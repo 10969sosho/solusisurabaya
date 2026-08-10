@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AVENIR — Artisan Bakery & Patisserie. Crafting moments of warmth, one loaf at a time.">
+  <title>AVENIR | Artisan Bakery & Patisserie</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animation.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <div class="grain-overlay"></div>
+  <div class="cursor-glow"></div>
+  <div class="scroll-progress"></div>
+
+  <div class="loader">
+    <div class="loader-icon"></div>
+    <p class="loader-text">Baking Fresh</p>
+  </div>
+
+  <div class="toast">
+    <div class="toast-icon">✓</div>
+    <p class="toast-text"></p>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">AVE<span>NIR</span></a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Galeri</a></li>
+          <li><a href="story.html">Cerita</a></li>
+          <li><a href="experience.html">Pengalaman</a></li>
+          <li><a href="reservation.html">Reservasi</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="nav-icon" aria-label="Cari">⌕</button>
+          <button class="nav-icon" aria-label="Keranjang">◻</button>
+          <a href="reservation.html" class="btn-reserve">Pesan Sekarang</a>
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="index.html" class="active">
+      <span class="mobile-nav-icon">⌂</span>
+      Beranda
+    </a>
+    <a href="menu.html">
+      <span class="mobile-nav-icon">☰</span>
+      Menu
+    </a>
+    <a href="gallery.html">
+      <span class="mobile-nav-icon">▣</span>
+      Galeri
+    </a>
+    <a href="reservation.html">
+      <span class="mobile-nav-icon">◉</span>
+      Reservasi
+    </a>
+  </nav>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="hero-bg">
+        <div class="hero-ambient left ambient-pulse"></div>
+        <div class="hero-ambient right ambient-pulse"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content stagger-children">
+          <span class="hero-tag">★ Jakarta's Finest Bakery 2026</span>
+          <h1 class="hero-title">
+            Where Freshness
+            <em>Meets Tradition</em>
+          </h1>
+          <p class="hero-desc">
+            Setiap roti kami adalah kisah yang dipanggang dengan sempurna. Dari tepung terbaik hingga oven batu, kami menghadirkan cita rasa autentik dalam setiap gigitan.
+          </p>
+          <div class="hero-cta">
+            <a href="reservation.html" class="btn-primary">Pesan Sekarang</a>
+            <a href="menu.html" class="btn-secondary">Lihat Menu</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-parallax="0.5">
+          <div class="hero-image-wrap">
+            <img src="assets/images/makanan/banner1.jpg" alt="Hidangan Unggulan" loading="eager">
+            <div class="steam-container"></div>
+          </div>
+
+          <div class="floating-card one">
+            <div class="floating-card-icon">🌾</div>
+            <div class="floating-card-text">
+              <strong>Tepung Pilihan</strong>
+              Import dan lokal terbaik
+            </div>
+          </div>
+
+          <div class="floating-card two">
+            <div class="floating-card-icon">⭐</div>
+            <div class="floating-card-text">
+              <strong>4.9 Rating</strong>
+              1.000+ ulasan pelanggan
+            </div>
+          </div>
+
+          <div class="floating-card three">
+            <div class="floating-card-icon">☕</div>
+            <div class="floating-card-text">
+              <strong>Paduan Kopi</strong>
+              Dari roasting house terbaik
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hidangan Unggulan -->
+    <section id="signature" class="section">
+      <div class="container">
+        <div class="signature-grid">
+          <div class="signature-image reveal-left">
+            <img src="assets/images/makanan/menu2.jpg" alt="Sate Wagyu" loading="lazy">
+            <div class="spice-particles"></div>
+            <div class="steam-container"></div>
+            <div class="chef-badge">
+              <div class="chef-badge-avatar">👨‍🍳</div>
+              <div class="chef-badge-text">
+                Rekomendasi Chef
+                <strong>Andre Wijaya</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="signature-info reveal-right">
+            <span class="section-label">Roti Unggulan</span>
+            <h2 class="section-title">Sourdough <em>Signature</em></h2>
+            <p class="signature-desc">
+              Sourdough artisan kami difermentasi selama 48 jam, menggunakan tepung organik giling batu, dipanggang dalam oven batu pada suhu 250°C. Kulit renyah, dalamnya lembut — sebuah mahakarya fermentasi alami.
+            </p>
+
+            <div class="signature-ingredients">
+              <span class="ingredient-tag">Tepung Organik</span>
+              <span class="ingredient-tag">Fermentasi 48 Jam</span>
+              <span class="ingredient-tag">Oven Batu</span>
+              <span class="ingredient-tag">Ragi Alami</span>
+              <span class="ingredient-tag">Tanpa Pengawet</span>
+            </div>
+
+            <div class="signature-footer">
+              <div class="signature-price">
+                Rp65.000<span>/ buah</span>
+              </div>
+              <a href="menu.html" class="btn-primary">Lihat Menu Lengkap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jelajahi AVENIR -->
+    <section class="section">
+      <div class="container">
+        <div class="menu-header reveal">
+          <span class="section-label">Jelajahi AVENIR</span>
+          <h2 class="section-title">Mulai <em>Petualanganmu</em></h2>
+          <p class="section-subtitle">
+            Jelajahi setiap sudut AVENIR Bakery — dari roti artisan kami hingga pastry klasik yang menggoda.
+          </p>
+        </div>
+
+        <div class="highlights-grid">
+          <a href="menu.html" class="highlight-card reveal">
+            <div class="highlight-card-image">
+              <img src="assets/images/makanan/menu3.jpg" alt="Menu" loading="lazy">
+              <div class="highlight-card-overlay">
+                <span class="highlight-card-arrow">→</span>
+              </div>
+            </div>
+            <div class="highlight-card-body">
+              <span class="highlight-card-icon">🥖</span>
+              <h3>Roti & Pastry</h3>
+              <p>Jelajahi koleksi roti dan pastry artisan kami</p>
+            </div>
+          </a>
+
+          <a href="gallery.html" class="highlight-card reveal">
+            <div class="highlight-card-image">
+              <img src="assets/images/makanan/menu4.jpg" alt="Galeri" loading="lazy">
+              <div class="highlight-card-overlay">
+                <span class="highlight-card-arrow">→</span>
+              </div>
+            </div>
+            <div class="highlight-card-body">
+              <span class="highlight-card-icon">📷</span>
+              <h3>Galeri Roti</h3>
+              <p>Lihat proses baking dan kreasi roti kami</p>
+            </div>
+          </a>
+
+          <a href="story.html" class="highlight-card reveal">
+            <div class="highlight-card-image">
+              <img src="assets/images/makanan/menu5.webp" alt="Cerita" loading="lazy">
+              <div class="highlight-card-overlay">
+                <span class="highlight-card-arrow">→</span>
+              </div>
+            </div>
+            <div class="highlight-card-body">
+              <span class="highlight-card-icon">🥐</span>
+              <h3>Cerita Kami</h3>
+              <p>Dari dapur kecil ke bakery premium — perjalanan AVENIR</p>
+            </div>
+          </a>
+
+          <a href="experience.html" class="highlight-card reveal">
+            <div class="highlight-card-image">
+              <img src="assets/images/makanan/menu6.jpg" alt="Pengalaman" loading="lazy">
+              <div class="highlight-card-overlay">
+                <span class="highlight-card-arrow">→</span>
+              </div>
+            </div>
+            <div class="highlight-card-body">
+              <span class="highlight-card-icon">👨‍🍳</span>
+              <h3>Oven Terbuka</h3>
+              <p>Saksikan proses baking langsung di oven batu kami</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Reservasi Cepat -->
+    <section class="section">
+      <div class="container">
+        <div class="reservation-box">
+          <div class="reservation-grid">
+            <div class="reservation-info reveal-left">
+              <span class="section-label">Pesan Sekarang</span>
+              <h2 class="section-title">Pesan <em>Roti Anda</em></h2>
+              <p class="section-subtitle">
+                Pesan roti dan pastry favorit Anda untuk acara spesial atau teman santai sehari-hari.
+              </p>
+              <a href="reservation.html" class="btn-primary" style="display:inline-block;margin-top:24px;">Pesan Sekarang</a>
+            </div>
+
+            <div class="reveal-right" style="display:flex;align-items:center;justify-content:center;">
+              <div style="font-size:80px;opacity:0.3;">🥖</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bg-text">AVENIR</div>
+
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">AVE<span>NIR</span></a>
+          <p>
+            AVENIR Bakery — Roti artisan dan pastry premium untuk setiap momen berharga Anda. Dibuat dengan cinta, dipanggang dengan sempurna.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">⟐</a>
+            <a href="#" aria-label="Twitter">⬡</a>
+            <a href="#" aria-label="Facebook">◈</a>
+            <a href="#" aria-label="TikTok">◇</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="story.html">Cerita Kami</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="experience.html">Pengalaman</a></li>
+            <li><a href="reservation.html">Reservasi</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Jam Buka</h4>
+          <ul>
+            <li><p>Sen – Sab: 07:00 — 21:00</p></li>
+            <li><p>Minggu: 08:00 — 20:00</p></li>
+            <li><p>Sarapan: 07:00 — 11:00</p></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <p>Jl. Roti No. 15, Menteng</p>
+          <p>Jakarta Pusat 10310</p>
+          <p>+62 21 5555 0123</p>
+          <p>halo@avenir-bakery.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AVENIR Bakery. Seluruh hak cipta dilindungi.</p>
+        <p>Dibuat dengan semangat ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/animation.js"></script>
+</body>
+</html>

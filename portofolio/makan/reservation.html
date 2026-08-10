@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pesan roti dan pastry AVENIR Bakery — Antisipasi pesanan Anda.">
+  <title>Reservasi | AVENIR Bakery</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animation.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <div class="grain-overlay"></div>
+  <div class="cursor-glow"></div>
+  <div class="scroll-progress"></div>
+
+  <div class="loader">
+    <div class="loader-icon"></div>
+    <p class="loader-text">Baking Fresh</p>
+  </div>
+
+  <div class="toast">
+    <div class="toast-icon">✓</div>
+    <p class="toast-text"></p>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">AVE<span>NIR</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Galeri</a></li>
+          <li><a href="story.html">Cerita</a></li>
+          <li><a href="experience.html">Pengalaman</a></li>
+          <li><a href="reservation.html" class="active">Reservasi</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="nav-icon" aria-label="Cari">⌕</button>
+          <button class="nav-icon" aria-label="Keranjang">◻</button>
+          <a href="reservation.html" class="btn-reserve">Pesan Sekarang</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="index.html"><span class="mobile-nav-icon">⌂</span>Beranda</a>
+    <a href="menu.html"><span class="mobile-nav-icon">☰</span>Menu</a>
+    <a href="gallery.html"><span class="mobile-nav-icon">▣</span>Galeri</a>
+    <a href="reservation.html" class="active"><span class="mobile-nav-icon">◉</span>Reservasi</a>
+  </nav>
+
+  <main>
+
+    <section class="page-header" style="min-height:40vh;">
+      <div class="page-header-bg">
+        <img src="assets/images/makanan/banner1.jpg" alt="Reservasi" loading="eager">
+      </div>
+      <div class="page-header-content">
+        <span class="page-header-tag">Pesan Meja</span>
+        <h1 class="page-header-title">Reservasi <em>Pengalamanmu</em></h1>
+        <p class="page-header-desc">
+          Amankan tempat Anda di AVENIR. Baik makan malam intim berdua maupun perayaan bersama teman, setiap momen tak terlupakan.
+        </p>
+      </div>
+    </section>
+
+    <section class="page-section" style="padding-top:60px;">
+      <div class="container">
+        <div class="reservation-box" style="max-width:900px;margin:0 auto;">
+          <form id="reservation-form" class="reservation-form" style="grid-template-columns:1fr 1fr;">
+            <div class="form-group">
+              <label>Nama Lengkap</label>
+              <input type="text" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="anda@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>Nomor Telepon</label>
+              <input type="tel" name="telepon" placeholder="+62 812 3456 7890" required>
+            </div>
+            <div class="form-group">
+              <label>Acara</label>
+              <select name="acara">
+                <option value="">Pilih acara</option>
+                <option value="dinner">Makan Malam</option>
+                <option value="anniversary">Ulang Tahun Pernikahan</option>
+                <option value="birthday">Ulang Tahun</option>
+                <option value="business">Bisnis</option>
+                <option value="other">Lainnya</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Tanggal</label>
+              <input type="date" name="tanggal" required>
+            </div>
+            <div class="form-group">
+              <label>Waktu</label>
+              <select name="waktu" required>
+                <option value="">Pilih waktu</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Jumlah Tamu</label>
+              <select name="jumlah_tamu" required>
+                <option value="">Jumlah tamu</option>
+                <option value="1">1 Tamu</option>
+                <option value="2">2 Tamu</option>
+                <option value="3">3 Tamu</option>
+                <option value="4">4 Tamu</option>
+                <option value="5">5 Tamu</option>
+                <option value="6">6 Tamu</option>
+                <option value="7">7 Tamu</option>
+                <option value="8">8+ Tamu</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Permintaan Khusus</label>
+              <input type="text" name="permintaan_khusus" placeholder="Kebutuhan diet, preferensi tempat duduk...">
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" class="btn-submit" style="width:100%;">Konfirmasi Reservasi</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-overlay" id="success-modal">
+      <div class="modal-content">
+        <div class="modal-icon">✨</div>
+        <h3 class="modal-title">Pesanan Berhasil!</h3>
+        <p class="modal-text">
+          Terima kasih telah memesan di AVENIR Bakery. Konfirmasi telah dikirim ke email Anda. Roti Anda akan siap sesuai jadwal.
+        </p>
+        <button class="modal-close">Tutup</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bg-text">AVENIR</div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">AVE<span>NIR</span></a>
+          <p>AVENIR Bakery — Roti artisan dan pastry premium untuk setiap momen berharga Anda. Dibuat dengan cinta, dipanggang dengan sempurna.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">⟐</a><a href="#" aria-label="Twitter">⬡</a><a href="#" aria-label="Facebook">◈</a><a href="#" aria-label="TikTok">◇</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li><li><a href="menu.html">Menu</a></li><li><a href="story.html">Cerita Kami</a></li><li><a href="gallery.html">Galeri</a></li><li><a href="experience.html">Pengalaman</a></li><li><a href="reservation.html">Reservasi</a></li><li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Jam Buka</h4>
+          <ul>
+            <li><p>Sen – Kam: 17:00 — 23:00</p></li><li><p>Jum – Sab: 17:00 — 01:00</p></li><li><p>Minggu: 11:00 — 22:00</p></li><li><p>Brunch: Sab – Min 11:00 — 15:00</p></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <p>Jl. Roti No. 15, Menteng</p><p>Jakarta Pusat 10310</p><p>+62 21 5555 0123</p><p>halo@avenir-bakery.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AVENIR Bakery. Seluruh hak cipta dilindungi.</p>
+        <p>Dibuat dengan semangat ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/animation.js"></script>
+</body>
+</html>

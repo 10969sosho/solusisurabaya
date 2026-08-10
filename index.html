@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solusi Surabaya, Simplified</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis (Smooth Scroll) -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="is-loading">
+
+    <!-- Noise Overlay -->
+    <div class="noise"></div>
+    
+    <!-- Vignette Overlay -->
+    <div class="vignette"></div>
+
+    <!-- 3D Background (Persists across Loading & Hero) -->
+    <div id="canvas-container"></div>
+
+    <header class="site-header" aria-label="Primary Navigation">
+        <nav class="navbar">
+            <a class="brand" href="#hero">Solusi Surabaya</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="portofolio/">Portfolio</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Demo</a></li>
+            </ul>
+            <a class="nav-cta" href="#contact">Get My Demo</a>
+        </nav>
+    </header>
+
+    <!-- Loading Section -->
+    <div id="loader">
+        <div class="loader-content">
+            <div id="loader-text" class="text-reveal">GENERATING DEMO</div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Kami bangun website profesional &amp; sistem digital<br>untuk pertumbuhan bisnis Anda.</h1>
+            <p class="hero-subtitle">Kami mengerti kebutuhan Anda dengan cepat, lalu membangun solusi digital yang efektif dan berdampak nyata.</p>
+            <div class="cta-group">
+                <a class="cta-btn primary" href="#contact">Get My Demo</a>
+                <a class="cta-btn secondary" href="#explore">Explore</a>
+            </div>
+               </div>
+    </section>
+
+    <!-- Who We Are Section (Pinned Storytelling) -->
+    <section id="who-we-are">
+        <div class="story-container">
+            <div id="trusted-by" class="story-scene scene-1">
+                <div class="section-inner">
+                    <p class="section-kicker">Klien Kami</p>
+                    <h2 class="section-title">Dipercaya Berbagai Bisnis</h2>
+                    <div class="logo-row" aria-label="Daftar klien">
+                        <div class="logo-pill">Hakusa Edu Japan</div>
+                        <div class="logo-pill">Yayasan Manarul Ilmi ITS</div>
+                        <div class="logo-pill">CV Hartin Kadjar Makmur</div>
+                        <div class="logo-pill">PT Harvest Global Niaga</div>
+                        <div class="logo-pill">CV Indira Kusuma Pratama</div>
+                        <div class="logo-pill">Prospedity (PT Pemburu Property Bali)</div>
+                        <div class="logo-pill">CV Keneas Solusi Wisaya</div>
+                        <div class="logo-pill">CV Jowimar Mandiri Makmur</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="services" class="story-scene scene-2">
+                <div class="section-inner">
+                    <p class="section-kicker">Layanan Kami</p>
+                    <h2 class="section-title">Apa yang Kami Bangun</h2>
+                    <p class="section-desc">Solusi sederhana. Dampak nyata.</p>
+                    <div id="explore" class="card-grid" data-scroll-progress="0.45">
+                        <article class="card">
+                            <h3>Website</h3>
+                            <p>Tampil meyakinkan, cepat, dan responsif di semua perangkat.</p>
+                            <p>Kami buat website yang bukan hanya bagus, tapi juga jelas alurnya—supaya pengunjung paham, percaya, lalu bertanya atau order.</p>
+                            <p>Company profile, landing page, katalog produk, halaman promo, hingga form lead ke WhatsApp. Struktur rapi, mudah dikembangkan, dan siap jadi “sales” 24/7 untuk bisnis Anda.</p>
+                        </article>
+                        <article class="card">
+                            <h3>Sistem &amp; Aplikasi Custom</h3>
+                            <p>Rapikan proses kerja, kurangi salah input, dan pantau bisnis real-time.</p>
+                            <p>Kami bangun sistem sesuai cara kerja tim Anda—bukan dipaksa ikut template. Mulai dari yang paling penting, lalu berkembang bertahap.</p>
+                            <p>Modul bisa mencakup penjualan, stok, pembelian, keuangan, laporan, approval, hingga integrasi WhatsApp/CRM. Akses aman berbasis role, alur kerja jelas, dan data siap dipakai untuk keputusan bisnis.</p>
+                        </article>
+                        <article class="card">
+                            <h3>AI &amp; Otomasi</h3>
+                            <p>Percepat respon, follow-up otomatis, dan minimalkan pekerjaan repetitif.</p>
+                            <p>AI &amp; automation kami fokus ke hasil: waktu tim lebih hemat, lead lebih cepat ditangani, dan proses jadi konsisten.</p>
+                            <p>Contoh implementasi: chatbot WhatsApp, auto follow-up leads, sinkron data antar sistem, notifikasi otomatis, hingga dashboard ringkas untuk monitoring. Sistem bekerja diam-diam di belakang layar, Anda fokus scaling.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div id="why-choose-us" class="story-scene scene-3">
+                <div class="section-inner">
+                    <p class="section-kicker">Keunggulan Kami</p>
+                    <h2 class="section-title">Kenapa Solusi Surabaya</h2>
+                    <p class="section-desc">Kami tidak hanya membuat website, tapi juga membangun solusi yang benar-benar membantu bisnis Anda.</p>
+                    <div class="carousel" data-carousel="why">
+                        <button class="carousel-btn" type="button" data-carousel-prev aria-label="Sebelumnya">Prev</button>
+                        <div class="carousel-viewport">
+                            <div class="carousel-track">
+                                <article class="feature">
+                                    <h3>Lihat Dulu</h3>
+                                    <p>Tanpa tebak-tebakan. Kami tunjukkan demo lebih dulu.</p>
+                                    <p>Anda bisa menilai arah desain, alur, dan fitur sejak awal—jadi keputusan lebih yakin.</p>
+                                    <p>Hasilnya: scope lebih jelas, revisi lebih terarah, dan proses tidak buang-buang waktu.</p>
+                                </article>
+                                <article class="feature">
+                                    <h3>Eksekusi Cepat</h3>
+                                    <p>Dari ide ke demo yang berfungsi dalam waktu kurang dari 1 jam.</p>
+                                    <p>Kami fokus ke prioritas inti: apa yang paling berdampak untuk bisnis Anda.</p>
+                                    <p>Setelah demo, pengembangan lanjut jadi lebih cepat karena pondasi sudah siap.</p>
+                                </article>
+                                <article class="feature">
+                                    <h3>Fokus Bisnis</h3>
+                                    <p>Desain rapi, alur jelas, dan tujuan terukur.</p>
+                                    <p>Kami bangun untuk konversi: pengunjung paham, percaya, lalu melakukan aksi.</p>
+                                    <p>Setiap elemen punya alasan—bukan sekadar “bagus”, tapi efektif untuk hasil.</p>
+                                </article>
+                                <article class="feature">
+                                    <h3>Siap Bertumbuh</h3>
+                                    <p>Struktur rapi dan siap di-scale mengikuti kebutuhan Anda.</p>
+                                    <p>Mulai sederhana dulu, lalu berkembang tanpa perlu bongkar dari awal.</p>
+                                    <p>Arsitektur, data, dan modul disiapkan agar perubahan nanti tetap aman dan cepat.</p>
+                                </article>
+                                <article class="feature">
+                                    <h3>Komunikasi Jelas</h3>
+                                    <p>Kami jelaskan dengan bahasa yang mudah dipahami.</p>
+                                    <p>Anda tahu apa yang dikerjakan, kapan selesai, dan output-nya seperti apa.</p>
+                                    <p>Update rutin, feedback cepat, dan keputusan dibuat berdasarkan progres nyata.</p>
+                                </article>
+                                <article class="feature">
+                                    <h3>Rapi &amp; Terdokumentasi</h3>
+                                    <p>Struktur project rapi agar mudah dirawat dan dikembangkan.</p>
+                                    <p>Perubahan terkontrol, flow jelas, dan kualitas lebih stabil.</p>
+                                    <p>Bagus untuk tim internal Anda jika nanti ingin lanjut handle in-house.</p>
+                                </article>
+                                <article class="feature">
+                                    <h3>Integrasi Siap</h3>
+                                    <p>Website/sistem yang mudah terhubung dengan tools yang sudah Anda pakai.</p>
+                                    <p>Mulai dari WhatsApp, CRM, payment, sampai API internal.</p>
+                                    <p>Data mengalir rapi, kerja lebih otomatis, dan tim lebih efisien.</p>
+                                </article>
+                                <article class="feature">
+                                    <h3>After Launch Support</h3>
+                                    <p>Tidak berhenti saat rilis. Kami bantu memastikan sistem berjalan stabil.</p>
+                                    <p>Monitoring, perbaikan cepat, dan optimasi sesuai kebutuhan.</p>
+                                    <p>Anda fokus bisnis—urusan teknis tetap terjaga.</p>
+                                </article>
+                            </div>
+                        </div>
+                        <button class="carousel-btn" type="button" data-carousel-next aria-label="Berikutnya">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DIGITAL SYSTEM (REWORKED) -->
+    <section id="digital-system">
+        <div class="system-container">
+            <div class="system-text sys-scene-1">
+                <p class="system-lead">Jika Anda sampai di bagian ini, berarti saatnya memiliki website yang bekerja untuk bisnis Anda.</p>
+            </div>
+            <div class="system-text sys-scene-2">
+                <p class="system-lead">Sekarang, mari lihat bagaimana kami bekerja mewujudkan website Anda.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="portfolio" class="content-section horizontal-work">
+        <div class="section-inner">
+            <p class="section-kicker">Karya Kami</p>
+            <h2 class="section-title">Karya Pilihan</h2>
+            <p class="section-desc">Scroll ke bawah untuk melihat project bergeser. Klik yang menarik untuk lanjut diskusi.</p>
+        </div>
+        <div class="work-viewport" aria-label="Daftar project terbaru">
+            <div class="work-track">
+                <article class="work-card" tabindex="0">
+                    <img class="work-thumb" src="portofolio/Website Katalog Perumahan.png" alt="Website Katalog Perumahan">
+                    <div class="work-meta">
+                        <h3>Website Katalog Perumahan</h3>
+                        <p>Platform digital untuk menampilkan daftar perumahan dan properti lengkap dengan informasi unit, galeri foto, dan kontak pemasaran.</p>
+                    </div>
+                </article>
+                <article class="work-card" tabindex="0">
+                    <img class="work-thumb" src="portofolio/Toko Fashion Online.png" alt="Toko Fashion Online">
+                    <div class="work-meta">
+                        <h3>Toko Fashion Online</h3>
+                        <p>Website e-commerce fashion dengan tampilan modern untuk menampilkan koleksi produk dan memudahkan proses pemesanan.</p>
+                    </div>
+                </article>
+                <article class="work-card" tabindex="0">
+                    <img class="work-thumb" src="portofolio/Toko Sembako dan Kebutuhan Harian.png" alt="Toko Sembako dan Kebutuhan Harian">
+                    <div class="work-meta">
+                        <h3>Toko Sembako dan Kebutuhan Harian</h3>
+                        <p>Platform penjualan kebutuhan sehari-hari yang mendukung pengelolaan produk, stok, dan pemesanan secara online.</p>
+                    </div>
+                </article>
+                <article class="work-card" tabindex="0">
+                    <img class="work-thumb" src="portofolio/Website Restoran Fine Dining.png" alt="Website Restoran Fine Dining">
+                    <div class="work-meta">
+                        <h3>Website Restoran Fine Dining</h3>
+                        <p>Website restoran premium yang menampilkan menu, galeri, informasi reservasi, dan profil bisnis secara elegan.</p>
+                    </div>
+                </article>
+                <article class="work-card" tabindex="0">
+                    <img class="work-thumb" src="portofolio/Toko Sepatu Olahraga Online.png" alt="Toko Sepatu Olahraga Online">
+                    <div class="work-meta">
+                        <h3>Toko Sepatu Olahraga Online</h3>
+                        <p>Website penjualan sepatu olahraga dengan katalog produk yang terstruktur dan pengalaman belanja yang responsif.</p>
+                    </div>
+                </article>
+                <article class="work-card" tabindex="0">
+                    <img class="work-thumb" src="portofolio/Sistem Enterprise Resource Planning (ERP).png" alt="Sistem Enterprise Resource Planning (ERP)">
+                    <div class="work-meta">
+                        <h3>Sistem Enterprise Resource Planning (ERP)</h3>
+                        <p>Sistem terintegrasi untuk membantu perusahaan mengelola operasional, data, dan proses bisnis secara lebih efisien.</p>
+                    </div>
+                </article>
+                <article class="work-card" tabindex="0">
+                    <img class="work-thumb" src="portofolio/Website Trading dan Distribusi Industrial Part.png" alt="Website Trading dan Distribusi Industrial Part">
+                    <div class="work-meta">
+                        <h3>Website Trading dan Distribusi Industrial Part</h3>
+                        <p>Website perusahaan trading yang menampilkan katalog produk, profil perusahaan, dan layanan permintaan penawaran harga.</p>
+                    </div>
+                </article>
+                <a class="work-card work-card--more" href="#contact">
+                    <div class="work-meta">
+                        <h3>Ingin Lihat Lainnya?</h3>
+                        <p>Lihat lebih banyak project &amp; minta demo.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="content-section">
+        <div class="section-inner">
+            <p class="section-kicker">Proses</p>
+            <h2 class="section-title">Alur Kerja</h2>
+            <div class="step-grid">
+                <article class="step">
+                    <span class="step-number">01</span>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15a4 4 0 0 1-4 4H9l-6 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Brief</h3>
+                    <p class="step-desc">Ceritakan kebutuhan Anda. Kami dengarkan visi dan tujuan bisnis Anda untuk merumuskan strategi yang tepat.</p>
+                </article>
+                <article class="step">
+                    <span class="step-number">02</span>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 7h10M7 12h10M7 17h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M5 4h14a2 2 0 0 1 2 2v8a4 4 0 0 1-4 4H9l-6 3V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Demo</h3>
+                    <p class="step-desc">Kami buatkan demo secara langsung. Lihat konsep awal dalam bentuk nyata sebelum melangkah lebih jauh.</p>
+                </article>
+                <article class="step">
+                    <span class="step-number">03</span>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 12a8 8 0 0 1 13.66-5.66" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M20 4v6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 12a8 8 0 0 1-13.66 5.66" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M4 20v-6h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Revisi Cepat</h3>
+                    <p class="step-desc">Penyesuaian singkat sesuai feedback. Kami bergerak lincah memastikan setiap detail sesuai ekspektasi Anda.</p>
+                </article>
+                <article class="step">
+                    <span class="step-number">04</span>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M10 22h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M12 2a7 7 0 0 1 4 12.76V16a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-1.24A7 7 0 0 1 12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Build</h3>
+                    <p class="step-desc">Pengembangan final. Tim engineer kami membangun sistem yang robust, scalable, dan berperforma tinggi.</p>
+                </article>
+                <article class="step">
+                    <span class="step-number">05</span>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 14c-1.5-1.5-2-3.5-1-6l4 4 3-3-4-4c2.5-1 4.5-.5 6 1 2 2 2 5 0 7l-7 7-3 1 1-3 7-7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Launch</h3>
+                    <p class="step-desc">Siap digunakan. Deployment penuh dengan pemantauan intensif untuk memastikan transisi yang mulus.</p>
+                </article>
+                <a class="step step-cta" href="#contact">
+                    <h3>Mulai Proyek?</h3>
+                    <p class="step-desc">Konsultasikan kebutuhan digital Anda dengan tim ahli kami sekarang.</p>
+                    <span class="step-cta-arrow" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section id="pricing" class="content-section">
+        <div class="section-inner">
+            <p class="section-kicker">Harga Kami</p>
+            <h2 class="section-title">Paket Harga</h2>
+            <p class="section-desc">Mulai dari yang sederhana. Kembangkan sesuai kebutuhan.</p>
+            <div class="card-grid pricing-grid">
+                <article class="card price-card">
+                    <h3>Basic</h3>
+                    <p class="price-note">Mulai 2 Juta</p>
+                    <p>Cocok untuk bisnis yang ingin mulai tampil online dengan cepat.</p>
+                    <ul class="mini-list">
+                        <li>Website 1–2 halaman</li>
+                        <li>Desain clean &amp; profesional</li>
+                        <li>Pengerjaan cepat</li>
+                        <li>Revisi ringan</li>
+                    </ul>
+                    <a class="card-action" href="#contact">Buat Demo Saya</a>
+                </article>
+                <article class="card price-card">
+                    <h3>Standar</h3>
+                    <p class="price-note">Mulai 5 Juta</p>
+                    <p>Untuk bisnis yang butuh website lebih lengkap dan terstruktur.</p>
+                    <ul class="mini-list">
+                        <li>Multi-page (Beranda, Tentang, Layanan, dll)</li>
+                        <li>Struktur bisnis lebih jelas</li>
+                        <li>Admin panel dasar</li>
+                        <li>SEO dasar</li>
+                    </ul>
+                    <a class="card-action" href="#contact">Buat Demo Saya</a>
+                </article>
+                <article class="card price-card">
+                    <h3>Custom</h3>
+                    <p class="price-note">Sesuai kebutuhan</p>
+                    <p>Solusi untuk kebutuhan sistem, integrasi, atau skala bisnis yang lebih kompleks.</p>
+                    <ul class="mini-list">
+                        <li>Sistem / software custom</li>
+                        <li>AI &amp; otomasi</li>
+                        <li>Integrasi antar sistem</li>
+                        <li>Pengembangan sesuai kebutuhan</li>
+                    </ul>
+                    <a class="card-action" href="#contact">Buat Demo Saya</a>
+                </article>
+            </div>
+            <p class="section-desc pricing-cta-text" style="text-align:center; max-width:100%;">Belum yakin pilih yang mana? Mulai dari demo dulu.</p>
+        </div>
+    </section>
+
+    <section id="testimonial" class="content-section">
+        <div class="section-inner">
+            <p class="section-kicker">Testimoni</p>
+            <h2 class="section-title">Apa Kata Mereka</h2>
+            <p class="section-desc">Berbicara tentang kualitas dan kepuasan klien yang sudah bekerja sama dengan kami.</p>
+            <div class="testimonial-rotator" data-testimonial-rotator aria-live="polite">
+                <figure class="quote-card quote-card--rotator is-active">
+                    <blockquote>“Langsung dikasih demo dari awal, jadi kami bisa lihat langsung gambaran website-nya tanpa harus nebak-nebak. Prosesnya cepat, komunikasinya jelas, dan hasil akhirnya sesuai dengan yang kami harapkan. Sangat membantu untuk mengambil keputusan.”</blockquote>
+                    <figcaption>Hakusa Edu Japan</figcaption>
+                </figure>
+                <figure class="quote-card quote-card--rotator">
+                    <blockquote>“Cepat, jelas, dan benar-benar jalan. Timnya responsif banget, setiap kali ada yang perlu ditanyakan langsung direspon. Kami tidak perlu menunggu lama untuk revisi. Sistem yang dibangun juga berfungsi dengan baik dan membantu operasional sehari-hari.”</blockquote>
+                    <figcaption>Yayasan Manarul Ilmi ITS</figcaption>
+                </figure>
+                <figure class="quote-card quote-card--rotator">
+                    <blockquote>“Alurnya rapi dari awal sampai akhir. Mulai dari brief, demo, revisi, sampai rilis semuanya transparan dan terstruktur. Kami jadi tahu progress di setiap tahap. Hasilnya memuaskan, website berjalan lancar dan sesuai dengan kebutuhan bisnis kami.”</blockquote>
+                    <figcaption>CV Hartin Kadjar Makmur</figcaption>
+                </figure>
+                <figure class="quote-card quote-card--rotator">
+                    <blockquote>“Revisinya cepat dan tepat sasaran, tidak muter-muter. Setiap masukan langsung ditangani dan hasilnya sesuai ekspektasi. Proses kolaborasinya sangat nyaman karena timnya mendengarkan dan memberikan solusi yang tepat untuk setiap kebutuhan.”</blockquote>
+                    <figcaption>PT Harvest Global Niaga</figcaption>
+                </figure>
+                <figure class="quote-card quote-card--rotator">
+                    <blockquote>“Hasilnya terasa profesional banget. Website yang dibuat tampil meyakinkan, cepat diakses, dan desainnya elegan. Kami mendapatkan banyak feedback positif dari pelanggan. Sangat recommended untuk bisnis yang ingin punya website berkualitas tanpa ribet.”</blockquote>
+                    <figcaption>CV Indira Kusuma Pratama</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section">
+        <div class="section-inner">
+            <p class="section-kicker">Kontak Kami</p>
+            <h2 class="section-title">Mulai dari Demo</h2>
+            <p class="section-desc" style="text-align:center; max-width:100%;">Tanpa komitmen. Lihat dulu hasilnya.</p>
+            <form id="contact-form" class="contact-form" data-wa-target="6281216362213">
+                <div class="field-grid">
+                    <label class="field">
+                        <span class="field-label">Nama</span>
+                        <input name="name" type="text" autocomplete="name" required />
+                    </label>
+                    <label class="field">
+                        <span class="field-label">Nama Perusahaan</span>
+                        <input name="company" type="text" autocomplete="organization" />
+                    </label>
+                    <label class="field">
+                        <span class="field-label">Bidang Usaha</span>
+                        <input name="business" type="text" autocomplete="organization-title" />
+                    </label>
+                    <label class="field">
+                        <span class="field-label">WhatsApp</span>
+                        <input name="wa" type="tel" inputmode="tel" autocomplete="tel" placeholder="contoh: 0812xxxx / 62812xxxx" required />
+                    </label>
+                </div>
+                <button class="cta-btn primary" type="submit">Buat Demo Saya</button>
+                <p class="form-hint">Dengan klik tombol, Anda akan diarahkan ke WhatsApp untuk mengirim pesan otomatis.</p>
+            </form>
+        </div>
+    </section>
+
+    <a class="whatsapp-float" href="#" target="_blank" rel="noopener noreferrer" aria-label="Hubungi Kami via WhatsApp">
+         <img src="whatsapp.png" alt="WhatsApp">
+     </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

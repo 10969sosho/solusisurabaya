@@ -1,0 +1,267 @@
+/* ============================================
+   VLTX — animation.css — Keyframes & Transitions
+   ============================================ */
+
+/* ---------- LOADING ---------- */
+@keyframes loadingLetter {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes loadingBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* ---------- BLOB FLOAT ---------- */
+@keyframes blobFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -20px) scale(1.05);
+  }
+  50% {
+    transform: translate(-10px, 15px) scale(0.97);
+  }
+  75% {
+    transform: translate(-20px, -10px) scale(1.03);
+  }
+}
+
+/* ---------- MARQUEE ---------- */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- DIVIDER PULSE ---------- */
+@keyframes dividerPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scaleX(0.6);
+  }
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal="left"] {
+  transform: translateX(-40px);
+}
+
+[data-reveal="left"].revealed {
+  transform: translateX(0);
+}
+
+[data-reveal="right"] {
+  transform: translateX(40px);
+}
+
+[data-reveal="right"].revealed {
+  transform: translateX(0);
+}
+
+[data-reveal="scale"] {
+  transform: scale(0.92);
+}
+
+[data-reveal="scale"].revealed {
+  transform: scale(1);
+}
+
+/* Stagger children */
+.stagger-children > [data-reveal] {
+  transition-delay: var(--stagger-delay, 0ms);
+}
+
+/* ---------- TESTIMONIAL AUTO SCROLL ---------- */
+@keyframes testimonialScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+/* ---------- FADE UP ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+/* ---------- FADE IN ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- SLIDE IN ---------- */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------- PULSE GLOW ---------- */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(214, 255, 63, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(214, 255, 63, 0);
+  }
+}
+
+/* ---------- FLOATING ANIMATION ---------- */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ---------- COUNTER POP ---------- */
+@keyframes counterPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.counter-animate {
+  animation: counterPop 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+/* ---------- SHIMMER ---------- */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ---------- PARALLAX TRANSITION ---------- */
+[data-parallax] {
+  will-change: transform;
+}
+
+/* ---------- HOVER LIFT ---------- */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+}
+
+/* ---------- GRADIENT TEXT ---------- */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent), #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- SMOOTH SECTION ENTRY ---------- */
+section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* ---------- SELECTION STYLE ---------- */
+::selection {
+  background: rgba(214, 255, 63, 0.3);
+  color: var(--white);
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Productivity SaaS Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fas fa-bolt"></i>
+                    <span>TaskFlow</span>
+                </div>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-menu">
+                    <li><a href="#product" class="nav-link">Product</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#integrations" class="nav-link">Integrations</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Start Free Trial</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-left">
+                <h1 class="hero-title">Manage Your Work Smarter</h1>
+                <p class="hero-subtitle">All-in-one productivity platform for teams.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Start Free Trial</button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-play"></i>
+                        View Demo
+                    </button>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Trusted by 10,000+ teams</span>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="dashboard-preview">
+                    <div class="dashboard-header">
+                        <div class="dashboard-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="dashboard-title">TaskFlow Dashboard</span>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="chart-widget">
+                            <div class="chart-header">
+                                <h4>Project Progress</h4>
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="chart-bars">
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                                <div class="bar" style="height: 45%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="task-board">
+                            <div class="task-column">
+                                <h5>To Do</h5>
+                                <div class="task-card">Design UI</div>
+                                <div class="task-card">Review Code</div>
+                            </div>
+                            <div class="task-column">
+                                <h5>In Progress</h5>
+                                <div class="task-card">Develop API</div>
+                            </div>
+                            <div class="task-column">
+                                <h5>Done</h5>
+                                <div class="task-card">Setup Project</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Everything You Need to Succeed</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Task Management</h3>
+                    <p>Organize and track your tasks with powerful project management tools.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team Collaboration</h3>
+                    <p>Work together seamlessly with real-time collaboration features.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Workflow Automation</h3>
+                    <p>Automate repetitive tasks and focus on what matters most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Dashboard Preview -->
+    <section class="dashboard-preview-section">
+        <div class="container">
+            <h2 class="section-title">Powerful tools designed for modern teams</h2>
+            <div class="large-dashboard">
+                <div class="dashboard-header">
+                    <div class="dashboard-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="dashboard-title">Analytics Dashboard</span>
+                </div>
+                <div class="large-dashboard-content">
+                    <div class="analytics-grid">
+                        <div class="analytics-card">
+                            <h4>Total Projects</h4>
+                            <span class="analytics-number">24</span>
+                        </div>
+                        <div class="analytics-card">
+                            <h4>Team Members</h4>
+                            <span class="analytics-number">12</span>
+                        </div>
+                        <div class="analytics-card">
+                            <h4>Completion Rate</h4>
+                            <span class="analytics-number">87%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-highlights">
+                <div class="highlight">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Analytics dashboard</span>
+                </div>
+                <div class="highlight">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Project tracking</span>
+                </div>
+                <div class="highlight">
+                    <i class="fas fa-bell"></i>
+                    <span>Notifications system</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations -->
+    <section class="integrations" id="integrations">
+        <div class="container">
+            <h2 class="section-title">Integrate with Your Favorite Tools</h2>
+            <div class="integrations-grid">
+                <div class="integration-logo">
+                    <i class="fab fa-slack"></i>
+                </div>
+                <div class="integration-logo">
+                    <i class="fab fa-google-drive"></i>
+                </div>
+                <div class="integration-logo">
+                    <i class="fas fa-sticky-note"></i>
+                </div>
+                <div class="integration-logo">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="integration-logo">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="integration-logo">
+                    <i class="fab fa-trello"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Save Time</h3>
+                    <p>Automate workflows and reduce manual work by 40%.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Improve Collaboration</h3>
+                    <p>Keep your team aligned and working together efficiently.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Increase Productivity</h3>
+                    <p>Boost team productivity with smart tools and insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">0</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i>Basic project management</li>
+                        <li><i class="fas fa-check"></i>Up to 5 users</li>
+                        <li><i class="fas fa-check"></i>1GB storage</li>
+                    </ul>
+                    <button class="btn btn-outline">Start Free Trial</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">Recommended</div>
+                    <h3>Pro</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">12</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i>Advanced features</li>
+                        <li><i class="fas fa-check"></i>Unlimited projects</li>
+                        <li><i class="fas fa-check"></i>10GB storage</li>
+                        <li><i class="fas fa-check"></i>Priority support</li>
+                    </ul>
+                    <button class="btn btn-primary">Start Free Trial</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Business</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">29</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i>Team analytics</li>
+                        <li><i class="fas fa-check"></i>Unlimited users</li>
+                        <li><i class="fas fa-check"></i>100GB storage</li>
+                        <li><i class="fas fa-check"></i>Dedicated support</li>
+                    </ul>
+                    <button class="btn btn-outline">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"This platform helped our team stay organized and productive. The automation features are game-changing."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="John Smith" class="author-photo">
+                            <div class="author-info">
+                                <h4>John Smith</h4>
+                                <span>CEO, TechCorp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is there a free trial?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a 14-day free trial on all our paid plans. No credit card required for the Starter plan.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I cancel anytime?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! You can cancel your subscription at any time. There are no long-term contracts.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer team plans?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our Pro and Business plans are perfect for teams. Contact us for enterprise pricing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Start Your Free Trial Today</h2>
+            <p>Join thousands of teams already using TaskFlow to boost their productivity.</p>
+            <button class="btn btn-primary btn-large">Create Account</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>TaskFlow</span>
+                    </div>
+                    <p>The all-in-one productivity platform that helps teams work smarter, not harder.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Docs</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Sales</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TaskFlow SaaS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

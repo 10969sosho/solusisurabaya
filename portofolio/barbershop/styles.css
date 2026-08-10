@@ -1,0 +1,612 @@
+/* Custom Styles for PROGRAM BARBERSHOP */
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* Main Content Spacing */
+.main-content {
+    margin-top: 70px;
+    padding: 1rem;
+    min-height: calc(100vh - 70px);
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 0;
+    min-height: 60px;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.25rem 0;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+    font-weight: 600;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+}
+
+.btn-success {
+    background: var(--gradient-success);
+    border: none;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border: none;
+    color: white;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    border: none;
+}
+
+/* Form Styles */
+.form-control, .form-select {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Table Styles */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    transform: scale(1.01);
+}
+
+/* Service & Product Cards */
+.service-card, .product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.service-card:hover, .product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+}
+
+.service-card.selected, .product-card.selected {
+    border-color: var(--success-color);
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+}
+
+/* Cart Styles */
+#cartTable tbody tr {
+    background: white;
+}
+
+#cartTable tbody tr:hover {
+    background: rgba(52, 152, 219, 0.05);
+}
+
+/* Summary Card */
+.bg-primary, .bg-success, .bg-info, .bg-warning {
+    border-radius: 15px;
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.bg-primary:hover, .bg-success:hover, .bg-info:hover, .bg-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Chart Container */
+canvas {
+    max-height: 300px;
+    width: 100% !important;
+    height: 300px !important;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+    border-bottom: 2px solid #e9ecef;
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-footer {
+    border-top: 2px solid #e9ecef;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Receipt Styles */
+#receiptContent {
+    font-family: 'Courier New', monospace;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.receipt-header {
+    text-align: center;
+    border-bottom: 2px dashed #333;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.receipt-total {
+    border-top: 2px solid #333;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Mobile Navbar */
+    .navbar {
+        padding: 0.25rem 0;
+        min-height: 55px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+        padding: 0.125rem 0;
+    }
+    
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .navbar-collapse {
+        background: rgba(33, 37, 41, 0.98);
+        margin-top: 0.5rem;
+        border-radius: 8px;
+        padding: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+        background: var(--gradient-primary);
+        color: white !important;
+        transform: translateX(4px);
+    }
+    
+    .nav-link i {
+        font-size: 1.1rem;
+        width: 20px;
+        text-align: center;
+    }
+    
+    .nav-link span {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    
+    /* Mobile Main Content */
+    .main-content {
+        margin-top: 60px;
+        padding: 0.75rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .service-card, .product-card {
+        padding: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Mobile Page Content */
+    .page-content {
+        padding: 0.25rem;
+    }
+    
+    /* Mobile Cards */
+    .card-header h4, .card-header h5 {
+        font-size: 1.1rem;
+    }
+    
+    /* Mobile Chart Container */
+    canvas {
+        max-height: 250px !important;
+        height: 250px !important;
+    }
+    
+    /* Mobile Tables */
+    .table th, .table td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Mobile Forms */
+    .form-control, .form-select {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+    
+    /* Mobile Buttons */
+    .btn {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .d-grid .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        z-index: 1030;
+        background: rgba(33, 37, 41, 0.95) !important;
+        backdrop-filter: blur(10px);
+    }
+    
+    .main-content {
+        margin-top: 70px;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem;
+        margin: 0 0.25rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        transition: left 0.5s;
+    }
+    
+    .nav-link:hover::before {
+        left: 100%;
+    }
+    
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-1px);
+        color: white !important;
+    }
+    
+    .nav-link.active {
+        background: var(--gradient-primary);
+        color: white !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-link i {
+        font-size: 1rem;
+        width: 16px;
+        text-align: center;
+    }
+    
+    .nav-link span {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    
+    /* Desktop Cards */
+    .card {
+        margin-bottom: 2rem;
+    }
+    
+    /* Desktop Tables */
+    .table th, .table td {
+        padding: 1rem 0.75rem;
+    }
+    
+    /* Desktop Forms */
+    .form-control, .form-select {
+        padding: 0.75rem 1rem;
+    }
+    
+    /* Desktop Buttons */
+    .btn {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Print Styles */
+@media print {
+    .navbar, .btn, .modal-footer {
+        display: none !important;
+    }
+    
+    .container-fluid {
+        margin-top: 0 !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    #receiptContent {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+/* Utility Classes */
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bg-gradient-primary {
+    background: var(--gradient-primary);
+}
+
+.bg-gradient-secondary {
+    background: var(--gradient-secondary);
+}
+
+.bg-gradient-success {
+    background: var(--gradient-success);
+}
+
+.shadow-custom {
+    box-shadow: var(--shadow);
+}
+
+.shadow-custom-lg {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Status Badges */
+.badge {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+.badge-loyalty {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.badge-vip {
+    background: var(--gradient-secondary);
+    color: white;
+}
+
+.badge-regular {
+    background: #6c757d;
+    color: white;
+}
+
+/* Alert Styles */
+.alert {
+    border-radius: 10px;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+    color: #0c5460;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    color: #856404;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+}

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeFind Real Estate - Find Your Dream Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-left">
+                    <div class="logo">
+                        <h2>HomeFind</h2>
+                    </div>
+                </div>
+                <div class="nav-center">
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#properties" class="nav-link">Properties</a></li>
+                        <li><a href="#agents" class="nav-link">Agents</a></li>
+                        <li><a href="#locations" class="nav-link">Locations</a></li>
+                        <li><a href="#blog" class="nav-link">Blog</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <button class="btn-primary">List Property</button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-image">
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Find Your Dream Home</h1>
+                        <p>Discover the best properties in your city</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Search Bar -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-card">
+                <form class="search-form">
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <select id="location" name="location">
+                            <option value="">Select Location</option>
+                            <option value="jakarta">Jakarta</option>
+                            <option value="bali">Bali</option>
+                            <option value="surabaya">Surabaya</option>
+                            <option value="bandung">Bandung</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type" name="property-type">
+                            <option value="">Select Type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="villa">Villa</option>
+                            <option value="condo">Condo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price-range">Price Range</label>
+                        <select id="price-range" name="price-range">
+                            <option value="">Select Range</option>
+                            <option value="0-500">$0 - $500,000</option>
+                            <option value="500-1000">$500,000 - $1,000,000</option>
+                            <option value="1000-2000">$1,000,000 - $2,000,000</option>
+                            <option value="2000+">$2,000,000+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bedrooms">Bedrooms</label>
+                        <select id="bedrooms" name="bedrooms">
+                            <option value="">Select Bedrooms</option>
+                            <option value="1">1 Bedroom</option>
+                            <option value="2">2 Bedrooms</option>
+                            <option value="3">3 Bedrooms</option>
+                            <option value="4+">4+ Bedrooms</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-search">Search Property</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="properties" class="featured-properties">
+        <div class="container">
+            <h2 class="section-title">Featured Properties</h2>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=250&fit=crop" alt="Modern House">
+                        <div class="property-badge">For Sale</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Modern Family House</h3>
+                        <p class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia
+                        </p>
+                        <p class="property-price">$850,000</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4 Bedrooms</span>
+                            <span><i class="fas fa-bath"></i> 3 Bathrooms</span>
+                            <span><i class="fas fa-ruler-combined"></i> 280 m²</span>
+                        </div>
+                        <button class="btn-view-details">View Details</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=250&fit=crop" alt="Luxury Apartment">
+                        <div class="property-badge">For Rent</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Luxury Apartment</h3>
+                        <p class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Bali, Indonesia
+                        </p>
+                        <p class="property-price">$2,500/month</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 2 Bedrooms</span>
+                            <span><i class="fas fa-bath"></i> 2 Bathrooms</span>
+                            <span><i class="fas fa-ruler-combined"></i> 120 m²</span>
+                        </div>
+                        <button class="btn-view-details">View Details</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=250&fit=crop" alt="Beach Villa">
+                        <div class="property-badge">For Sale</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Beachfront Villa</h3>
+                        <p class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Surabaya, Indonesia
+                        </p>
+                        <p class="property-price">$1,200,000</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 5 Bedrooms</span>
+                            <span><i class="fas fa-bath"></i> 4 Bathrooms</span>
+                            <span><i class="fas fa-ruler-combined"></i> 450 m²</span>
+                        </div>
+                        <button class="btn-view-details">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property by Location -->
+    <section id="locations" class="locations-section">
+        <div class="container">
+            <h2 class="section-title">Properties by Location</h2>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=250&fit=crop" alt="Jakarta">
+                    <div class="location-overlay">
+                        <h3>Jakarta</h3>
+                        <p>120 Properties Available</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&h=250&fit=crop" alt="Bali">
+                    <div class="location-overlay">
+                        <h3>Bali</h3>
+                        <p>85 Properties Available</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop" alt="Surabaya">
+                    <div class="location-overlay">
+                        <h3>Surabaya</h3>
+                        <p>67 Properties Available</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=250&fit=crop" alt="Bandung">
+                    <div class="location-overlay">
+                        <h3>Bandung</h3>
+                        <p>93 Properties Available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agents Section -->
+    <section id="agents" class="agents-section">
+        <div class="container">
+            <h2 class="section-title">Our Professional Agents</h2>
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Agent 1" class="agent-photo">
+                    <h3>John Smith</h3>
+                    <p class="agent-title">Senior Property Consultant</p>
+                    <div class="agent-contact">
+                        <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+                        <p><i class="fas fa-envelope"></i> john@homefind.com</p>
+                    </div>
+                    <button class="btn-contact-agent">Contact Agent</button>
+                </div>
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=200&h=200&fit=crop&crop=face" alt="Agent 2" class="agent-photo">
+                    <h3>Sarah Johnson</h3>
+                    <p class="agent-title">Real Estate Specialist</p>
+                    <div class="agent-contact">
+                        <p><i class="fas fa-phone"></i> +62 813-4567-8901</p>
+                        <p><i class="fas fa-envelope"></i> sarah@homefind.com</p>
+                    </div>
+                    <button class="btn-contact-agent">Contact Agent</button>
+                </div>
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" alt="Agent 3" class="agent-photo">
+                    <h3>Michael Chen</h3>
+                    <p class="agent-title">Property Investment Advisor</p>
+                    <div class="agent-contact">
+                        <p><i class="fas fa-phone"></i> +62 814-5678-9012</p>
+                        <p><i class="fas fa-envelope"></i> michael@homefind.com</p>
+                    </div>
+                    <button class="btn-contact-agent">Contact Agent</button>
+                </div>
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" alt="Agent 4" class="agent-photo">
+                    <h3>Emily Davis</h3>
+                    <p class="agent-title">Luxury Property Expert</p>
+                    <div class="agent-contact">
+                        <p><i class="fas fa-phone"></i> +62 815-6789-0123</p>
+                        <p><i class="fas fa-envelope"></i> emily@homefind.com</p>
+                    </div>
+                    <button class="btn-contact-agent">Contact Agent</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>1200+ Properties</h3>
+                    <p>Wide selection of premium properties across Indonesia</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Professional Agents</h3>
+                    <p>Experienced and certified real estate professionals</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Prime Locations</h3>
+                    <p>Properties in the most sought-after areas</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Trusted by Clients</h3>
+                    <p>5-star rated service with satisfied customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"They helped me find my dream house in just two weeks. The service was exceptional and the process was smooth."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Client 1">
+                        <div class="author-info">
+                            <h4>Robert Wilson</h4>
+                            <p>Home Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Professional and reliable. They found the perfect investment property for my portfolio. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=60&h=60&fit=crop&crop=face" alt="Client 2">
+                        <div class="author-info">
+                            <h4>Lisa Anderson</h4>
+                            <p>Property Investor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Great communication and market knowledge. Made selling my property stress-free and profitable."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Client 3">
+                        <div class="author-info">
+                            <h4>David Brown</h4>
+                            <p>Property Seller</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Latest from Our Blog</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=250&fit=crop" alt="Blog 1">
+                    <div class="blog-content">
+                        <h3>Tips for Buying Your First Home</h3>
+                        <p>Essential guide for first-time homebuyers to navigate the property market successfully...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=250&fit=crop" alt="Blog 2">
+                    <div class="blog-content">
+                        <h3>Property Investment Guide 2024</h3>
+                        <p>Comprehensive guide to real estate investment strategies and market trends...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop" alt="Blog 3">
+                    <div class="blog-content">
+                        <h3>Market Trends and Predictions</h3>
+                        <p>Expert analysis of current real estate market conditions and future outlook...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h2>Get in Touch</h2>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p>Jl. Sudirman No. 123, Jakarta 10220, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+62 21 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@homefind.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h3>HomeFind</h3>
+                        <p>Your trusted partner in finding the perfect home. We provide professional real estate services with integrity and excellence.</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#agents">Agents</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Popular Locations</h4>
+                    <ul>
+                        <li><a href="#">Jakarta</a></li>
+                        <li><a href="#">Bali</a></li>
+                        <li><a href="#">Surabaya</a></li>
+                        <li><a href="#">Bandung</a></li>
+                        <li><a href="#">Yogyakarta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Jl. Sudirman No. 123, Jakarta</p>
+                        <p><i class="fas fa-phone"></i> +62 21 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> info@homefind.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HomeFind Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

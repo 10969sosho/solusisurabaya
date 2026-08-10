@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Distributor - Sistem Manajemen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Distributor</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-section">
+                    <div class="nav-section-title">📋 Master Data</div>
+                    <ul class="nav-submenu">
+                        <li><a href="#" class="nav-link active" data-module="produk">📦 Produk</a></li>
+                        <li><a href="#" class="nav-link" data-module="supplier">🏭 Supplier</a></li>
+                        <li><a href="#" class="nav-link" data-module="customer">👥 Customer</a></li>
+                    </ul>
+                </li>
+                <li class="nav-section">
+                    <div class="nav-section-title">💼 Transaksi</div>
+                    <ul class="nav-submenu">
+                        <li><a href="#" class="nav-link" data-module="pembelian">🛒 Pembelian</a></li>
+                        <li><a href="#" class="nav-link" data-module="penjualan">💰 Penjualan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-section">
+                    <div class="nav-section-title">📊 Laporan</div>
+                    <ul class="nav-submenu">
+                        <li><a href="#" class="nav-link" data-module="stock">📦 Stock</a></li>
+                        <li><a href="#" class="nav-link" data-module="finance">💳 Finance</a></li>
+                        <li><a href="#" class="nav-link" data-module="laporan">📈 Laporan</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1 id="page-title">Manajemen Produk</h1>
+            </header>
+
+            <!-- Module Content -->
+            <div class="module-content">
+                <!-- Produk Module -->
+                <div id="produk-module" class="module active">
+                    <div class="module-header">
+                        <button class="btn btn-primary" onclick="showProdukForm()">+ Tambah Produk</button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Kode</th>
+                                    <th>Nama Produk</th>
+                                    <th>Stok</th>
+                                    <th>Harga</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="produk-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Supplier Module -->
+                <div id="supplier-module" class="module">
+                    <div class="module-header">
+                        <button class="btn btn-primary" onclick="showSupplierForm()">+ Tambah Supplier</button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Kontak</th>
+                                    <th>Alamat</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="supplier-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Customer Module -->
+                <div id="customer-module" class="module">
+                    <div class="module-header">
+                        <button class="btn btn-primary" onclick="showCustomerForm()">+ Tambah Customer</button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Kontak</th>
+                                    <th>Alamat</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="customer-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Pembelian Module -->
+                <div id="pembelian-module" class="module">
+                    <div class="module-header">
+                        <button class="btn btn-primary" onclick="showPembelianForm()">+ Buat Pembelian</button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Pembelian</th>
+                                    <th>Tanggal</th>
+                                    <th>Supplier</th>
+                                    <th>Produk</th>
+                                    <th>Qty</th>
+                                    <th>Harga Beli</th>
+                                    <th>Total</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pembelian-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Penjualan Module -->
+                <div id="penjualan-module" class="module">
+                    <div class="module-header">
+                        <button class="btn btn-primary" onclick="showPenjualanForm()">+ Buat Order</button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Order</th>
+                                    <th>Tanggal</th>
+                                    <th>Customer</th>
+                                    <th>Produk</th>
+                                    <th>Qty</th>
+                                    <th>Total</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="penjualan-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Stock Module -->
+                <div id="stock-module" class="module">
+                    <div class="module-header">
+                        <h3>Manajemen Stok</h3>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Kode</th>
+                                    <th>Nama Produk</th>
+                                    <th>Stok Awal</th>
+                                    <th>Masuk</th>
+                                    <th>Keluar</th>
+                                    <th>Stok Akhir</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="stock-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Finance Module -->
+                <div id="finance-module" class="module">
+                    <div class="finance-container">
+                        <div class="finance-card">
+                            <h3>Total Penjualan</h3>
+                            <div class="finance-value positive" id="total-penjualan-finance">Rp 0</div>
+                        </div>
+                        <div class="finance-card">
+                            <h3>Total Pembelian</h3>
+                            <div class="finance-value negative" id="total-pembelian-finance">Rp 0</div>
+                        </div>
+                        <div class="finance-card">
+                            <h3>Laba Kotor</h3>
+                            <div class="finance-value" id="laba-kotor">Rp 0</div>
+                        </div>
+                        <div class="finance-card">
+                            <h3>Margin (%)</h3>
+                            <div class="finance-value" id="margin-percent">0%</div>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <h3>Rincian Transaksi</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Tanggal</th>
+                                    <th>Jenis</th>
+                                    <th>Deskripsi</th>
+                                    <th>Debit</th>
+                                    <th>Kredit</th>
+                                    <th>Saldo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="finance-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Laporan Module -->
+                <div id="laporan-module" class="module">
+                    <div class="laporan-container">
+                        <div class="laporan-card">
+                            <h3>Total Pendapatan</h3>
+                            <div class="laporan-value" id="total-pendapatan">Rp 0</div>
+                        </div>
+                        <div class="laporan-card">
+                            <h3>Total Penjualan</h3>
+                            <div class="laporan-value" id="total-penjualan">0</div>
+                        </div>
+                        <div class="laporan-card">
+                            <h3>Produk Terlaris</h3>
+                            <div class="laporan-value" id="produk-terlaris">-</div>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <h3>Daftar Penjualan</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Order</th>
+                                    <th>Tanggal</th>
+                                    <th>Customer</th>
+                                    <th>Produk</th>
+                                    <th>Qty</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="laporan-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Forms -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

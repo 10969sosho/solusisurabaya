@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Photography - Professional Photographer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --black: #0B0B0B;
+            --dark-gray: #1F1F1F;
+            --white: #FFFFFF;
+            --soft-gray: #E5E7EB;
+            --text-gray: #9CA3AF;
+            --accent: #D4AF37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--white);
+            background: var(--black);
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            background: transparent;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .navbar.scrolled {
+            background: var(--dark-gray);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--white);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: var(--white);
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-slider {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--soft-gray);
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: transparent;
+            color: var(--white);
+            text-decoration: none;
+            border: 1px solid var(--white);
+            border-radius: 0;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        /* Portfolio Gallery */
+        .portfolio {
+            padding: 100px 0;
+            background: var(--black);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 60px;
+            letter-spacing: -1px;
+        }
+
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            grid-auto-rows: 250px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 0;
+        }
+
+        .portfolio-item:nth-child(1) { grid-row: span 2; }
+        .portfolio-item:nth-child(3) { grid-row: span 2; }
+        .portfolio-item:nth-child(6) { grid-row: span 2; }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .overlay-content {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .overlay-content h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .overlay-content p {
+            font-size: 0.9rem;
+            color: var(--soft-gray);
+        }
+
+        /* Collections Section */
+        .collections {
+            padding: 100px 0;
+            background: var(--dark-gray);
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .collection-card {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .collection-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .collection-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .collection-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .collection-card:hover .collection-overlay {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .collection-overlay h3 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .collection-btn {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .collection-card:hover .collection-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: var(--black);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--soft-gray);
+            margin-bottom: 30px;
+        }
+
+        /* Blog Section */
+        .blog {
+            padding: 100px 0;
+            background: var(--dark-gray);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .blog-card {
+            background: var(--black);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .blog-content {
+            padding: 30px;
+        }
+
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .blog-content p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--black);
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .testimonial-card {
+            background: var(--dark-gray);
+            padding: 60px;
+            margin: 0 20px;
+        }
+
+        .testimonial-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--soft-gray);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .testimonial-event {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Booking Section */
+        .booking {
+            padding: 100px 0;
+            background: var(--dark-gray);
+        }
+
+        .booking-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .booking-form {
+            background: var(--white);
+            padding: 50px;
+            margin-top: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--black);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--soft-gray);
+            background: var(--white);
+            color: var(--black);
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-primary {
+            background: var(--black);
+            color: var(--white);
+            border: none;
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-gray);
+        }
+
+        /* Instagram Feed */
+        .instagram {
+            padding: 100px 0;
+            background: var(--black);
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .instagram-item {
+            aspect-ratio: 1;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .instagram-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .instagram-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .instagram-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .instagram-item:hover .instagram-overlay {
+            opacity: 1;
+        }
+
+        .instagram-text {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-column p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-gray);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .masonry-grid,
+            .blog-grid,
+            .collections-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .instagram-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .portfolio-item:nth-child(1),
+            .portfolio-item:nth-child(3),
+            .portfolio-item:nth-child(6) {
+                grid-row: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Daniel</a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-behance"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1920&h=1080&fit=crop');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&h=1080&fit=crop');"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Capturing Moments That Matter</h1>
+            <p>Professional photography for timeless memories.</p>
+            <a href="#portfolio" class="btn">View Portfolio</a>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="masonry-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=800&fit=crop" alt="Wedding Photography">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>Wedding</h3>
+                            <p>Love Stories</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop" alt="Portrait Photography">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>Portrait</h3>
+                            <p>Personal Stories</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=800&fit=crop" alt="Travel Photography">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>Travel</h3>
+                            <p>Adventure Stories</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754?w=600&h=400&fit=crop" alt="Event Photography">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>Events</h3>
+                            <p>Celebration Moments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop" alt="Landscape Photography">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>Landscape</h3>
+                            <p>Nature's Beauty</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&h=800&fit=crop" alt="Lifestyle Photography">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h3>Lifestyle</h3>
+                            <p>Everyday Moments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <h2 class="section-title">Collections</h2>
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop" alt="Wedding Photography Collection">
+                    <div class="collection-overlay">
+                        <h3>Wedding Photography</h3>
+                        <a href="#" class="btn collection-btn">View Collection</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop" alt="Travel Photography Collection">
+                    <div class="collection-overlay">
+                        <h3>Travel Photography</h3>
+                        <a href="#" class="btn collection-btn">View Collection</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop" alt="Portrait Sessions Collection">
+                    <div class="collection-overlay">
+                        <h3>Portrait Sessions</h3>
+                        <a href="#" class="btn collection-btn">View Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=500&fit=crop&crop=face" alt="Daniel - Professional Photographer">
+                </div>
+                <div class="about-text">
+                    <h2>Hi, I'm Daniel.</h2>
+                    <p>A professional photographer capturing stories through my lens for over 10 years. I specialize in creating timeless memories that you'll cherish forever.</p>
+                    <p>My passion for photography began when I discovered the power of freezing moments in time. Each photograph tells a unique story, and I'm here to help you tell yours.</p>
+                    <a href="#" class="btn">Read My Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Blog / Journal</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1554048612-b6a482b224bb?w=600&h=300&fit=crop" alt="Behind the scenes photoshoot">
+                    <div class="blog-content">
+                        <h3>Behind the Scenes Photoshoot</h3>
+                        <p>Get an exclusive look at what goes into creating stunning portrait sessions. From lighting setup to client direction.</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=600&h=300&fit=crop" alt="Photography tips">
+                    <div class="blog-content">
+                        <h3>Photography Tips</h3>
+                        <p>Learn professional photography techniques that will elevate your own photos. Master composition and lighting.</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=300&fit=crop" alt="Travel photography stories">
+                    <div class="blog-content">
+                        <h3>Travel Photography Stories</h3>
+                        <p>Join me on adventures around the world as I capture breathtaking landscapes and cultural moments.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The photos were absolutely stunning and captured our special day perfectly. Daniel's attention to detail and artistic vision exceeded all our expectations."</p>
+                    <div class="testimonial-author">Sarah Johnson</div>
+                    <div class="testimonial-event">Wedding Photography</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="contact" class="booking">
+        <div class="container">
+            <div class="booking-container">
+                <h2 class="section-title">Book Your Photoshoot</h2>
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-type">Event Type</label>
+                        <select id="event-type" name="event-type" required>
+                            <option value="">Select Event Type</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="portrait">Portrait Session</option>
+                            <option value="event">Event Coverage</option>
+                            <option value="commercial">Commercial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your vision..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section id="instagram" class="instagram">
+        <div class="container">
+            <h2 class="section-title">Instagram Feed</h2>
+            <div class="instagram-grid">
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop" alt="Photography work 1">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram" style="color: white; font-size: 2rem;"></i>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=400&fit=crop" alt="Photography work 2">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram" style="color: white; font-size: 2rem;"></i>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=400&fit=crop" alt="Photography work 3">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram" style="color: white; font-size: 2rem;"></i>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&h=400&fit=crop" alt="Photography work 4">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram" style="color: white; font-size: 2rem;"></i>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=400&h=400&fit=crop" alt="Photography work 5">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram" style="color: white; font-size: 2rem;"></i>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1540206395-68808572332f?w=400&h=400&fit=crop" alt="Photography work 6">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram" style="color: white; font-size: 2rem;"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="instagram-text">Follow My Work @photographer</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Daniel Photography</h3>
+                    <p>Professional photographer capturing life's precious moments with artistic vision and technical excellence.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> daniel@photography.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY</li>
+                        <li><i class="fab fa-instagram"></i> @photographer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Daniel Photography. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Hero slider
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 5000);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('.booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! I will get back to you within 24 hours.');
+            this.reset();
+        });
+
+        // Testimonial slider
+        const testimonials = [
+            {
+                text: "The photos were absolutely stunning and captured our special day perfectly.",
+                author: "Sarah Johnson",
+                event: "Wedding Photography"
+            },
+            {
+                text: "Daniel's creative eye and professional approach made our corporate shoot a huge success.",
+                author: "Michael Chen",
+                event: "Corporate Event"
+            },
+            {
+                text: "Incredible attention to detail and such a pleasure to work with. Highly recommended!",
+                author: "Emma Rodriguez",
+                event: "Portrait Session"
+            }
+        ];
+
+        let currentTestimonial = 0;
+        const testimonialCard = document.querySelector('.testimonial-card');
+
+        function showTestimonial(index) {
+            const testimonial = testimonials[index];
+            testimonialCard.innerHTML = `
+                <p class="testimonial-text">"${testimonial.text}"</p>
+                <div class="testimonial-author">${testimonial.author}</div>
+                <div class="testimonial-event">${testimonial.event}</div>
+            `;
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        // Auto-rotate testimonials every 4 seconds
+        setInterval(nextTestimonial, 4000);
+    </script>
+</body>
+</html>

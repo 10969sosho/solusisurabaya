@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menu AVENIR — Jelajahi koleksi roti dan pastry artisan kami.">
+  <title>Menu | AVENIR Bakery</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animation.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <div class="grain-overlay"></div>
+  <div class="cursor-glow"></div>
+  <div class="scroll-progress"></div>
+
+  <div class="loader">
+    <div class="loader-icon"></div>
+    <p class="loader-text">Baking Fresh</p>
+  </div>
+
+  <div class="toast">
+    <div class="toast-icon">✓</div>
+    <p class="toast-text"></p>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">AVE<span>NIR</span></a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="gallery.html">Galeri</a></li>
+          <li><a href="story.html">Cerita</a></li>
+          <li><a href="experience.html">Pengalaman</a></li>
+          <li><a href="reservation.html">Reservasi</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="nav-icon" aria-label="Cari">⌕</button>
+          <button class="nav-icon" aria-label="Keranjang">◻</button>
+          <a href="reservation.html" class="btn-reserve">Pesan Sekarang</a>
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="index.html"><span class="mobile-nav-icon">⌂</span>Beranda</a>
+    <a href="menu.html" class="active"><span class="mobile-nav-icon">☰</span>Menu</a>
+    <a href="gallery.html"><span class="mobile-nav-icon">▣</span>Galeri</a>
+    <a href="reservation.html"><span class="mobile-nav-icon">◉</span>Reservasi</a>
+  </nav>
+
+  <main>
+
+    <section class="page-header">
+      <div class="page-header-bg">
+        <img src="assets/images/makanan/banner1.jpg" alt="Latar Menu" loading="eager">
+      </div>
+      <div class="page-header-content">
+        <span class="page-header-tag">Menu Kami</span>
+        <h1 class="page-header-title">Roti <em>Artisan</em></h1>
+        <p class="page-header-desc">
+          Setiap roti dan pastry dibuat setiap pagi oleh baker artisan kami, menggunakan tepung terbaik dan bahan-bahan segar.
+        </p>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+
+        <div class="menu-tabs reveal">
+          <button class="menu-tab active" data-category="all">Semua</button>
+          <button class="menu-tab" data-category="main">Hidangan Utama</button>
+          <button class="menu-tab" data-category="dessert">Pencuci Mulut</button>
+          <button class="menu-tab" data-category="beverage">Minuman</button>
+          <button class="menu-tab" data-category="coffee">Kopi</button>
+          <button class="menu-tab" data-category="special">Menu Spesial</button>
+        </div>
+
+        <div class="menu-grid">
+
+          <!-- Roti Artisan -->
+          <div class="menu-card" data-category="bread">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu2.jpg" alt="Sourdough Classic" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Tepung organik, fermentasi 48 jam, oven batu</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Roti Artisan</p>
+              <h3 class="menu-card-title">Sourdough Classic</h3>
+              <p class="menu-card-desc">Tepung organik, fermentasi 48 jam, oven batu</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">180 kkal</span>
+                <span class="menu-card-price">Rp55.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="bread">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu3.jpg" alt="Baguette Prancis" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Tepung protein tinggi, ragi alami, crumb lembut</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Roti Artisan</p>
+              <h3 class="menu-card-title">Baguette Prancis</h3>
+              <p class="menu-card-desc">Tepung protein tinggi, ragi alami, crumb lembut</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">160 kkal</span>
+                <span class="menu-card-price">Rp35.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="bread">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu4.jpg" alt="Roti Gandum Utuh" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Gandum utuh, biji-bijian, madu organik</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Roti Artisan</p>
+              <h3 class="menu-card-title">Roti Gandum Utuh</h3>
+              <p class="menu-card-desc">Gandum utuh, biji-bijian, madu organik</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">200 kkal</span>
+                <span class="menu-card-price">Rp45.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="bread">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu5.webp" alt="Roti Coklat Kismis" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Coklat Belgia, kismis, kayu manis</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Roti Artisan</p>
+              <h3 class="menu-card-title">Roti Coklat Kismis</h3>
+              <p class="menu-card-desc">Coklat Belgia, kismis, kayu manis</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">220 kkal</span>
+                <span class="menu-card-price">Rp50.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="bread">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu6.jpg" alt="Focaccia Rosemary" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Minyak zaitun, rosemary segar, garam laut</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Roti Artisan</p>
+              <h3 class="menu-card-title">Focaccia Rosemary</h3>
+              <p class="menu-card-desc">Minyak zaitun, rosemary segar, garam laut</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">190 kkal</span>
+                <span class="menu-card-price">Rp40.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="bread">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu7.jpg" alt="Ciabatta Alami" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Tepung Italia, hidrasi 80%, tekstur kenyal</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Roti Artisan</p>
+              <h3 class="menu-card-title">Ciabatta Alami</h3>
+              <p class="menu-card-desc">Tepung Italia, hidrasi 80%, tekstur kenyal</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">170 kkal</span>
+                <span class="menu-card-price">Rp38.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pastry -->
+          <div class="menu-card" data-category="pastry">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu8.jpg" alt="Croissant Mentega" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Mentega Prancis, 27 lapis, pastry emas</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Pastry</p>
+              <h3 class="menu-card-title">Croissant Mentega</h3>
+              <p class="menu-card-desc">Mentega Prancis, 27 lapis, pastry emas</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">250 kkal</span>
+                <span class="menu-card-price">Rp30.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="pastry">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu2.jpg" alt="Danish Buah" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Buah musiman, pastry cream, almond flakes</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Pastry</p>
+              <h3 class="menu-card-title">Danish Buah</h3>
+              <p class="menu-card-desc">Buah musiman, pastry cream, almond flakes</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">220 kkal</span>
+                <span class="menu-card-price">Rp32.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="pastry">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu3.jpg" alt="Pain au Chocolat" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Coklat hitam 70%, mentega premium</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Pastry</p>
+              <h3 class="menu-card-title">Pain au Chocolat</h3>
+              <p class="menu-card-desc">Coklat hitam 70%, mentega premium</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">270 kkal</span>
+                <span class="menu-card-price">Rp35.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="pastry">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu4.jpg" alt="Cinnamon Roll" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Kayu manis Ceylon, cream cheese frosting</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Pastry</p>
+              <h3 class="menu-card-title">Cinnamon Roll</h3>
+              <p class="menu-card-desc">Kayu manis Ceylon, cream cheese frosting</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">290 kkal</span>
+                <span class="menu-card-price">Rp28.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kue Kering -->
+          <div class="menu-card" data-category="cookie">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu5.webp" alt="Cookies Coklat Chip" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Coklat Belgia, mentega asin, garam laut</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Kue Kering</p>
+              <h3 class="menu-card-title">Cookies Coklat Chip</h3>
+              <p class="menu-card-desc">Coklat Belgia, mentega asin, garam laut</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">200 kkal</span>
+                <span class="menu-card-price">Rp25.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="cookie">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu6.jpg" alt="Macaron Klasik" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Putih telur Prancis, filling ganache</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Kue Kering</p>
+              <h3 class="menu-card-title">Macaron Klasik</h3>
+              <p class="menu-card-desc">Putih telur Prancis, filling ganache</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">150 kkal</span>
+                <span class="menu-card-price">Rp40.000/box 6</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="cookie">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu7.jpg" alt="Biscotti Almond" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Almond panggang, double bake, cocok kopi</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Kue Kering</p>
+              <h3 class="menu-card-title">Biscotti Almond</h3>
+              <p class="menu-card-desc">Almond panggang, double bake, cocok kopi</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">120 kkal</span>
+                <span class="menu-card-price">Rp22.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="cookie">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu8.jpg" alt="Madeleine Madu" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Madu hutan, lemon zest, butter lembut</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Kue Kering</p>
+              <h3 class="menu-card-title">Madeleine Madu</h3>
+              <p class="menu-card-desc">Madu hutan, lemon zest, butter lembut</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">130 kkal</span>
+                <span class="menu-card-price">Rp20.000/box 4</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kopi & Minuman -->
+          <div class="menu-card" data-category="coffee">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu2.jpg" alt="Kopi Susu Gula Aren" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Espresso Toraja, susu oat, gula aren asli</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Kopi & Minuman</p>
+              <h3 class="menu-card-title">Kopi Susu Gula Aren</h3>
+              <p class="menu-card-desc">Espresso Toraja, susu oat, gula aren asli</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">80 kkal</span>
+                <span class="menu-card-price">Rp32.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="coffee">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu3.jpg" alt="Matcha Latte" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Matcha Jepang premium, susu almond</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Kopi & Minuman</p>
+              <h3 class="menu-card-title">Matcha Latte</h3>
+              <p class="menu-card-desc">Matcha Jepang premium, susu almond</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">70 kkal</span>
+                <span class="menu-card-price">Rp38.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="coffee">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu4.jpg" alt="Cappuccino Klasik" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Blend Kintamani, microfoam lembut</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Kopi & Minuman</p>
+              <h3 class="menu-card-title">Cappuccino Klasik</h3>
+              <p class="menu-card-desc">Blend Kintamani, microfoam lembut</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">90 kkal</span>
+                <span class="menu-card-price">Rp30.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="coffee">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu5.webp" alt="Cold Brew" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Single origin Flores, seduh 18 jam</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Kopi & Minuman</p>
+              <h3 class="menu-card-title">Cold Brew</h3>
+              <p class="menu-card-desc">Single origin Flores, seduh 18 jam</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">5 kkal</span>
+                <span class="menu-card-price">Rp28.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu Spesial -->
+          <div class="menu-card" data-category="special">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu6.jpg" alt="Roti Raksasa Platter" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Platter roti artisan untuk 8-10 orang</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Menu Spesial</p>
+              <h3 class="menu-card-title">Roti Raksasa Platter</h3>
+              <p class="menu-card-desc">Platter roti artisan untuk 8-10 orang</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">—</span>
+                <span class="menu-card-price">Rp250.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="special">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu7.jpg" alt="Banana Bread Premium" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Pisang Cavendish, walnut, glaze madu</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Menu Spesial</p>
+              <h3 class="menu-card-title">Banana Bread Premium</h3>
+              <p class="menu-card-desc">Pisang Cavendish, walnut, glaze madu</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">—</span>
+                <span class="menu-card-price">Rp35.000/slice</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="special">
+            <div class="menu-card-image">
+              <img src="assets/images/makanan/menu8.jpg" alt="Box Hadiah Roti" loading="lazy">
+              <div class="menu-card-overlay">
+                <p class="menu-card-overlay-text">Koleksi roti dan pastry dalam box premium</p>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <p class="menu-card-category">Menu Spesial</p>
+              <h3 class="menu-card-title">Box Hadiah Roti</h3>
+              <p class="menu-card-desc">Koleksi roti dan pastry dalam box premium</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-calories">—</span>
+                <span class="menu-card-price">Rp150.000</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bg-text">AVENIR</div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">AVE<span>NIR</span></a>
+          <p>AVENIR Bakery — Roti artisan dan pastry premium untuk setiap momen berharga Anda. Dibuat dengan cinta, dipanggang dengan sempurna.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">⟐</a>
+            <a href="#" aria-label="Twitter">⬡</a>
+            <a href="#" aria-label="Facebook">◈</a>
+            <a href="#" aria-label="TikTok">◇</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="story.html">Cerita Kami</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="experience.html">Pengalaman</a></li>
+            <li><a href="reservation.html">Reservasi</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Jam Buka</h4>
+          <ul>
+            <li><p>Sen – Sab: 07:00 — 21:00</p></li>
+            <li><p>Minggu: 08:00 — 20:00</p></li>
+            <li><p>Sarapan: 07:00 — 11:00</p></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <p>Jl. Roti No. 15, Menteng</p>
+          <p>Jakarta Pusat 10310</p>
+          <p>+62 21 5555 0123</p>
+          <p>halo@avenir-bakery.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AVENIR Bakery. Seluruh hak cipta dilindungi.</p>
+        <p>Dibuat dengan semangat ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/animation.js"></script>
+</body>
+</html>

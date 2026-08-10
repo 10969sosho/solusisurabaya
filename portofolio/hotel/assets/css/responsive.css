@@ -1,0 +1,415 @@
+@media (max-width: 1200px) {
+    .rooms-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .dining-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .story-grid {
+        gap: 48px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-mobile-toggle {
+        display: flex;
+    }
+
+    .gallery-bento {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 180px;
+    }
+
+    .bento-tall {
+        grid-row: span 2;
+    }
+
+    .bento-wide {
+        grid-column: span 2;
+    }
+
+    .stats-grid {
+        gap: 24px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-floating-text {
+        right: 0;
+        bottom: -20px;
+    }
+
+    .booking-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-search-room {
+        grid-column: 1 / -1;
+        border-radius: var(--radius-sm);
+        padding: 16px;
+    }
+
+    .booking-field {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 80px 20px;
+    }
+
+    .hero-section {
+        padding: 140px 20px 80px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-badge {
+        font-size: 10px;
+        letter-spacing: 2px;
+        gap: 10px;
+    }
+
+    .badge-line {
+        width: 24px;
+    }
+
+    .hero-headline {
+        font-size: clamp(36px, 10vw, 56px);
+    }
+
+    .hero-desc {
+        font-size: 15px;
+    }
+
+    .hero-booking-bar {
+        margin-top: 48px;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .rooms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-preview-section {
+        padding: 80px 20px;
+    }
+
+    .experience-scroll {
+        margin: 0 -20px;
+        padding: 0 20px;
+    }
+
+    .exp-card {
+        width: 240px;
+    }
+
+    .exp-label {
+        font-size: 15px;
+        bottom: 40px;
+        left: 16px;
+    }
+
+    .section-header {
+        margin-bottom: 48px;
+    }
+
+    .section-tag {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .dining-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-bento {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 160px;
+        gap: 10px;
+    }
+
+    .bento-tall {
+        grid-row: span 2;
+    }
+
+    .bento-wide {
+        grid-column: span 2;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .testimonial-card {
+        padding: 28px 24px;
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .booking-container {
+        padding: 36px 24px;
+        border-radius: var(--radius-lg);
+    }
+
+    .booking-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .footer-legal {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-watermark {
+        font-size: 100px;
+    }
+
+    #weather-ticker {
+        bottom: 20px;
+        left: 20px;
+        padding: 8px 14px;
+        font-size: 11px;
+    }
+
+    .music-toggle {
+        bottom: 20px;
+        right: 20px;
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-floating {
+        top: 12px;
+        width: calc(100% - 24px);
+    }
+
+    .nav-inner {
+        padding: 0 12px 0 18px;
+        height: 60px;
+    }
+
+    .nav-icon-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+        letter-spacing: 4px;
+    }
+
+    .btn-book-nav {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .hero-badge {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+
+    .badge-line {
+        width: 16px;
+    }
+
+    .hero-headline {
+        font-size: 32px;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-primary,
+    .cta-secondary {
+        justify-content: center;
+        text-align: center;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    .section-header {
+        margin-bottom: 36px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .exp-card {
+        width: 200px;
+    }
+
+    .exp-label {
+        font-size: 13px;
+        bottom: 32px;
+        left: 14px;
+    }
+
+    .gallery-bento {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 140px;
+        gap: 8px;
+    }
+
+    .gallery-filters {
+        gap: 6px;
+    }
+
+    .gallery-filter {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .booking-container {
+        padding: 28px 18px;
+    }
+
+    .booking-modal-content {
+        padding: 28px 20px;
+    }
+
+    .hero-scroll-indicator {
+        display: none;
+    }
+
+    .page-header {
+        min-height: 50vh;
+        padding: 140px 20px 60px;
+    }
+
+    .page-section,
+    .rooms-full-section,
+    .experience-full-section,
+    .story-full-section,
+    .gallery-full-section,
+    .dining-full-section,
+    .contact-full-section {
+        padding: 60px 20px;
+    }
+
+    .rooms-full-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exp-item {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 28px;
+    }
+
+    .exp-item:nth-child(even) {
+        direction: ltr;
+    }
+
+    .dining-full-card {
+        grid-template-columns: 1fr;
+    }
+
+    .dining-full-card:nth-child(even) .dining-full-image {
+        order: 0;
+    }
+
+    .dining-full-content {
+        padding: 28px;
+    }
+
+    .story-full-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-feature-image {
+        position: static;
+        top: auto;
+    }
+
+    .story-values {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-full-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-form-row {
+        grid-template-columns: 1fr;
+    }
+}

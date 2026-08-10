@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Clinic - Kesehatan Anda Prioritas Kami</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>MediCare Clinic</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#departments">Departments</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <button class="btn-primary">Book Appointment</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Trusted by 10,000+ Patients</span>
+                </div>
+                <h1 class="hero-title">Your Health Is Our Priority</h1>
+                <p class="hero-subtitle">Professional healthcare services with experienced doctors and modern medical facilities.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Book Appointment</button>
+                    <button class="btn-secondary">View Doctors</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="doctor-image">
+                    <i class="fas fa-user-md"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>General Checkup</h3>
+                    <p>Comprehensive health checkup with modern diagnostic tools</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <h3>Dental Care</h3>
+                    <p>Professional dental care and oral health services</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Laboratory Test</h3>
+                    <p>Accurate and fast laboratory testing services</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3>Vaccination</h3>
+                    <p>Complete vaccination programs for all ages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <h2 class="section-title">Our Doctors</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-photo">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dr. Michael Lee</h3>
+                    <p class="specialization">Cardiologist</p>
+                    <p class="experience">12 Years Experience</p>
+                    <button class="btn-outline">View Profile</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-photo">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p class="specialization">Pediatrician</p>
+                    <p class="experience">8 Years Experience</p>
+                    <button class="btn-outline">View Profile</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-photo">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dr. David Chen</h3>
+                    <p class="specialization">Neurologist</p>
+                    <p class="experience">15 Years Experience</p>
+                    <button class="btn-outline">View Profile</button>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-photo">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dr. Maria Rodriguez</h3>
+                    <p class="specialization">Dermatologist</p>
+                    <p class="experience">10 Years Experience</p>
+                    <button class="btn-outline">View Profile</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment">
+        <div class="container">
+            <div class="appointment-card">
+                <h2 class="section-title">Book Appointment</h2>
+                <form class="appointment-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Patient Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Doctor</option>
+                            <option value="dr-lee">Dr. Michael Lee - Cardiologist</option>
+                            <option value="dr-johnson">Dr. Sarah Johnson - Pediatrician</option>
+                            <option value="dr-chen">Dr. David Chen - Neurologist</option>
+                            <option value="dr-rodriguez">Dr. Maria Rodriguez - Dermatologist</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="departments">
+        <div class="container">
+            <h2 class="section-title">Our Departments</h2>
+            <div class="departments-grid">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Cardiology</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Pediatrics</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Neurology</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Orthopedics</h3>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3>Dermatology</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Patient Testimonials</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>John Smith</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The doctors are very professional and caring. The service is excellent and the facilities are modern."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Emily Davis</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Great experience from start to finish. The staff is friendly and the doctors are very knowledgeable."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Michael Wilson</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Highly recommend this clinic. They provide comprehensive care and really listen to their patients."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Articles Section -->
+    <section id="articles" class="articles">
+        <div class="container">
+            <h2 class="section-title">Health Articles</h2>
+            <div class="articles-grid">
+                <div class="article-card">
+                    <div class="article-image">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3>Healthy Lifestyle Tips</h3>
+                    <p>Learn how to maintain a healthy lifestyle with simple daily habits and proper nutrition.</p>
+                </div>
+                <div class="article-card">
+                    <div class="article-image">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Heart Disease Prevention</h3>
+                    <p>Understanding the risk factors and prevention strategies for heart disease.</p>
+                </div>
+                <div class="article-card">
+                    <div class="article-image">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Child Health Guide</h3>
+                    <p>Essential guide for parents on maintaining children's health and development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinic Location Section -->
+    <section id="contact" class="location">
+        <div class="container">
+            <h2 class="section-title">Visit Our Clinic</h2>
+            <div class="location-content">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Clinic Location Map</p>
+                    </div>
+                </div>
+                <div class="clinic-info">
+                    <h3>MediCare Clinic</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Medical Street, Health District, City 12345</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(021) 1234-5678</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@medicareclinic.com</span>
+                    </div>
+                    <div class="opening-hours">
+                        <h4>Opening Hours</h4>
+                        <div class="hours-item">
+                            <span>Mon–Fri:</span>
+                            <span>08:00 – 18:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Saturday:</span>
+                            <span>08:00 – 14:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Sunday:</span>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare Clinic</span>
+                    </div>
+                    <p>Professional healthcare services with experienced doctors and modern medical facilities.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">General Checkup</a></li>
+                        <li><a href="#">Dental Care</a></li>
+                        <li><a href="#">Laboratory Test</a></li>
+                        <li><a href="#">Vaccination</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Departments</h4>
+                    <ul>
+                        <li><a href="#">Cardiology</a></li>
+                        <li><a href="#">Pediatrics</a></li>
+                        <li><a href="#">Neurology</a></li>
+                        <li><a href="#">Dermatology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(021) 1234-5678</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@medicareclinic.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Medical Street, City 12345</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MediCare Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

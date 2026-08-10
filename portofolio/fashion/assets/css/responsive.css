@@ -1,0 +1,426 @@
+/* ============================================
+   VLTX — responsive.css — Adaptive Breakpoints
+   ============================================ */
+
+/* ---------- TABLET (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    width: 260px;
+    z-index: 1003;
+    border-right: 1px solid var(--glass-border);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-logo {
+    writing-mode: horizontal-tb;
+    rotate: 0deg;
+  }
+
+  .sidebar-nav {
+    gap: 16px;
+  }
+
+  .nav-link {
+    writing-mode: horizontal-tb;
+    rotate: 0deg;
+    font-size: 13px;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link.active {
+    color: var(--accent);
+  }
+
+  .sidebar-bottom {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .sidebar-icons {
+    flex-direction: row;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto 40px;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-image-stack {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .editorial-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .editorial-text {
+    max-width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 220px;
+  }
+
+  .bento-card.bento-lg {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .testimonial-card.glass {
+    min-width: 300px;
+    max-width: 320px;
+  }
+}
+
+/* ---------- MOBILE (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+  section {
+    padding: 80px 20px;
+  }
+
+  .hero-section {
+    padding-top: 20px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: clamp(36px, 10vw, 56px);
+  }
+
+  .hero-image-stack {
+    max-width: 280px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-marquee {
+    margin-top: 48px;
+  }
+
+  .masonry-grid {
+    columns: 2;
+    column-gap: 10px;
+  }
+
+  .masonry-card {
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .editorial-stats-row {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .stat-item {
+    padding: 28px 16px;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 180px;
+    gap: 10px;
+  }
+
+  .bento-card.bento-lg {
+    grid-column: span 2;
+  }
+
+  .bento-card.bento-portrait {
+    grid-row: span 1;
+  }
+
+  .testimonial-card.glass {
+    min-width: 280px;
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  .testimonial-track {
+    animation: testimonialScroll 50s linear infinite;
+  }
+
+  .newsletter-box {
+    padding: 48px 24px;
+  }
+
+  .input-wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .newsletter-btn {
+    margin-left: 0;
+    justify-content: center;
+    border-radius: 50px;
+  }
+
+  .footer-section {
+    padding: 60px 20px 100px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-bg-text {
+    font-size: 30vw;
+    bottom: -20px;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .cart-popup {
+    bottom: 80px;
+    right: 16px;
+    left: 16px;
+  }
+
+  .slider-card {
+    min-width: 240px;
+    max-width: 260px;
+  }
+
+  .lookbook-filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+/* ---------- SMALL MOBILE (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  section {
+    padding: 60px 16px;
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 12vw, 48px);
+  }
+
+  .hero-image-stack {
+    max-width: 240px;
+  }
+
+  .masonry-grid {
+    columns: 1;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .stat-item {
+    padding: 24px 12px;
+  }
+
+  .stat-number {
+    font-size: 36px;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+
+  .bento-card.bento-lg {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .bento-card.bento-portrait {
+    grid-row: span 1;
+  }
+
+  .slider-card {
+    min-width: 220px;
+    max-width: 240px;
+  }
+
+  .newsletter-box {
+    padding: 40px 18px;
+  }
+
+  .newsletter-title {
+    font-size: 28px;
+  }
+
+  .hero-cta {
+    width: 100%;
+  }
+
+  .cta-primary {
+    width: 100%;
+  }
+
+  .testimonial-card.glass {
+    min-width: 260px;
+    max-width: 280px;
+  }
+
+  .editorial-stats-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* ---------- CONTACT + HOME PREVIEW RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-preview {
+    padding: 60px 20px 80px;
+  }
+
+  .preview-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .preview-card.preview-wide {
+    grid-column: span 1;
+  }
+
+  .page-header {
+    padding: 80px 20px 32px;
+  }
+
+  .contact-section {
+    padding: 60px 20px 80px;
+  }
+
+  .contact-grid {
+    gap: 32px;
+  }
+
+  .contact-info-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .preview-title {
+    font-size: 18px;
+  }
+
+  .preview-overlay {
+    padding: 20px;
+  }
+}
+
+/* ---------- MENU OVERLAY ---------- */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1002;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.sidebar-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* ---------- HIDE CURSOR ON TOUCH ---------- */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor,
+  .cursor-follower {
+    display: none;
+  }
+
+  body {
+    cursor: auto;
+  }
+
+  a, button {
+    cursor: pointer;
+  }
+}

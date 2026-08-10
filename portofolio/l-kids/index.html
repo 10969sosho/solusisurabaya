@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L kids official — Premium Fashion Catalog</title>
+    <meta name="description" content="Katalog fashion premium L kids official. Koleksi curated seperti editorial gallery dengan link marketplace eksternal." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#app">Skip</a>
+
+    <header class="nav" role="banner">
+      <div class="nav__left">
+        <button class="icon-btn" type="button" id="menuBtn" aria-label="Open menu" aria-controls="sidebarLeft" aria-expanded="false">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <button class="nav__label" type="button" id="menuLabelBtn" aria-controls="sidebarLeft" aria-expanded="false">MENU</button>
+      </div>
+
+      <a class="nav__logo" href="#/" aria-label="L kids official home">
+        <span class="logo-mark" aria-hidden="true">L</span>
+        <span class="logo-text">KIDS OFFICIAL</span>
+      </a>
+
+      <div class="nav__right">
+        <a class="nav__login" href="#/login" aria-label="Login">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 21a8 8 0 0 0-16 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="1.6" />
+          </svg>
+          <span>LOGIN</span>
+        </a>
+      </div>
+    </header>
+
+    <aside class="sidebar sidebar--left" id="sidebarLeft" aria-hidden="true">
+      <div class="sidebar__inner">
+        <button class="sidebar__close" type="button" id="menuCloseBtn" aria-label="Close menu">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <nav class="menu" aria-label="Primary">
+          <a href="#/" class="menu__item">HOME</a>
+          <a href="#/shop" class="menu__item">SHOP</a>
+          <a href="#/collections" class="menu__item">COLLECTIONS</a>
+          <a href="#/lookbook" class="menu__item">LOOKBOOK</a>
+          <a href="#/about" class="menu__item">ABOUT</a>
+          <a href="#/films" class="menu__item">FILMS</a>
+          <a href="#/contact" class="menu__item">CONTACT</a>
+        </nav>
+
+        <div class="sidebar__bottom">
+          <div class="social" aria-label="Social links">
+            <a class="social__item" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" stroke="currentColor" stroke-width="1.6" />
+                <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="1.6" />
+                <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+              </svg>
+            </a>
+            <a class="social__item" href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M14 9h3V6h-3a4 4 0 0 0-4 4v3H7v3h3v6h3v-6h3l1-3h-4v-3a1 1 0 0 1 1-1Z" fill="currentColor" />
+              </svg>
+            </a>
+            <a class="social__item" href="https://pinterest.com/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3a9 9 0 0 0-3 17.5c-.1-.8-.2-2 .1-2.9l1.4-5.9s-.4-.8-.4-2c0-1.9 1.1-3.3 2.5-3.3 1.2 0 1.8.9 1.8 2 0 1.2-.8 3-1.2 4.7-.3 1.4.7 2.6 2.1 2.6 2.5 0 4.4-2.6 4.4-6.3 0-3.3-2.4-5.6-5.8-5.6-3.9 0-6.2 2.9-6.2 5.9 0 1.2.5 2.5 1 3.1.1.1.1.3.1.5l-.4 1.6c-.1.5-.4.6-.8.4-1.5-.7-2.4-3-2.4-4.8 0-3.9 2.9-7.5 8.3-7.5 4.4 0 7.8 3.1 7.8 7.3 0 4.4-2.8 7.9-6.6 7.9-1.3 0-2.6-.7-3-1.5l-.8 3.1c-.3 1-.9 2.2-1.3 3A9 9 0 1 0 12 3Z" fill="currentColor" />
+              </svg>
+            </a>
+            <a class="social__item" href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M14 3v11.1a3.9 3.9 0 1 1-3-3.8V7a7.2 7.2 0 1 0 6.2 7.1V9.8c1.2.9 2.6 1.4 3.8 1.5V8.2c-2.1-.2-3.8-1.8-4-4.2H14Z" fill="currentColor" />
+              </svg>
+            </a>
+          </div>
+          <div class="sidebar__footer">
+            <div>L kids official</div>
+            <div>© 2026</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay" hidden></div>
+
+    <aside class="side-nav" aria-label="Editorial navigation">
+      <a class="side-nav__item" href="#latest" data-target="latest">LATEST COLLECTION</a>
+      <a class="side-nav__item" href="#previous" data-target="previous">COLLECTIONS</a>
+      <a class="side-nav__item" href="#about" data-target="about">ABOUT US</a>
+      <a class="side-nav__item" href="#films" data-target="films">FILMS</a>
+    </aside>
+
+    <main id="app" class="app" role="main" tabindex="-1"></main>
+
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

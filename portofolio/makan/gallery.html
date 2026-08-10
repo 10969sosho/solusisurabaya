@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galeri AVENIR Bakery — Lihat-lihat koleksi roti dan pastry artisan kami.">
+  <title>Galeri | AVENIR Bakery</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animation.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <div class="grain-overlay"></div>
+  <div class="cursor-glow"></div>
+  <div class="scroll-progress"></div>
+
+  <div class="loader">
+    <div class="loader-icon"></div>
+    <p class="loader-text">Baking Fresh</p>
+  </div>
+
+  <div class="toast">
+    <div class="toast-icon">✓</div>
+    <p class="toast-text"></p>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">AVE<span>NIR</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html" class="active">Galeri</a></li>
+          <li><a href="story.html">Cerita</a></li>
+          <li><a href="experience.html">Pengalaman</a></li>
+          <li><a href="reservation.html">Reservasi</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="nav-icon" aria-label="Cari">⌕</button>
+          <button class="nav-icon" aria-label="Keranjang">◻</button>
+          <a href="reservation.html" class="btn-reserve">Pesan Sekarang</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="index.html"><span class="mobile-nav-icon">⌂</span>Beranda</a>
+    <a href="menu.html"><span class="mobile-nav-icon">☰</span>Menu</a>
+    <a href="gallery.html" class="active"><span class="mobile-nav-icon">▣</span>Galeri</a>
+    <a href="reservation.html"><span class="mobile-nav-icon">◉</span>Reservasi</a>
+  </nav>
+
+  <main>
+
+    <section class="page-header">
+      <div class="page-header-bg">
+        <img src="assets/images/makanan/banner1.jpg" alt="Latar Galeri" loading="eager">
+      </div>
+      <div class="page-header-content">
+        <span class="page-header-tag">Perjalanan Visual</span>
+        <h1 class="page-header-title"><em>Galeri</em> Kami</h1>
+        <p class="page-header-desc">
+          Masuki dunia AVENIR melalui koleksi kurasi fotografi makanan premium dan momen interior eksklusif.
+        </p>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <div class="gallery-filters reveal" style="justify-content:center;margin-bottom:48px;">
+          <button class="gallery-filter active" data-filter="all">Semua</button>
+          <button class="gallery-filter" data-filter="bread">Roti</button>
+          <button class="gallery-filter" data-filter="pastry">Pastry</button>
+          <button class="gallery-filter" data-filter="cookie">Kue Kering</button>
+          <button class="gallery-filter" data-filter="coffee">Kopi</button>
+          <button class="gallery-filter" data-filter="atmosphere">Suasana</button>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-category="bread">
+            <img src="assets/images/makanan/menu2.jpg" alt="Roti 1" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="bread">
+            <img src="assets/images/makanan/menu3.jpg" alt="Roti 2" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="pastry">
+            <img src="assets/images/makanan/menu4.jpg" alt="Pastry 1" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="cookie">
+            <img src="assets/images/makanan/menu5.webp" alt="Kue Kering 1" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="coffee">
+            <img src="assets/images/makanan/menu6.jpg" alt="Kopi 1" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="atmosphere">
+            <img src="assets/images/makanan/menu7.jpg" alt="Suasana 1" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="bread">
+            <img src="assets/images/makanan/menu8.jpg" alt="Roti 3" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="bread">
+            <img src="assets/images/makanan/menu2.jpg" alt="Roti 4" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="pastry">
+            <img src="assets/images/makanan/menu3.jpg" alt="Pastry 2" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="cookie">
+            <img src="assets/images/makanan/menu4.jpg" alt="Kue Kering 2" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="coffee">
+            <img src="assets/images/makanan/menu5.webp" alt="Kopi 2" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+          <div class="gallery-item" data-category="atmosphere">
+            <img src="assets/images/makanan/menu6.jpg" alt="Suasana 2" loading="lazy">
+            <div class="gallery-item-overlay"><button class="gallery-view-btn">Lihat</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bg-text">AVENIR</div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">AVE<span>NIR</span></a>
+          <p>Mendefinisikan ulang keunggulan kuliner melalui semangat, presisi, dan seni bersantap.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">⟐</a><a href="#" aria-label="Twitter">⬡</a><a href="#" aria-label="Facebook">◈</a><a href="#" aria-label="TikTok">◇</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li><li><a href="menu.html">Menu</a></li><li><a href="story.html">Cerita Kami</a></li><li><a href="gallery.html">Galeri</a></li><li><a href="experience.html">Pengalaman</a></li><li><a href="reservation.html">Reservasi</a></li><li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Jam Buka</h4>
+          <ul>
+            <li><p>Sen – Kam: 17:00 — 23:00</p></li><li><p>Jum – Sab: 17:00 — 01:00</p></li><li><p>Minggu: 11:00 — 22:00</p></li><li><p>Brunch: Sab – Min 11:00 — 15:00</p></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <p>Jl. Roti No. 15, Menteng</p><p>Jakarta Pusat 10310</p><p>+62 21 5555 0123</p><p>halo@avenir-bakery.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AVENIR Bakery. Seluruh hak cipta dilindungi.</p>
+        <p>Dibuat dengan semangat ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/animation.js"></script>
+</body>
+</html>

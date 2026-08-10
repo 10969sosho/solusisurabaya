@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guesthouse Rumah Mawar — A calm place to stay</title>
+    <meta
+      name="description"
+      content="Guesthouse tenang di Blitar, cocok untuk istirahat dan recharge. Book via WhatsApp."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="loader" data-loader>
+      <div class="loader__inner">
+        <div class="loader__brand">
+          <div class="loader__title" data-loader-title>Guesthouse Rumah Mawar</div>
+          <div class="loader__subtitle" data-loader-subtitle>A calm place to stay</div>
+        </div>
+        <div class="loader__progress" aria-hidden="true">
+          <span class="loader__line" data-loader-line></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" data-page>
+      <main data-lenis-wrapper>
+        <section class="hero" aria-label="Hero" data-hero>
+          <div class="hero__bg" aria-hidden="true" data-hero-bg>
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/21/df/d0/cozy-guest-house.jpg?h=500&s=1&w=900"
+              alt=""
+              loading="eager"
+              decoding="async"
+            />
+            <div class="hero__overlay"></div>
+          </div>
+
+          <div class="container hero__content">
+            <div class="hero__text" data-hero-text>
+              <p class="hero__eyebrow" data-animate>Rumah Mawar, Blitar</p>
+              <h1 class="hero__title" data-animate data-split>Tempat Nyaman untuk Pulang</h1>
+              <p class="hero__subtitle" data-animate>
+                Guesthouse tenang di Blitar, cocok untuk istirahat dan recharge.
+              </p>
+              <div class="hero__line" aria-hidden="true" data-animate></div>
+
+              <div class="hero__actions" data-animate>
+                <a
+                  class="btn btn--primary"
+                  href="https://wa.me/6281234567890?text=Halo%20Rumah%20Mawar%2C%20saya%20ingin%20booking%20kamar."
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Book Now (WhatsApp)
+                </a>
+                <a class="btn btn--secondary" href="#rooms">View Rooms</a>
+              </div>
+
+              <a class="scroll-indicator" href="#rooms" aria-label="Scroll ke rooms">
+                <span class="scroll-indicator__dot" aria-hidden="true"></span>
+                <span class="scroll-indicator__label">Scroll</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="trust" id="trust" aria-label="Trust" data-section>
+          <div class="container">
+            <header class="section-head" data-animate>
+              <h2 class="section-head__title">Kenapa Pilih Rumah Mawar</h2>
+              <p class="section-head__desc">Alasan cepat yang bikin kamu yakin untuk stay dan booking.</p>
+            </header>
+
+            <div class="trust__grid" data-stagger>
+              <article class="trust-card" data-animate>
+                <div class="trust-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M4 11.5V10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1.5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M4 11.5h16V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.5 8V6.8A2.8 2.8 0 0 1 10.3 4h3.4a2.8 2.8 0 0 1 2.8 2.8V8"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="trust-card__title">Nyaman & Bersih</h3>
+                <p class="trust-card__desc">Kamar rapi, linen bersih, dan suasana tenang untuk istirahat.</p>
+              </article>
+
+              <article class="trust-card" data-animate>
+                <div class="trust-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M7 16.5a5.5 5.5 0 0 1 0-9"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M17 7.5a5.5 5.5 0 0 1 0 9"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M9.8 14.3a3 3 0 0 1 0-4.6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M14.2 9.7a3 3 0 0 1 0 4.6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M12 12h.01"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="trust-card__title">WiFi Stabil</h3>
+                <p class="trust-card__desc">Tetap produktif atau santai streaming tanpa drama.</p>
+              </article>
+
+              <article class="trust-card" data-animate>
+                <div class="trust-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M7 3h10l1 8a6 6 0 0 1-6 7H12a6 6 0 0 1-6-7l1-8Z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9 21h6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M12 10v4"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M10.3 12.8 12 14.6l1.7-1.8"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="trust-card__title">Kamar Mandi Bersih</h3>
+                <p class="trust-card__desc">Area mandi nyaman dan terawat untuk recharge sepenuhnya.</p>
+              </article>
+
+              <article class="trust-card" data-animate>
+                <div class="trust-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3 14.5 5.8 7.7A2.5 2.5 0 0 1 8.1 6h7.8a2.5 2.5 0 0 1 2.3 1.7l2.8 6.8"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M5 14.5h14V18a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 17h.01M16 17h.01"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="trust-card__title">Parkir Aman</h3>
+                <p class="trust-card__desc">Akses mudah dan terasa aman untuk kendaraanmu.</p>
+              </article>
+            </div>
+
+            <div class="trust-banner">
+              <div class="trust-banner__media" aria-hidden="true" data-animate>
+                <img
+                  src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/21/df/d0/cozy-guest-house.jpg?h=650&s=1&w=1100"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="trust-banner__overlay"></div>
+              </div>
+              <div class="trust-banner__content">
+                <h3 class="trust-banner__title" data-animate>Tenang itu bukan kebetulan</h3>
+                <p class="trust-banner__desc" data-animate>
+                  Rumah Mawar dibuat untuk tamu yang pengen tempat rapi, hangat, dan terasa aman. Copy singkat, tapi
+                  pengalaman stay-nya yang bikin yakin.
+                </p>
+                <div class="trust-banner__highlights" data-stagger>
+                  <div class="chip" data-animate>Check-in mudah</div>
+                  <div class="chip" data-animate>Suasana calming</div>
+                  <div class="chip" data-animate>Area terawat</div>
+                  <div class="chip" data-animate>Respon cepat (WA)</div>
+                </div>
+                <div class="section-cta" data-animate>
+                  <a
+                    class="btn btn--primary"
+                    href="https://wa.me/6281234567890?text=Halo%20Rumah%20Mawar%2C%20saya%20ingin%20tanya%20ketersediaan%20kamar."
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Tanya via WhatsApp
+                  </a>
+                  <a class="btn btn--secondary" href="#rooms">Lihat Room</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="experience" id="rooms" aria-label="Room Preview" data-section>
+          <div class="container">
+            <header class="section-head" data-animate>
+              <h2 class="section-head__title">Room Preview</h2>
+              <p class="section-head__desc">
+                Scroll ke bawah → gambar bergerak ke samping. Biar kamu kebayang suasana sebelum booking.
+              </p>
+            </header>
+          </div>
+
+          <div class="experience__pin" data-horizontal>
+            <div class="container experience__inner">
+              <div class="experience__left">
+                <div class="room-info" data-room-info>
+                  <div class="room-info__pill" data-animate>Room Type</div>
+                  <h3 class="room-info__title" data-animate>Standard Room</h3>
+                  <p class="room-info__desc" data-animate>
+                    Untuk kamu yang cari tempat tenang, bersih, dan hangat — ideal untuk istirahat setelah perjalanan.
+                  </p>
+                  <div class="room-info__price" data-animate>Mulai dari <strong>Rp 250.000</strong> / malam</div>
+
+                  <ul class="room-info__list" data-stagger>
+                    <li class="room-info__item" data-animate>AC / Fan</li>
+                    <li class="room-info__item" data-animate>WiFi</li>
+                    <li class="room-info__item" data-animate>Kamar mandi bersih</li>
+                    <li class="room-info__item" data-animate>Parkir aman</li>
+                  </ul>
+
+                  <div class="room-info__feel" data-stagger>
+                    <div class="feel-card" data-animate>
+                      <div class="feel-card__title">Untuk recharge</div>
+                      <div class="feel-card__desc">Suasana tenang buat tidur lebih nyenyak.</div>
+                    </div>
+                    <div class="feel-card" data-animate>
+                      <div class="feel-card__title">Untuk kerja ringan</div>
+                      <div class="feel-card__desc">WiFi stabil, vibes nyaman, fokus tetap dapat.</div>
+                    </div>
+                  </div>
+
+                  <div class="room-info__actions" data-animate>
+                    <a
+                      class="btn btn--primary"
+                      href="https://wa.me/6281234567890?text=Halo%20Rumah%20Mawar%2C%20saya%20ingin%20booking%20Standard%20Room."
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Booking Standard
+                    </a>
+                    <a class="btn btn--secondary" href="#location">Lihat Lokasi</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="experience__right">
+                <div class="hscroll" data-hscroll>
+                  <div class="htrack" data-htrack>
+                    <article class="hcard">
+                      <div class="hcard__media" aria-hidden="true">
+                        <img
+                          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/21/df/d0/cozy-guest-house.jpg?h=800&s=1&w=1300"
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div class="hcard__overlay"></div>
+                      </div>
+                      <div class="hcard__body">
+                        <div class="hcard__title">Warm Courtyard</div>
+                        <div class="hcard__desc">Pencahayaan hangat, vibe tenang, enak untuk pelan-pelan.</div>
+                      </div>
+                    </article>
+
+                    <article class="hcard">
+                      <div class="hcard__media" aria-hidden="true">
+                        <img
+                          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/21/df/d0/cozy-guest-house.jpg?h=700&s=1&w=1200"
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div class="hcard__overlay"></div>
+                      </div>
+                      <div class="hcard__body">
+                        <div class="hcard__title">Clean Lines</div>
+                        <div class="hcard__desc">Desain rapi dan modern, terasa premium tapi tetap hangat.</div>
+                      </div>
+                    </article>
+
+                    <article class="hcard">
+                      <div class="hcard__media" aria-hidden="true">
+                        <img
+                          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/21/df/d0/cozy-guest-house.jpg?h=650&s=1&w=1100"
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div class="hcard__overlay"></div>
+                      </div>
+                      <div class="hcard__body">
+                        <div class="hcard__title">Calm Walkway</div>
+                        <div class="hcard__desc">Area luar nyaman untuk udara segar sebelum tidur.</div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="hprogress" aria-hidden="true">
+                  <span class="hprogress__bar" data-hprogress></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="location" id="location" aria-label="Location" data-section>
+          <div class="container">
+            <header class="section-head" data-animate>
+              <h2 class="section-head__title">Location</h2>
+              <p class="section-head__desc">Akses mudah, biar kamu nggak ragu: jauh atau ribet nggak.</p>
+            </header>
+
+            <div class="location__grid">
+              <div class="location__map" data-animate>
+                <iframe
+                  title="Guesthouse Rumah Mawar di Google Maps"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=Guesthouse%20Rumah%20Mawar%20Blitar&output=embed"
+                ></iframe>
+              </div>
+
+              <div class="location__info">
+                <div class="location__badge" data-animate>📍 Blitar, Jawa Timur</div>
+                <h3 class="location__title" data-animate>Dekat akses kota, tetap terasa tenang</h3>
+                <p class="location__desc" data-animate>
+                  Cocok untuk transit, kerja, atau liburan singkat. Aman untuk parkir dan gampang cari makan.
+                </p>
+
+                <ul class="location__list" data-stagger>
+                  <li class="location__item" data-animate>Dekat pusat kota</li>
+                  <li class="location__item" data-animate>Akses kendaraan mudah</li>
+                  <li class="location__item" data-animate>Banyak tempat makan sekitar</li>
+                </ul>
+
+                <div class="location__actions" data-animate>
+                  <a
+                    class="btn btn--secondary"
+                    href="https://www.google.com/maps/search/?api=1&query=Guesthouse%20Rumah%20Mawar%20Blitar"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Buka di Google Maps
+                  </a>
+                  <a
+                    class="btn btn--primary"
+                    href="https://wa.me/6281234567890?text=Halo%20Rumah%20Mawar%2C%20boleh%20share%20lokasi%20dan%20rute%20terdekat%3F"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Tanya Arah (WA)
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="nearby" data-animate>
+              <div class="nearby__title">Sekitar Rumah Mawar</div>
+              <div class="nearby__grid" data-stagger>
+                <div class="nearby-card" data-animate>
+                  <div class="nearby-card__title">Kuliner</div>
+                  <div class="nearby-card__desc">Banyak pilihan makan dekat, aman buat malam.</div>
+                </div>
+                <div class="nearby-card" data-animate>
+                  <div class="nearby-card__title">Pusat kota</div>
+                  <div class="nearby-card__desc">Akses gampang untuk aktivitas harian.</div>
+                </div>
+                <div class="nearby-card" data-animate>
+                  <div class="nearby-card__title">Transport</div>
+                  <div class="nearby-card__desc">Rute mudah untuk kendaraan pribadi.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonials" id="testimoni" aria-label="Testimonials" data-section>
+          <div class="container">
+            <header class="section-head" data-animate>
+              <h2 class="section-head__title">Testimoni</h2>
+              <p class="section-head__desc">Bukti sosial biar lebih yakin sebelum booking.</p>
+            </header>
+
+            <div class="slider slider--testi" data-slider="testi" data-animate>
+              <div class="slider__viewport">
+                <div class="slider__track" data-slider-track>
+                  <div class="slider__slide" data-slide>
+                    <article class="testi-card">
+                      <p class="testi-card__text">
+                        “Tempatnya bersih banget, nyaman, cocok buat istirahat. Vibes-nya tenang.”
+                      </p>
+                      <div class="testi-card__meta">
+                        <div class="testi-card__stars" aria-label="5 dari 5">★★★★★</div>
+                        <div class="testi-card__name">Tamu</div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="slider__slide" data-slide>
+                    <article class="testi-card">
+                      <p class="testi-card__text">“Lokasi strategis, akses gampang, owner ramah. Worth it.”</p>
+                      <div class="testi-card__meta">
+                        <div class="testi-card__stars" aria-label="5 dari 5">★★★★★</div>
+                        <div class="testi-card__name">Tamu</div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="slider__slide" data-slide>
+                    <article class="testi-card">
+                      <p class="testi-card__text">“Kamar mandi bersih, tidur nyenyak, suasana hangat.”</p>
+                      <div class="testi-card__meta">
+                        <div class="testi-card__stars" aria-label="5 dari 5">★★★★★</div>
+                        <div class="testi-card__name">Tamu</div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <button class="slider__btn slider__btn--prev" type="button" aria-label="Sebelumnya" data-slider-prev>
+                ‹
+              </button>
+              <button class="slider__btn slider__btn--next" type="button" aria-label="Berikutnya" data-slider-next>
+                ›
+              </button>
+              <div class="slider__dots" aria-label="Testimoni indicator" data-slider-dots></div>
+            </div>
+
+            <div class="section-cta" data-animate>
+              <a
+                class="btn btn--primary"
+                href="https://wa.me/6281234567890?text=Halo%20Rumah%20Mawar%2C%20saya%20ingin%20booking%20untuk%20tanggal%20..."
+                target="_blank"
+                rel="noreferrer"
+              >
+                Booking Sekarang (WA)
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer" aria-label="Footer">
+          <div class="container footer__inner">
+            <div class="footer__brand">
+              <div class="footer__title">Rumah Mawar</div>
+              <div class="footer__subtitle">A calm place to stay</div>
+            </div>
+            <a
+              class="footer__cta"
+              href="https://wa.me/6281234567890?text=Halo%20Rumah%20Mawar%2C%20saya%20ingin%20booking."
+              target="_blank"
+              rel="noreferrer"
+            >
+              WhatsApp Booking
+            </a>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <a
+      class="fab-wa"
+      href="https://wa.me/6281234567890?text=Halo%20Rumah%20Mawar%2C%20saya%20ingin%20booking."
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Booking via WhatsApp"
+    >
+      <span class="fab-wa__dot" aria-hidden="true"></span>
+      <span class="fab-wa__label">WhatsApp</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

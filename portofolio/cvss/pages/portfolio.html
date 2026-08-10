@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio CV Solusi Surabaya: karya website, aplikasi mobile, software desktop, dan solusi e-commerce." />
+  <title>Portfolio - CV Solusi Surabaya</title>
+
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="nav-brand">
+        <a href="../index.html#home" class="nav-logo">
+          <img src="../logocvsss.png" alt="CV Solusi Surabaya Logo" class="logo-img">
+          <span class="logo-text">CV Solusi Surabaya</span>
+        </a>
+      </div>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html#home" class="nav-link">Beranda</a></li>
+          <li class="nav-item"><a href="./services.html" class="nav-link">Layanan</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Portfolio</a></li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">Tentang</a></li>
+          <li class="nav-item"><a href="./contact.html" class="nav-link">Kontak</a></li>
+        </ul>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </nav>
+    <div class="scroll-progress" id="scroll-progress"></div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-content container">
+        <h1 class="hero-title">
+          <span class="hero-title-main">Portfolio</span>
+          <span class="hero-title-sub">Hasil Kerja Terbaik Kami</span>
+        </h1>
+        <p class="hero-description fade-in-up">
+          Menampilkan beragam proyek dalam pembuatan website, aplikasi mobile, software desktop, dan solusi e-commerce.
+        </p>
+      </div>
+    </section>
+
+    <section class="container" style="padding-top:40px;">
+      <div class="section-header">
+        <h2 class="section-title fade-in-up">Proyek Pilihan</h2>
+        <p class="section-description fade-in-up stagger-1">Contoh karya yang mewakili kualitas dan keahlian kami.</p>
+      </div>
+
+      <!-- Simple filter hint (non-interactive placeholder) -->
+      <div class="center mt-2">
+        <span class="badge accent">Website</span>
+        <span class="badge">Mobile</span>
+        <span class="badge">Desktop</span>
+        <span class="badge">E-commerce</span>
+      </div>
+
+      <div class="portfolio-grid mt-2">
+        <article class="portfolio-item fade-in-up stagger-1" id="project-1" data-category="ecommerce">
+          <a href="#project-1" class="portfolio-link">
+            <img src="../assets/images/portfolio/project-1.jpg" alt="Toko Online Fashion" loading="lazy">
+            <div class="portfolio-caption">
+              <h3 class="portfolio-title">Toko Online Fashion</h3>
+              <p class="portfolio-tech">React, Node.js, MongoDB</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item fade-in-up stagger-2" id="project-2" data-category="mobile">
+          <a href="#project-2" class="portfolio-link">
+            <img src="../assets/images/portfolio/project-2.jpg" alt="Aplikasi Mobile Banking" loading="lazy">
+            <div class="portfolio-caption">
+              <h3 class="portfolio-title">Aplikasi Mobile Banking</h3>
+              <p class="portfolio-tech">React Native, Firebase</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item fade-in-up stagger-3" id="project-3" data-category="desktop">
+          <a href="#project-3" class="portfolio-link">
+            <img src="../assets/images/portfolio/project-3.jpg" alt="Sistem Inventory Desktop" loading="lazy">
+            <div class="portfolio-caption">
+              <h3 class="portfolio-title">Sistem Inventory Desktop</h3>
+              <p class="portfolio-tech">Electron, SQLite</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item fade-in-up stagger-4" id="project-4" data-category="website">
+          <a href="#project-4" class="portfolio-link">
+            <img src="../assets/images/portfolio/project-4.jpg" alt="Website Corporate" loading="lazy">
+            <div class="portfolio-caption">
+              <h3 class="portfolio-title">Website Corporate</h3>
+              <p class="portfolio-tech">Vue.js, Laravel</p>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <div class="mt-3">
+        <div class="card fade-in-up">
+          <h3>Butuh Proyek Serupa?</h3>
+          <p class="mt-1">Ceritakan tantangan bisnis Anda, kami bantu wujudkan solusinya.</p>
+          <a href="./contact.html" class="btn btn-primary btn-glow mt-2">Diskusikan Proyek</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="../assets/images/logo/logo-white.svg" alt="CV Solusi Surabaya" class="footer-logo">
+          <h3>CV Solusi Surabaya</h3>
+          <p>Solusi digital terpercaya untuk mengembangkan bisnis Anda di era modern.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html#home">Beranda</a>
+          <a href="./services.html">Layanan</a>
+          <a href="./portfolio.html" aria-current="page">Portfolio</a>
+          <a href="./about.html">Tentang</a>
+          <a href="./contact.html">Kontak</a>
+        </div>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> CV Solusi Surabaya. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/utils.js" defer></script>
+  <script src="../assets/js/animations.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

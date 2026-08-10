@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jelajahi perjalanan visual Azura Resort & Spa — galeri sinematik arsitektur mewah dan atmosfer tropis Bali.">
+    <title>Gallery & Atmosphere | Azura Resort & Spa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=general-sans@200,300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body data-page="gallery">
+
+    <div id="luxury-loader">
+        <div class="loader-content">
+            <span class="loader-brand">AZURA</span>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <div class="scroll-progress"></div>
+    <div class="particles-container" id="particles"></div>
+
+    <div id="nav-placeholder"></div>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-bg">
+                <div class="page-header-bg-image" style="background-image: url('assets/images/hotel/hotel1.webp');"></div>
+                <div class="page-header-overlay"></div>
+            </div>
+            <div class="page-header-content">
+                <span class="section-tag reveal-up">Perjalanan Visual</span>
+                <h1 class="section-title reveal-up">
+                    <span class="title-serif">Galeri</span>
+                    <span class="title-light">& Atmosfer</span>
+                </h1>
+                <p class="section-sub reveal-up">
+                    Masuklah ke dunia kami — sebuah perjalanan visual terkurasi melalui ruang-ruang,
+                    tekstur, dan momen-momen yang mendefinisikan pengalaman Azura.
+                </p>
+            </div>
+        </section>
+
+        <section class="gallery-full-section page-section-dark">
+            <div class="gallery-filters reveal-up">
+                <button class="gallery-filter active" data-filter="all">Semua</button>
+                <button class="gallery-filter" data-filter="rooms">Rooms</button>
+                <button class="gallery-filter" data-filter="dining">Restaurants</button>
+                <button class="gallery-filter" data-filter="spa">Spa</button>
+                <button class="gallery-filter" data-filter="exterior">Exteriors</button>
+            </div>
+
+            <div class="gallery-bento" id="galleryGrid">
+                <div class="bento-item bento-tall" data-category="rooms">
+                    <img src="assets/images/hotel/hotel1.webp" alt="Interior Suite Mewah" loading="lazy">
+                    <div class="bento-hover"><span>View Details</span></div>
+                </div>
+                <div class="bento-item bento-wide" data-category="dining">
+                    <img src="assets/images/hotel/hotel2.jpg" alt="Restoran Santapan Mewah" loading="lazy">
+                    <div class="bento-hover"><span>View Details</span></div>
+                </div>
+                <div class="bento-item" data-category="spa">
+                    <img src="assets/images/hotel/hotel3.jpg" alt="Ruang Perawatan Spa" loading="lazy">
+                    <div class="bento-hover"><span>View Details</span></div>
+                </div>
+                <div class="bento-item" data-category="exterior">
+                    <img src="assets/images/hotel/hotel4.jpg" alt="Eksterior Resort" loading="lazy">
+                    <div class="bento-hover"><span>View Details</span></div>
+                </div>
+                <div class="bento-item bento-wide" data-category="rooms">
+                    <img src="assets/images/hotel/hotel5.webp" alt="Kamar Tidur Vila" loading="lazy">
+                    <div class="bento-hover"><span>View Details</span></div>
+                </div>
+                <div class="bento-item bento-tall" data-category="exterior">
+                    <img src="assets/images/hotel/hotel 6.jpg" alt="Pemandangan Taman Resort" loading="lazy">
+                    <div class="bento-hover"><span>View Details</span></div>
+                </div>
+                <div class="bento-item" data-category="dining">
+                    <img src="assets/images/hotel/banner3.jpg" alt="Meja Santapan Mewah" loading="lazy">
+                    <div class="bento-hover"><span>View Details</span></div>
+                </div>
+                <div class="bento-item" data-category="spa">
+                    <img src="assets/images/hotel/hotel1.webp" alt="Kolam Spa" loading="lazy">
+                    <div class="bento-hover"><span>View Details</span></div>
+                </div>
+                <div class="bento-item bento-wide" data-category="exterior">
+                    <img src="assets/images/hotel/hotel2.jpg" alt="Pemandangan Kolam Infinity" loading="lazy">
+                    <div class="bento-hover"><span>View Details</span></div>
+                </div>
+                <div class="bento-item" data-category="rooms">
+                    <img src="assets/images/hotel/hotel3.jpg" alt="Kamar Mandi Hotel" loading="lazy">
+                    <div class="bento-hover"><span>View Details</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/booking.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var filters = document.querySelectorAll('.gallery-filter');
+            var items = document.querySelectorAll('.bento-item');
+
+            filters.forEach(function (filter) {
+                filter.addEventListener('click', function () {
+                    filters.forEach(function (f) { f.classList.remove('active'); });
+                    this.classList.add('active');
+                    var category = this.getAttribute('data-filter');
+
+                    items.forEach(function (item) {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = '';
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.95)';
+                            setTimeout(function () {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

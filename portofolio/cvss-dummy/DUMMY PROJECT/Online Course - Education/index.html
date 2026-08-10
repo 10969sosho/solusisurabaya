@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Modern E-Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>E-Learning</span>
+                </div>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#courses" class="nav-link">Courses</a></li>
+                    <li><a href="#categories" class="nav-link">Categories</a></li>
+                    <li><a href="#instructors" class="nav-link">Instructors</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Start Learning</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-left">
+                <h1 class="hero-title">Learn Skills For The Future</h1>
+                <p class="hero-subtitle">Online courses from industry experts.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Browse Courses</button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>50,000+ Students Learning</span>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-illustration">
+                    <div class="laptop-mockup">
+                        <div class="laptop-screen">
+                            <div class="dashboard-ui">
+                                <div class="dashboard-header">
+                                    <div class="dashboard-menu"></div>
+                                    <div class="dashboard-profile"></div>
+                                </div>
+                                <div class="dashboard-content">
+                                    <div class="course-card"></div>
+                                    <div class="course-card"></div>
+                                    <div class="course-card"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Search -->
+    <section class="course-search">
+        <div class="search-container">
+            <div class="search-card">
+                <input type="text" placeholder="Search course" class="search-input">
+                <select class="category-dropdown">
+                    <option>All Categories</option>
+                    <option>Web Development</option>
+                    <option>UI/UX Design</option>
+                    <option>Digital Marketing</option>
+                    <option>Data Science</option>
+                </select>
+                <button class="btn btn-primary search-btn">
+                    <i class="fas fa-search"></i>
+                    Search
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses -->
+    <section id="courses" class="popular-courses">
+        <div class="container">
+            <h2 class="section-title">Popular Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="Modern Web Development">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Modern Web Development</h3>
+                        <p class="course-instructor">By John Smith</p>
+                        <div class="course-meta">
+                            <span class="rating">
+                                <i class="fas fa-star"></i>
+                                4.8
+                            </span>
+                            <span class="duration">12 Hours</span>
+                            <span class="price">$49</span>
+                        </div>
+                        <button class="btn btn-primary btn-enroll">Enroll Now</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=250&fit=crop" alt="UI/UX Design Fundamentals">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">UI/UX Design Fundamentals</h3>
+                        <p class="course-instructor">By Sarah Johnson</p>
+                        <div class="course-meta">
+                            <span class="rating">
+                                <i class="fas fa-star"></i>
+                                4.9
+                            </span>
+                            <span class="duration">16 Hours</span>
+                            <span class="price">$69</span>
+                        </div>
+                        <button class="btn btn-primary btn-enroll">Enroll Now</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Data Science Basics">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Data Science Basics</h3>
+                        <p class="course-instructor">By Michael Chen</p>
+                        <div class="course-meta">
+                            <span class="rating">
+                                <i class="fas fa-star"></i>
+                                4.7
+                            </span>
+                            <span class="duration">20 Hours</span>
+                            <span class="price">$89</span>
+                        </div>
+                        <button class="btn btn-primary btn-enroll">Enroll Now</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="Digital Marketing Mastery">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Digital Marketing Mastery</h3>
+                        <p class="course-instructor">By Emma Wilson</p>
+                        <div class="course-meta">
+                            <span class="rating">
+                                <i class="fas fa-star"></i>
+                                4.6
+                            </span>
+                            <span class="duration">14 Hours</span>
+                            <span class="price">$59</span>
+                        </div>
+                        <button class="btn btn-primary btn-enroll">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section id="categories" class="course-categories">
+        <div class="container">
+            <h2 class="section-title">Course Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Science</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Business</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Development</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors -->
+    <section id="instructors" class="instructors">
+        <div class="container">
+            <h2 class="section-title">Meet Our Instructors</h2>
+            <div class="instructors-grid">
+                <div class="instructor-card">
+                    <div class="instructor-photo">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=200&h=200&fit=crop&crop=face" alt="Sarah Lee">
+                    </div>
+                    <h3 class="instructor-name">Sarah Lee</h3>
+                    <p class="instructor-expertise">UI/UX Designer</p>
+                    <div class="instructor-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="instructor-card">
+                    <div class="instructor-photo">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="John Smith">
+                    </div>
+                    <h3 class="instructor-name">John Smith</h3>
+                    <p class="instructor-expertise">Web Developer</p>
+                    <div class="instructor-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="instructor-card">
+                    <div class="instructor-photo">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" alt="Emma Wilson">
+                    </div>
+                    <h3 class="instructor-name">Emma Wilson</h3>
+                    <p class="instructor-expertise">Marketing Expert</p>
+                    <div class="instructor-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="instructor-card">
+                    <div class="instructor-photo">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" alt="Michael Chen">
+                    </div>
+                    <h3 class="instructor-name">Michael Chen</h3>
+                    <p class="instructor-expertise">Data Scientist</p>
+                    <div class="instructor-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Platform Preview -->
+    <section class="platform-preview">
+        <div class="container">
+            <div class="preview-content">
+                <div class="preview-left">
+                    <div class="dashboard-screenshot">
+                        <div class="screenshot-header">
+                            <div class="screenshot-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="screenshot-content">
+                            <div class="screenshot-sidebar"></div>
+                            <div class="screenshot-main">
+                                <div class="screenshot-card"></div>
+                                <div class="screenshot-card"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-right">
+                    <h2 class="preview-title">Learn Anywhere, Anytime</h2>
+                    <div class="preview-features">
+                        <div class="feature-item">
+                            <i class="fas fa-video"></i>
+                            <span>Video lessons</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Progress tracking</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certificates</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">View Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Achievements -->
+    <section class="achievements">
+        <div class="container">
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="achievement-number">50K+</div>
+                    <div class="achievement-label">Students</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="achievement-number">120+</div>
+                    <div class="achievement-label">Courses</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="achievement-number">30+</div>
+                    <div class="achievement-label">Instructors</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="achievement-number">95%</div>
+                    <div class="achievement-label">Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Reviews -->
+    <section class="student-reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="reviews-slider">
+                <div class="review-card active">
+                    <div class="review-content">
+                        <p>"The courses are easy to understand and very practical."</p>
+                    </div>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Student">
+                        <div class="author-info">
+                            <h4>Alex Johnson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get Free Learning Resources</h2>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>E-Learning</span>
+                    </div>
+                    <p>Empowering learners worldwide with quality online education and expert instruction.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Popular Courses</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Programming</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@learnhub.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Learning St, Education City</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LearnHub Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Hubungi CV Solusi Surabaya untuk konsultasi pembuatan website, aplikasi mobile, software desktop, dan solusi e-commerce." />
+  <title>Kontak - CV Solusi Surabaya</title>
+
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="nav-brand">
+        <a href="../index.html#home" class="nav-logo">
+          <img src="../logocvsss.png" alt="CV Solusi Surabaya Logo" class="logo-img">
+          <span class="logo-text">CV Solusi Surabaya</span>
+        </a>
+      </div>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html#home" class="nav-link">Beranda</a></li>
+          <li class="nav-item"><a href="./services.html" class="nav-link">Layanan</a></li>
+          <li class="nav-item"><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">Tentang</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Kontak</a></li>
+        </ul>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </nav>
+    <div class="scroll-progress" id="scroll-progress"></div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-content container">
+        <h1 class="hero-title">
+          <span class="hero-title-main">Kontak Kami</span>
+          <span class="hero-title-sub">Konsultasi Gratis untuk Proyek Anda</span>
+        </h1>
+        <p class="hero-description fade-in-up">
+          Sampaikan kebutuhan Anda. Tim kami akan menghubungi dalam 1-2 hari kerja.
+        </p>
+      </div>
+    </section>
+
+    <section class="container" style="padding-top:40px;">
+      <div class="section-header">
+        <h2 class="section-title fade-in-up">Formulir Kontak</h2>
+        <p class="section-description fade-in-up stagger-1">
+          Beri kami detail singkat mengenai proyek agar kami dapat memberikan solusi yang tepat.
+        </p>
+      </div>
+
+      <div class="fade-in-up stagger-2" style="display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start;">
+        <form id="contact-form" class="card" novalidate aria-describedby="form-help">
+          <div class="form-row">
+            <div>
+              <label for="name" class="form-label">Nama Lengkap*</label>
+              <input class="input" type="text" id="name" name="name" placeholder="Nama Anda" required/>
+              <small class="error" id="error-name" style="color:#ff6b35;display:none;">Wajib diisi.</small>
+            </div>
+            <div>
+              <label for="email" class="form-label">Email*</label>
+              <input class="input" type="email" id="email" name="email" placeholder="nama@email.com" required/>
+              <small class="error" id="error-email" style="color:#ff6b35;display:none;">Email tidak valid.</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="phone" class="form-label">Telepon (opsional)</label>
+              <input class="input" type="tel" id="phone" name="phone" placeholder="+62..."/>
+            </div>
+            <div>
+              <label for="service" class="form-label">Minat Layanan*</label>
+              <select class="select" id="service" name="service" required>
+                <option value="" selected disabled>Pilih layanan</option>
+                <option>Website Development</option>
+                <option>Mobile Applications</option>
+                <option>Desktop Software</option>
+                <option>E-commerce Solutions</option>
+              </select>
+              <small class="error" id="error-service" style="color:#ff6b35;display:none;">Pilih salah satu layanan.</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="full">
+              <label for="desc" class="form-label">Deskripsi Proyek*</label>
+              <textarea class="textarea" id="desc" name="desc" rows="6" placeholder="Ceritakan tujuan, fitur utama, dan timeline..." required></textarea>
+              <small class="error" id="error-desc" style="color:#ff6b35;display:none;">Wajib diisi (min 20 karakter).</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="budget" class="form-label">Perkiraan Budget (opsional)</label>
+              <select class="select" id="budget" name="budget">
+                <option value="" selected>Tidak pasti</option>
+                <option>< 15 juta</option>
+                <option>15 - 50 juta</option>
+                <option>50 - 150 juta</option>
+                <option>> 150 juta</option>
+              </select>
+            </div>
+            <div>
+              <label for="timeline" class="form-label">Target Timeline (opsional)</label>
+              <input class="input" type="text" id="timeline" name="timeline" placeholder="Contoh: 2-3 bulan"/>
+            </div>
+          </div>
+
+          <p id="form-help" class="mt-1" style="color:var(--muted);">
+            Tanda (*) wajib diisi. Kami menjaga kerahasiaan data Anda.
+          </p>
+
+          <div class="mt-2" style="display:flex;gap:12px;align-items:center;">
+            <button type="submit" class="btn btn-primary btn-large btn-glow">Kirim Permintaan</button>
+            <button type="reset" class="btn btn-outline btn-large">Reset</button>
+            <span id="form-status" aria-live="polite" style="margin-left:8px;"></span>
+          </div>
+        </form>
+
+        <aside class="card" aria-label="Informasi Perusahaan">
+          <h3>Informasi Kontak</h3>
+          <p class="mt-1"><strong>CV Solusi Surabaya</strong></p>
+          <p>Jl. Raya Surabaya No. 123<br/>Surabaya, Jawa Timur 60111</p>
+          <p class="mt-1"><strong>Telepon:</strong><br/>+62 812-3456-7890<br/>+62 31-1234-5678</p>
+          <p class="mt-1"><strong>Email:</strong><br/>info@cvsolusisurabaya.com<br/>support@cvsolusisurabaya.com</p>
+          <div class="mt-2">
+            <a href="tel:+6281234567890" class="btn btn-outline btn-small">Telepon Sekarang</a>
+            <a href="mailto:info@cvsolusisurabaya.com" class="btn btn-outline btn-small">Email</a>
+          </div>
+        </aside>
+      </div>
+
+      <div class="mt-3 fade-in-up stagger-3">
+        <div class="card">
+          <h3>Lokasi Kantor</h3>
+          <div style="margin-top:10px;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+            <!-- Placeholder Map Embed (replace with real map embed if available) -->
+            <iframe title="Lokasi CV Solusi Surabaya" src="https://www.openstreetmap.org/export/embed.html?bbox=112.6%2C-7.3%2C112.8%2C-7.2&layer=mapnik" style="width:100%;height:300px;border:0;"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-cta" aria-label="CTA">
+      <div class="container">
+        <div class="cta-content fade-in-up">
+          <h2 class="cta-title">Butuh Proposal Resmi?</h2>
+          <p class="cta-description">Kirimkan brief singkat, kami susun proposal lengkap dalam 2-3 hari kerja.</p>
+          <div class="cta-buttons">
+            <a href="#top" class="btn btn-primary btn-large btn-glow">Kembali ke Form</a>
+            <a href="../index.html#portfolio" class="btn btn-outline btn-large">Lihat Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="../assets/images/logo/logo-white.svg" alt="CV Solusi Surabaya" class="footer-logo">
+          <h3>CV Solusi Surabaya</h3>
+          <p>Solusi digital terpercaya untuk mengembangkan bisnis Anda di era modern.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html#home">Beranda</a>
+          <a href="./services.html">Layanan</a>
+          <a href="./portfolio.html">Portfolio</a>
+          <a href="./about.html">Tentang</a>
+          <a href="./contact.html" aria-current="page">Kontak</a>
+        </div>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> CV Solusi Surabaya. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/utils.js" defer></script>
+  <script src="../assets/js/animations.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/contact.js" defer></script>
+</body>
+</html>

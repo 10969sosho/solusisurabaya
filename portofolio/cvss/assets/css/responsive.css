@@ -1,0 +1,75 @@
+/* CV Solusi Surabaya - Responsive Overrides and Utilities */
+
+/* Containers and typography scaling */
+@media (min-width: 1400px) {
+  .container { max-width: 1280px; }
+}
+
+@media (max-width: 1200px) {
+  .section-title { font-size: 1.85rem; }
+}
+
+@media (max-width: 992px) {
+  .section-title { font-size: 1.75rem; }
+  .hero-title-main { font-size: clamp(1.8rem, 4.2vw, 2.4rem); }
+}
+
+@media (max-width: 768px) {
+  .nav { height: 68px; }
+  .logo-text { font-size: 1rem; }
+  .section-title { font-size: 1.55rem; }
+  .section-description { font-size: .975rem; }
+  .scroll-indicator { display: none; }
+}
+
+@media (max-width: 576px) {
+  .section-title { font-size: 1.45rem; }
+  .section-description { font-size: .95rem; }
+  .hero-description { font-size: .975rem; }
+}
+
+/* Header shrink behavior (paired with JS adding .scrolled) */
+.header.scrolled {
+  background: rgba(10,10,10,0.8);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+}
+.header.scrolled .nav { height: 58px; }
+
+/* Grids refinement across breakpoints */
+@media (max-width: 1200px) {
+  .services-grid,
+  .features-grid,
+  .portfolio-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+
+@media (max-width: 992px) {
+  .services-grid,
+  .features-grid,
+  .portfolio-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .testimonials-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .footer-content { grid-template-columns: 1fr; }
+  .footer-links { justify-content: flex-start; }
+}
+
+/* Utilities */
+.hide-sm { display: none !important; }
+@media (min-width: 769px) { .hide-sm { display: initial !important; } }
+
+.hide-md { display: none !important; }
+@media (min-width: 993px) { .hide-md { display: initial !important; } }
+
+.hide-lg { display: none !important; }
+@media (min-width: 1201px) { .hide-lg { display: initial !important; } }
+
+/* Print styles (basic) */
+@media print {
+  * { background: transparent !important; color: #000 !important; box-shadow: none !important; }
+  a[href]:after { content: " (" attr(href) ") "; font-size: .9em; }
+  .nav, .footer, .scroll-progress, .scroll-indicator { display: none !important; }
+  section { padding: 12px 0; }
+  .container { max-width: 100% !important; padding: 0 12px !important; }
+}

@@ -1,0 +1,183 @@
+@keyframes heroZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes breatheGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(198, 169, 105, 0.1), 0 0 60px rgba(198, 169, 105, 0.05);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(198, 169, 105, 0.2), 0 0 80px rgba(198, 169, 105, 0.08);
+    }
+}
+
+@keyframes subtleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes lineGrow {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.reveal-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1),
+                transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-up:nth-child(1) { transition-delay: 0.1s; }
+.reveal-up:nth-child(2) { transition-delay: 0.2s; }
+.reveal-up:nth-child(3) { transition-delay: 0.3s; }
+.reveal-up:nth-child(4) { transition-delay: 0.4s; }
+.reveal-up:nth-child(5) { transition-delay: 0.5s; }
+.reveal-up:nth-child(6) { transition-delay: 0.6s; }
+.reveal-up:nth-child(7) { transition-delay: 0.7s; }
+.reveal-up:nth-child(8) { transition-delay: 0.8s; }
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1),
+                transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1),
+                transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.parallax-slow {
+    will-change: transform;
+}
+
+.parallax-bg {
+    will-change: transform;
+}
+
+.counter-animate {
+    transition: all 0.1s linear;
+}
+
+.hero-content .reveal-up:nth-child(1).visible { transition-delay: 0.1s; }
+.hero-content .reveal-up:nth-child(2).visible { transition-delay: 0.25s; }
+.hero-content .reveal-up:nth-child(3).visible { transition-delay: 0.4s; }
+.hero-content .reveal-up:nth-child(4).visible { transition-delay: 0.55s; }
+
+.gold-glow {
+    animation: breatheGlow 4s ease-in-out infinite;
+}
+
+.shimmer-effect {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(198, 169, 105, 0.08) 50%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+.cinematic-appear {
+    animation: fadeInUp 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+html.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+.gallery-filter,
+.room-card,
+.dining-card,
+.dest-card,
+.exp-card {
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.booking-modal.active .booking-modal-content {
+    animation: fadeInUp 0.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.booking-success-popup.show {
+    animation: fadeInUp 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .hero-bg-image {
+        animation: none;
+    }
+
+    .reveal-up,
+    .reveal-left,
+    .reveal-right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
