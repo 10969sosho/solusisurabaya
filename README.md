@@ -10,7 +10,7 @@ Company profile and portfolio website for Solusi Surabaya.
 - `/portofolio/hotel/` - hotel demo
 - `/portofolio/makan/` - restaurant demo
 
-Additional projects use the slug folders listed in `portofolio/index.html`.
+Every portfolio website has a named slug directly under `portofolio/`. Assets inside an individual website may still use subfolders required by that website's HTML and CSS.
 
 ## Deployment
 
