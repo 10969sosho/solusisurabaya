@@ -1,370 +1,249 @@
-// Restaurant Website JavaScript
+/* ============================================
+   Maison De Lumière — Premium Script
+   ============================================ */
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-link, .cta-button, .btn-primary, .btn-secondary');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href && href.startsWith('#')) {
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* ----------------------------------------
+       Navbar scroll effect
+    ---------------------------------------- */
+    const navbar = document.querySelector('.navbar');
+    function handleNavScroll() {
+        if (!navbar) return;
+        if (window.scrollY > 60) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+    window.addEventListener('scroll', handleNavScroll);
+    handleNavScroll();
+
+    /* ----------------------------------------
+       Mobile menu toggle
+    ---------------------------------------- */
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        navMenu.querySelectorAll('.nav-link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            });
+        });
+    }
+
+    /* ----------------------------------------
+       Smooth scroll for anchor links
+    ---------------------------------------- */
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            var targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            var target = document.querySelector(targetId);
+            if (target) {
                 e.preventDefault();
-                const targetSection = document.querySelector(href);
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    /* ----------------------------------------
+       Menu tabs (menu.html)
+    ---------------------------------------- */
+    const menuTabs = document.querySelectorAll('.menu-tab');
+    const menuCategories = document.querySelectorAll('.menu-category');
+
+    menuTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            var category = this.getAttribute('data-category');
+
+            menuTabs.forEach(function (t) { t.classList.remove('active'); });
+            this.classList.add('active');
+
+            menuCategories.forEach(function (cat) {
+                if (category === 'all' || cat.getAttribute('data-category') === category) {
+                    cat.style.display = 'block';
+                } else {
+                    cat.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    /* ----------------------------------------
+       Reservation form validation
+    ---------------------------------------- */
+    const reservationForm = document.getElementById('reservationForm');
+    const contactForm = document.getElementById('contactForm');
+
+    function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function validatePhone(phone) {
+        return /^[\d\s\-\+\(\)]{8,15}$/.test(phone);
+    }
+
+    function clearErrors(form) {
+        form.querySelectorAll('.form-group').forEach(function (g) {
+            g.classList.remove('error');
+        });
+    }
+
+    function showError(form, fieldName) {
+        var group = form.querySelector('[data-field="' + fieldName + '"]');
+        if (group) group.classList.add('error');
+    }
+
+    if (reservationForm) {
+        reservationForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            clearErrors(this);
+
+            var name = this.querySelector('[name="name"]').value.trim();
+            var email = this.querySelector('[name="email"]').value.trim();
+            var phone = this.querySelector('[name="phone"]').value.trim();
+            var date = this.querySelector('[name="date"]').value;
+            var time = this.querySelector('[name="time"]').value;
+            var guests = this.querySelector('[name="guests"]').value;
+            var valid = true;
+
+            if (!name) { showError(this, 'name'); valid = false; }
+            if (!email || !validateEmail(email)) { showError(this, 'email'); valid = false; }
+            if (!phone || !validatePhone(phone)) { showError(this, 'phone'); valid = false; }
+            if (!date) { showError(this, 'date'); valid = false; }
+            if (!time) { showError(this, 'time'); valid = false; }
+            if (!guests) { showError(this, 'guests'); valid = false; }
+
+            if (valid) {
+                this.style.display = 'none';
+                var success = this.nextElementSibling;
+                if (success && success.classList.contains('form-success')) {
+                    success.classList.add('show');
                 }
             }
         });
-    });
-
-    // Favorite button functionality
-    const favoriteButtons = document.querySelectorAll('.favorite-btn');
-    
-    favoriteButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const icon = this.querySelector('i');
-            if (icon.classList.contains('far')) {
-                icon.classList.remove('far');
-                icon.classList.add('fas');
-                this.style.backgroundColor = 'var(--dark-red)';
-                this.style.color = 'var(--white)';
-            } else {
-                icon.classList.remove('fas');
-                icon.classList.add('far');
-                this.style.backgroundColor = 'var(--white)';
-                this.style.color = 'var(--charcoal)';
-            }
-        });
-    });
-
-    // Gallery lightbox functionality
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const lightbox = document.createElement('div');
-    lightbox.className = 'lightbox';
-    lightbox.innerHTML = `
-        <div class="lightbox-content">
-            <span class="lightbox-close">&times;</span>
-            <img class="lightbox-image" src="" alt="">
-            <div class="lightbox-nav">
-                <button class="lightbox-prev">&lt;</button>
-                <button class="lightbox-next">&gt;</button>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(lightbox);
-
-    let currentImageIndex = 0;
-    const galleryImages = Array.from(galleryItems).map(item => item.querySelector('img').src);
-
-    galleryItems.forEach((item, index) => {
-        item.addEventListener('click', function() {
-            currentImageIndex = index;
-            openLightbox(galleryImages[currentImageIndex]);
-        });
-    });
-
-    function openLightbox(imageSrc) {
-        const lightboxImage = lightbox.querySelector('.lightbox-image');
-        lightboxImage.src = imageSrc;
-        lightbox.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
     }
 
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-
-    function navigateLightbox(direction) {
-        currentImageIndex += direction;
-        if (currentImageIndex < 0) {
-            currentImageIndex = galleryImages.length - 1;
-        } else if (currentImageIndex >= galleryImages.length) {
-            currentImageIndex = 0;
-        }
-        const lightboxImage = lightbox.querySelector('.lightbox-image');
-        lightboxImage.src = galleryImages[currentImageIndex];
-    }
-
-    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-    lightbox.querySelector('.lightbox-prev').addEventListener('click', () => navigateLightbox(-1));
-    lightbox.querySelector('.lightbox-next').addEventListener('click', () => navigateLightbox(1));
-
-    lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
-    });
-
-    // Keyboard navigation for lightbox
-    document.addEventListener('keydown', function(e) {
-        if (lightbox.style.display === 'flex') {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            } else if (e.key === 'ArrowLeft') {
-                navigateLightbox(-1);
-            } else if (e.key === 'ArrowRight') {
-                navigateLightbox(1);
-            }
-        }
-    });
-
-    // Reviews slider auto-scroll
-    const reviewsSlider = document.querySelector('.reviews-slider');
-    let scrollAmount = 0;
-    let scrollDirection = 1;
-    
-    function autoScrollReviews() {
-        if (!reviewsSlider) return;
-        
-        const maxScroll = reviewsSlider.scrollWidth - reviewsSlider.clientWidth;
-        
-        if (scrollAmount >= maxScroll) {
-            scrollDirection = -1;
-        } else if (scrollAmount <= 0) {
-            scrollDirection = 1;
-        }
-        
-        scrollAmount += scrollDirection * 1;
-        reviewsSlider.scrollLeft = scrollAmount;
-    }
-
-    // Start auto-scroll for reviews
-    const autoScrollInterval = setInterval(autoScrollReviews, 50);
-    
-    // Pause auto-scroll on hover
-    reviewsSlider.addEventListener('mouseenter', () => {
-        clearInterval(autoScrollInterval);
-    });
-
-    reviewsSlider.addEventListener('mouseleave', () => {
-        setInterval(autoScrollReviews, 50);
-    });
-
-    // Form submission for reservation
-    const reservationForm = document.querySelector('.reservation-form');
-    
-    if (reservationForm) {
-        reservationForm.addEventListener('submit', function(e) {
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = this.querySelector('input[type="text"]').value;
-            const date = this.querySelector('input[type="date"]').value;
-            const time = this.querySelector('input[type="time"]').value;
-            const guests = this.querySelector('select').value;
-            
-            // Simple validation
-            if (!name || !date || !time || !guests) {
-                alert('Please fill in all fields.');
-                return;
+            clearErrors(this);
+
+            var name = this.querySelector('[name="name"]').value.trim();
+            var email = this.querySelector('[name="email"]').value.trim();
+            var message = this.querySelector('[name="message"]').value.trim();
+            var valid = true;
+
+            if (!name) { showError(this, 'name'); valid = false; }
+            if (!email || !validateEmail(email)) { showError(this, 'email'); valid = false; }
+            if (!message) { showError(this, 'message'); valid = false; }
+
+            if (valid) {
+                this.style.display = 'none';
+                var success = this.nextElementSibling;
+                if (success && success.classList.contains('form-success')) {
+                    success.classList.add('show');
+                }
             }
-            
-            // Show success message (in a real app, this would send data to a server)
-            alert(`Thank you for your reservation, ${name}!\n\nDetails:\nDate: ${date}\nTime: ${time}\nGuests: ${guests}\n\nWe look forward to seeing you!`);
-            
-            // Reset form
-            this.reset();
         });
     }
 
-    // Navbar background change on scroll
-    const navbar = document.querySelector('.navbar');
-    
-    function updateNavbarBackground() {
-        if (window.scrollY > 100) {
-            navbar.style.backgroundColor = 'rgba(255, 247, 237, 0.95)';
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.style.backgroundColor = 'var(--cream)';
-            navbar.style.backdropFilter = 'none';
+    /* ----------------------------------------
+       Gallery lightbox
+    ---------------------------------------- */
+    var galleryItems = document.querySelectorAll('.gallery-item');
+    var lightbox = document.getElementById('lightbox');
+
+    if (galleryItems.length && lightbox) {
+        var lightboxImg = lightbox.querySelector('img');
+        var currentIndex = 0;
+        var images = [];
+
+        galleryItems.forEach(function (item, index) {
+            var img = item.querySelector('img');
+            if (img) {
+                images.push(img.src);
+                item.addEventListener('click', function () {
+                    currentIndex = index;
+                    lightboxImg.src = images[currentIndex];
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
         }
-    }
 
-    window.addEventListener('scroll', updateNavbarBackground);
-
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
+        lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) closeLightbox();
         });
-    }, observerOptions);
 
-    // Add fade-in animation to sections
-    const sections = document.querySelectorAll('.popular-dishes, .chef-section, .reservation-section, .gallery-section, .reviews-section, .location-section');
-    
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
-    });
+        lightbox.querySelector('.lightbox-prev').addEventListener('click', function () {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            lightboxImg.src = images[currentIndex];
+        });
 
-    // Mobile menu toggle (for future mobile menu implementation)
-    function createMobileMenu() {
-        const navCenter = document.querySelector('.nav-center');
-        const mobileToggle = document.createElement('button');
-        mobileToggle.className = 'mobile-menu-toggle';
-        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-        
-        const navContainer = document.querySelector('.nav-container');
-        navContainer.appendChild(mobileToggle);
-        
-        mobileToggle.addEventListener('click', function() {
-            navCenter.classList.toggle('mobile-active');
-            const icon = this.querySelector('i');
-            if (navCenter.classList.contains('mobile-active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+        lightbox.querySelector('.lightbox-next').addEventListener('click', function () {
+            currentIndex = (currentIndex + 1) % images.length;
+            lightboxImg.src = images[currentIndex];
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                lightboxImg.src = images[currentIndex];
+            }
+            if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % images.length;
+                lightboxImg.src = images[currentIndex];
             }
         });
     }
 
-    // Initialize mobile menu for small screens
-    if (window.innerWidth <= 768) {
-        createMobileMenu();
+    /* ----------------------------------------
+       Scroll fade-in animations
+    ---------------------------------------- */
+    var animatedElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+
+    if (animatedElements.length && 'IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        animatedElements.forEach(function (el) {
+            observer.observe(el);
+        });
     }
 
-    // Reinitialize mobile menu on window resize
-    let resizeTimer;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
-            const existingToggle = document.querySelector('.mobile-menu-toggle');
-            if (window.innerWidth <= 768 && !existingToggle) {
-                createMobileMenu();
-            } else if (window.innerWidth > 768 && existingToggle) {
-                existingToggle.remove();
-                document.querySelector('.nav-center').classList.remove('mobile-active');
-            }
-        }, 250);
-    });
+    /* ----------------------------------------
+       Set minimum date for reservation
+    ---------------------------------------- */
+    var dateInput = document.querySelector('input[name="date"]');
+    if (dateInput) {
+        var today = new Date();
+        var yyyy = today.getFullYear();
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var dd = String(today.getDate()).padStart(2, '0');
+        dateInput.setAttribute('min', yyyy + '-' + mm + '-' + dd);
+    }
+
 });
-
-// CSS for lightbox (added via JavaScript)
-const lightboxStyles = `
-    .lightbox {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        z-index: 2000;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .lightbox-content {
-        position: relative;
-        max-width: 90%;
-        max-height: 90%;
-        text-align: center;
-    }
-
-    .lightbox-image {
-        max-width: 100%;
-        max-height: 80vh;
-        object-fit: contain;
-        border-radius: 8px;
-    }
-
-    .lightbox-close {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-        z-index: 2001;
-    }
-
-    .lightbox-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        pointer-events: none;
-    }
-
-    .lightbox-prev,
-    .lightbox-next {
-        background-color: rgba(255, 255, 255, 0.2);
-        color: white;
-        border: none;
-        font-size: 2rem;
-        padding: 1rem;
-        cursor: pointer;
-        border-radius: 4px;
-        pointer-events: all;
-        transition: background-color 0.3s ease;
-    }
-
-    .lightbox-prev:hover,
-    .lightbox-next:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .mobile-menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        color: var(--charcoal);
-        cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-        .mobile-menu-toggle {
-            display: block;
-        }
-        
-        .nav-center {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background-color: var(--cream);
-            box-shadow: 0 4px 12px var(--shadow);
-            transform: translateY(-100%);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-center.mobile-active {
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .nav-menu {
-            flex-direction: column;
-            padding: 2rem;
-            gap: 1rem;
-        }
-    }
-`;
-
-// Add lightbox styles to head
-const styleSheet = document.createElement('style');
-styleSheet.textContent = lightboxStyles;
-document.head.appendChild(styleSheet);

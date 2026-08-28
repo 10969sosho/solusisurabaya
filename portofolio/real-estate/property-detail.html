@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gardenia Residence — Hartawan Properti Indonesia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">Hartawan<span>.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="properties.html" class="active">Properti</a>
+        <a href="about.html">Tentang</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Gardenia Residence</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Beranda</a>
+        <span>/</span>
+        <a href="properties.html">Properti</a>
+        <span>/</span>
+        <span>Gardenia Residence</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property Detail -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+
+      <!-- Gallery -->
+      <div class="detail-gallery">
+        <div class="main-img">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200" alt="Gardenia Residence">
+        </div>
+        <div class="thumb-grid">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400" alt="Interior">
+          <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400" alt="Lingkungan">
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="detail-info">
+        <div>
+          <h2 style="margin-bottom: 8px;">Gardenia Residence</h2>
+          <p class="card-location" style="margin-bottom: 24px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Jakarta Selatan
+          </p>
+          <span style="font-size: 1.6rem; font-weight: 800; color: var(--gold); display: block; margin-bottom: 24px;">Rp 2.3 Miliar</span>
+
+          <h3 style="margin-bottom: 16px;">Spesifikasi</h3>
+          <table class="specs-table">
+            <tr><td>Luas Tanah</td><td>180 m²</td></tr>
+            <tr><td>Luas Bangunan</td><td>120 m²</td></tr>
+            <tr><td>Kamar Tidur</td><td>3</td></tr>
+            <tr><td>Kamar Mandi</td><td>2</td></tr>
+            <tr><td>Lantai</td><td>2</td></tr>
+            <tr><td>Garasi</td><td>1 Mobil</td></tr>
+            <tr><td>Sertifikat</td><td>SHM</td></tr>
+            <tr><td>Kondisi</td><td>Baru</td></tr>
+          </table>
+
+          <h3 style="margin: 28px 0 16px;">Fasilitas</h3>
+          <div class="facilities-grid">
+            <div class="facility-tag"><span class="icon">&#9733;</span> Kolam Renang</div>
+            <div class="facility-tag"><span class="icon">&#9733;</span> Taman</div>
+            <div class="facility-tag"><span class="icon">&#9733;</span> Keamanan 24 Jam</div>
+            <div class="facility-tag"><span class="icon">&#9733;</span> Gym</div>
+            <div class="facility-tag"><span class="icon">&#9733;</span> CCTV</div>
+            <div class="facility-tag"><span class="icon">&#9733;</span> One Gate System</div>
+          </div>
+        </div>
+
+        <!-- Inquiry Form -->
+        <div class="inquiry-card">
+          <h3>Formulir Pertanyaan</h3>
+          <p style="margin-bottom: 20px;">Tertarik dengan properti ini? Silakan isi formulir berikut.</p>
+          <div class="form-success">Pesan Anda berhasil dikirim! Tim kami akan segera menghubungi.</div>
+          <form class="validate-form">
+            <div class="form-group">
+              <label for="inq-name">Nama Lengkap</label>
+              <input type="text" id="inq-name" required>
+              <span class="error">Field ini wajib diisi</span>
+            </div>
+            <div class="form-group">
+              <label for="inq-email">Email</label>
+              <input type="email" id="inq-email" required>
+              <span class="error">Email tidak valid</span>
+            </div>
+            <div class="form-group">
+              <label for="inq-phone">Telepon</label>
+              <input type="tel" id="inq-phone" required>
+              <span class="error">Nomor telepon tidak valid</span>
+            </div>
+            <div class="form-group">
+              <label for="inq-msg">Pesan</label>
+              <textarea id="inq-msg" rows="4" required></textarea>
+              <span class="error">Field ini wajib diisi</span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pertanyaan</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Hartawan<span>.</span></div>
+          <p>PT. Hartawan Properti Indonesia — partner terpercaya dalam mencari dan memiliki properti premium di Indonesia.</p>
+        </div>
+        <div>
+          <h4>Menu</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="properties.html">Properti</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Properti</h4>
+          <ul class="footer-links">
+            <li><a href="properties.html">Apartemen</a></li>
+            <li><a href="properties.html">Villa</a></li>
+            <li><a href="properties.html">Tanah</a></li>
+            <li><a href="properties.html">Rumah</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <ul class="footer-links">
+            <li>Jl. Sudirman No. 123</li>
+            <li>Jakarta Selatan, 12190</li>
+            <li>+62 21 5555 0123</li>
+            <li>info@hartawanproperti.co.id</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 PT. Hartawan Properti Indonesia. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — ELVOIRA Fashion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand">Elvoira<span>.</span></a>
+      <ul class="navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="#" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="#" aria-label="Cart" style="position:relative">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SHOP HERO -->
+  <section class="shop-hero">
+    <div class="container">
+      <h1>Shop All</h1>
+      <p>Temukan koleksi lengkap ELVOIRA Fashion</p>
+    </div>
+  </section>
+
+  <!-- SHOP CONTENT -->
+  <section class="shop-content">
+    <div class="container">
+      <div class="shop-layout">
+        <!-- Sidebar -->
+        <aside class="shop-sidebar">
+          <div class="filter-group">
+            <h4>Category</h4>
+            <div class="filter-options">
+              <span class="filter-option active" data-category="all">Semua <span class="count">12</span></span>
+              <span class="filter-option" data-category="dress">Dress <span class="count">2</span></span>
+              <span class="filter-option" data-category="blouse">Blouse <span class="count">2</span></span>
+              <span class="filter-option" data-category="pants">Pants <span class="count">2</span></span>
+              <span class="filter-option" data-category="jacket">Jacket <span class="count">2</span></span>
+              <span class="filter-option" data-category="bag">Bag <span class="count">2</span></span>
+              <span class="filter-option" data-category="shoes">Shoes <span class="count">2</span></span>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h4>Price Range</h4>
+            <div class="filter-options">
+              <span class="filter-option">Under Rp 500.000</span>
+              <span class="filter-option">Rp 500.000 - Rp 1.000.000</span>
+              <span class="filter-option">Rp 1.000.000 - Rp 2.000.000</span>
+              <span class="filter-option">Above Rp 2.000.000</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Products -->
+        <div class="shop-main">
+          <div class="sort-bar">
+            <span class="results-count">Menampilkan 12 produk</span>
+            <select class="sort-select">
+              <option value="popular">Sort by: Popular</option>
+              <option value="newest">Sort by: Newest</option>
+              <option value="price-low">Sort by: Price Low-High</option>
+              <option value="price-high">Sort by: Price High-Low</option>
+            </select>
+          </div>
+
+          <div class="shop-products-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-category="dress" data-price="1850000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600" alt="Emilia Silk Dress"></a>
+                <span class="product-badge">Bestseller</span>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Dress</span>
+                <h3><a href="product-detail.html">Emilia Silk Dress</a></h3>
+                <div class="product-price"><span class="current">Rp 1.850.000</span></div>
+                <div class="product-rating"><span class="stars">★★★★★</span> (124)</div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="jacket" data-price="2100000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600" alt="Noir Blazer"></a>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Jacket</span>
+                <h3><a href="product-detail.html">Noir Blazer</a></h3>
+                <div class="product-price"><span class="current">Rp 2.100.000</span></div>
+                <div class="product-rating"><span class="stars">★★★★★</span> (98)</div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="pants" data-price="1450000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1542290667-3378bOCA4347?w=600" alt="Luna Palazzo Pants"></a>
+                <span class="product-badge">New</span>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Pants</span>
+                <h3><a href="product-detail.html">Luna Palazzo Pants</a></h3>
+                <div class="product-price"><span class="current">Rp 1.450.000</span></div>
+                <div class="product-rating"><span class="stars">★★★★☆</span> (87)</div>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-category="blouse" data-price="890000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Aurora Blouse"></a>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Blouse</span>
+                <h3><a href="product-detail.html">Aurora Blouse</a></h3>
+                <div class="product-price"><span class="current">Rp 890.000</span></div>
+                <div class="product-rating"><span class="stars">★★★★★</span> (156)</div>
+              </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card" data-category="bag" data-price="2500000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600" alt="Valentina Tote"></a>
+                <span class="product-badge">Popular</span>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Bag</span>
+                <h3><a href="product-detail.html">Valentina Tote</a></h3>
+                <div class="product-price"><span class="current">Rp 2.500.000</span></div>
+                <div class="product-rating"><span class="stars">★★★★★</span> (203)</div>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card" data-category="shoes" data-price="1350000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600" alt="Sofia Heels"></a>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Shoes</span>
+                <h3><a href="product-detail.html">Sofia Heels</a></h3>
+                <div class="product-price">
+                  <span class="current">Rp 1.350.000</span>
+                  <span class="original">Rp 1.650.000</span>
+                </div>
+                <div class="product-rating"><span class="stars">★★★★☆</span> (74)</div>
+              </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card" data-category="dress" data-price="2200000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600" alt="Celestine Gown"></a>
+                <span class="product-badge">Premium</span>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Dress</span>
+                <h3><a href="product-detail.html">Celestine Gown</a></h3>
+                <div class="product-price"><span class="current">Rp 2.200.000</span></div>
+                <div class="product-rating"><span class="stars">★★★★★</span> (67)</div>
+              </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card" data-category="blouse" data-price="750000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600" alt="Serena Wrap Blouse"></a>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Blouse</span>
+                <h3><a href="product-detail.html">Serena Wrap Blouse</a></h3>
+                <div class="product-price"><span class="current">Rp 750.000</span></div>
+                <div class="product-rating"><span class="stars">★★★★☆</span> (91)</div>
+              </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card" data-category="pants" data-price="980000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1542290667-3378bOCA4347?w=600" alt="Maya Cargo Pants"></a>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Pants</span>
+                <h3><a href="product-detail.html">Maya Cargo Pants</a></h3>
+                <div class="product-price"><span class="current">Rp 980.000</span></div>
+                <div class="product-rating"><span class="stars">★★★★★</span> (112)</div>
+              </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card" data-category="jacket" data-price="1750000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Velvet Bomber"></a>
+                <span class="product-badge">Sale</span>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Jacket</span>
+                <h3><a href="product-detail.html">Velvet Bomber</a></h3>
+                <div class="product-price">
+                  <span class="current">Rp 1.750.000</span>
+                  <span class="original">Rp 2.100.000</span>
+                </div>
+                <div class="product-rating"><span class="stars">★★★★☆</span> (58)</div>
+              </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="product-card" data-category="bag" data-price="1850000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600" alt="Mini Crossbody"></a>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Bag</span>
+                <h3><a href="product-detail.html">Mini Crossbody</a></h3>
+                <div class="product-price"><span class="current">Rp 1.850.000</span></div>
+                <div class="product-rating"><span class="stars">★★★★★</span> (145)</div>
+              </div>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card" data-category="shoes" data-price="1100000">
+              <div class="product-card-image">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600" alt="Ballet Flats"></a>
+                <div class="product-actions">
+                  <button aria-label="Wishlist">♡</button>
+                  <button aria-label="Quick View">👁</button>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <span class="product-category">Shoes</span>
+                <h3><a href="product-detail.html">Ballet Flats</a></h3>
+                <div class="product-price"><span class="current">Rp 1.100.000</span></div>
+                <div class="product-rating"><span class="stars">★★★★☆</span> (89)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <button class="prev" disabled>←</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="next">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Elvoira<span>.</span></h3>
+          <p>Elegance in Every Thread. Fashion premium untuk wanita dan pria yang menghargai keanggunan.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">Wanita</a></li>
+            <li><a href="shop.html">Pria</a></li>
+            <li><a href="shop.html">Aksesoris</a></li>
+            <li><a href="shop.html">New Arrivals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ELVOIRA Fashion. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

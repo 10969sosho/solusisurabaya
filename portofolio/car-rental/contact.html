@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Autovista Prestige Motors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fas fa-car"></i></div>
+        Autovista
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="models.html">Models</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="nav-cta">Book Test Drive</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact <span class="gradient-text">Us</span></h1>
+      <p>We'd love to hear from you. Reach out to our team anytime.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: CONTACT FORM -->
+        <div class="contact-form-card fade-in">
+          <h2><i class="fas fa-envelope" style="color:var(--electric-blue);margin-right:8px"></i> Send Us a Message</h2>
+          <form id="contactForm">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="phone" placeholder="+62 812-xxxx-xxxx">
+              </div>
+              <div class="form-group">
+                <label>Subject</label>
+                <select name="subject">
+                  <option>General Inquiry</option>
+                  <option>Car Purchase</option>
+                  <option>Trade-In</option>
+                  <option>Financing</option>
+                  <option>Service Booking</option>
+                  <option>Test Drive</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message *</label>
+              <textarea name="message" placeholder="Tell us how we can help you..." required style="min-height:140px"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+              <i class="fab fa-whatsapp"></i> Send via WhatsApp
+            </button>
+          </form>
+        </div>
+
+        <!-- RIGHT: INFO -->
+        <div class="contact-info-card fade-in">
+          <h2><i class="fas fa-location-dot" style="color:var(--electric-blue);margin-right:8px"></i> Dealer Locations</h2>
+
+          <div class="dealer-location">
+            <h4><i class="fas fa-building" style="color:var(--electric-blue);margin-right:8px"></i> Jakarta HQ</h4>
+            <p><i class="fas fa-location-dot"></i> Jl. Sudirman No. 1, Jakarta Selatan</p>
+            <p><i class="fas fa-phone"></i> +62 21-5555-0101</p>
+            <p><i class="fas fa-envelope"></i> jakarta@autovista.co.id</p>
+          </div>
+
+          <div class="dealer-location">
+            <h4><i class="fas fa-building" style="color:var(--electric-blue);margin-right:8px"></i> Surabaya</h4>
+            <p><i class="fas fa-location-dot"></i> Jl. Basuki Rahmat No. 45, Surabaya</p>
+            <p><i class="fas fa-phone"></i> +62 31-5555-0202</p>
+            <p><i class="fas fa-envelope"></i> surabaya@autovista.co.id</p>
+          </div>
+
+          <div class="dealer-location">
+            <h4><i class="fas fa-building" style="color:var(--electric-blue);margin-right:8px"></i> Medan</h4>
+            <p><i class="fas fa-location-dot"></i> Jl. Sisingamangaraja No. 12, Medan</p>
+            <p><i class="fas fa-phone"></i> +62 61-5555-0303</p>
+            <p><i class="fas fa-envelope"></i> medan@autovista.co.id</p>
+          </div>
+
+          <!-- HOURS -->
+          <div class="hours-list">
+            <h4><i class="fas fa-clock" style="color:var(--electric-blue);margin-right:8px"></i> Business Hours</h4>
+            <div class="hours-item"><span>Monday - Friday</span><span>08:00 - 17:00</span></div>
+            <div class="hours-item"><span>Saturday</span><span>08:00 - 15:00</span></div>
+            <div class="hours-item"><span>Sunday & Holidays</span><span>09:00 - 14:00</span></div>
+          </div>
+
+          <!-- WHATSAPP HOTLINE -->
+          <div class="whatsapp-hotline">
+            <h4><i class="fab fa-whatsapp"></i> WhatsApp Hotline</h4>
+            <p>Chat with us 24/7 for instant support</p>
+            <a href="https://wa.me/6281234567890" target="_blank">
+              <i class="fab fa-whatsapp"></i> +62 812-3456-7890
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><i class="fas fa-car"></i></div>
+            Autovista
+          </div>
+          <p>Your trusted premium car dealer since 2005. Excellence in every journey.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="models.html">Models</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">New Car Sales</a></li>
+            <li><a href="services.html">Trade-In</a></li>
+            <li><a href="services.html">Financing</a></li>
+            <li><a href="services.html">Insurance</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+62 812-3456-7890</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@autovista.co.id</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-location-dot"></i>
+            <span>Jl. Sudirman No. 1, Jakarta</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Autovista Prestige Motors. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
