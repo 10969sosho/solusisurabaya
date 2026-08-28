@@ -1,0 +1,221 @@
+/* ============================================
+   Responsive.css — Maison De Lumière
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chef-specialties,
+    .about-story,
+    .about-chef {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .reservation-page,
+    .contact-page {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .philosophy-grid,
+    .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(26, 26, 26, 0.98);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu .nav-link {
+        font-size: 1.1rem;
+        letter-spacing: 3px;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .mobile-toggle.active i::before {
+        content: '\f00d';
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+
+    .hero-badge {
+        font-size: 0.65rem;
+        padding: 6px 18px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-label {
+        font-size: 0.65rem;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-card-image {
+        height: 220px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-cta h2 {
+        font-size: 2.2rem;
+    }
+
+    .menu-tabs {
+        gap: 0.5rem;
+    }
+
+    .menu-tab {
+        padding: 10px 20px;
+        font-size: 0.7rem;
+    }
+
+    .menu-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .menu-item-price {
+        text-align: left;
+    }
+
+    .reservation-form-wrapper {
+        padding: 2rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-grid,
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-story-text h2,
+    .about-chef-text h2 {
+        font-size: 2rem;
+    }
+
+    .chef-info h2 {
+        font-size: 2rem;
+    }
+
+    .menu-category-title {
+        font-size: 2rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-gold,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .reservation-cta h2 {
+        font-size: 1.8rem;
+    }
+
+    .featured-card-body {
+        padding: 1rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .reservation-form-wrapper {
+        padding: 1.5rem;
+    }
+}
