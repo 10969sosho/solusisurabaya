@@ -1,298 +1,376 @@
-// E-Commerce Store JavaScript
+// ============================================
+// ELVOIRA Fashion - Premium E-Commerce JS
+// ============================================
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Hero Slider Functionality
-    const slides = document.querySelectorAll('.slide');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        slides[index].classList.add('active');
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    // Auto-slide functionality
-    let slideInterval = setInterval(nextSlide, 5000);
-
-    // Button event listeners
-    if (prevButton && nextButton) {
-        prevButton.addEventListener('click', function() {
-            prevSlide();
-            resetInterval();
-        });
-
-        nextButton.addEventListener('click', function() {
-            nextSlide();
-            resetInterval();
-        });
-    }
-
-    function resetInterval() {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, 5000);
-    }
-
-    // Product Card Interactions
-    const productCards = document.querySelectorAll('.product-card');
-    
-    productCards.forEach(card => {
-        const quickViewBtn = card.querySelector('.quick-view');
-        const addToCartBtn = card.querySelector('.add-to-cart');
-        const wishlistBtn = card.querySelector('.wishlist-btn');
-        const cartBtn = card.querySelector('.cart-btn');
-
-        if (quickViewBtn) {
-            quickViewBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                showQuickView(card);
-            });
-        }
-
-        if (addToCartBtn) {
-            addToCartBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                addToCart(card);
-            });
-        }
-
-        if (wishlistBtn) {
-            wishlistBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                toggleWishlist(card, wishlistBtn);
-            });
-        }
-
-        if (cartBtn) {
-            cartBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                addToCart(card);
-            });
-        }
-    });
-
-    // Quick View Functionality
-    function showQuickView(card) {
-        const productName = card.querySelector('h3').textContent;
-        const productPrice = card.querySelector('.price').textContent;
-        
-        alert(`Quick View: ${productName} - ${productPrice}\n\nThis would normally open a modal with product details.`);
-    }
-
-    // Add to Cart Functionality
-    function addToCart(card) {
-        const productName = card.querySelector('h3').textContent;
-        const cartCount = document.querySelector('.cart-count');
-        
-        if (cartCount) {
-            let currentCount = parseInt(cartCount.textContent);
-            cartCount.textContent = currentCount + 1;
-        }
-        
-        // Show success message
-        showNotification(`${productName} added to cart!`, 'success');
-    }
-
-    // Wishlist Functionality
-    function toggleWishlist(card, button) {
-        const productName = card.querySelector('h3').textContent;
-        
-        if (button.style.color === 'red') {
-            button.style.color = '';
-            showNotification(`${productName} removed from wishlist`, 'info');
-        } else {
-            button.style.color = 'red';
-            showNotification(`${productName} added to wishlist!`, 'success');
-        }
-    }
-
-    // Category Card Interactions
-    const categoryCards = document.querySelectorAll('.category-card');
-    
-    categoryCards.forEach(card => {
-        card.addEventListener('click', function() {
-            const categoryName = card.querySelector('h3').textContent;
-            showNotification(`Browsing ${categoryName} category`, 'info');
-        });
-    });
-
-    // Newsletter Subscription
-    const newsletterForm = document.querySelector('.newsletter-form');
-    
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const emailInput = this.querySelector('input[type="email"]');
-            const email = emailInput.value;
-            
-            if (email) {
-                showNotification(`Thank you for subscribing with ${email}!`, 'success');
-                emailInput.value = '';
-            }
-        });
-    }
-
-    // Search Functionality
-    const searchBar = document.querySelector('.search-bar');
-    
-    if (searchBar) {
-        const searchInput = searchBar.querySelector('input');
-        const searchButton = searchBar.querySelector('button');
-        
-        searchButton.addEventListener('click', function() {
-            performSearch(searchInput.value);
-        });
-        
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch(this.value);
-            }
-        });
-    }
-
-    function performSearch(query) {
-        if (query.trim()) {
-            showNotification(`Searching for: "${query}"`, 'info');
-            // In a real application, this would trigger a search API call
-        }
-    }
-
-    // Navigation Menu Interactions
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            
-            if (targetId.startsWith('#')) {
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        });
-    });
-
-    // Notification System
-    function showNotification(message, type = 'info') {
-        // Create notification element
-        const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.textContent = message;
-        
-        // Style the notification
-        notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 16px 24px;
-            border-radius: 8px;
-            color: white;
-            font-weight: 500;
-            z-index: 10000;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            max-width: 300px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        `;
-        
-        // Set background color based on type
-        switch (type) {
-            case 'success':
-                notification.style.backgroundColor = '#10B981';
-                break;
-            case 'error':
-                notification.style.backgroundColor = '#EF4444';
-                break;
-            case 'warning':
-                notification.style.backgroundColor = '#F59E0B';
-                break;
-            default:
-                notification.style.backgroundColor = '#2563EB';
-        }
-        
-        // Add to DOM
-        document.body.appendChild(notification);
-        
-        // Animate in
-        setTimeout(() => {
-            notification.style.transform = 'translateX(0)';
-        }, 100);
-        
-        // Remove after delay
-        setTimeout(() => {
-            notification.style.transform = 'translateX(100%)';
-            setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.parentNode.removeChild(notification);
-                }
-            }, 300);
-        }, 3000);
-    }
-
-    // Smooth scrolling for all anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // Mobile Menu Toggle (for future mobile implementation)
-    function toggleMobileMenu() {
-        const navMenu = document.querySelector('.nav-menu');
-        navMenu.classList.toggle('mobile-active');
-    }
-
-    // Initialize mobile menu button (if exists)
-    const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    if (mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', toggleMobileMenu);
-    }
-
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements for scroll animations
-    const animateElements = document.querySelectorAll('.product-card, .category-card, .review-card');
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-
-    console.log('E-Commerce Store JavaScript loaded successfully!');
+document.addEventListener('DOMContentLoaded', () => {
+  initNavbar();
+  initMobileMenu();
+  initScrollAnimations();
+  initGallery();
+  initSizeSelector();
+  initColorSelector();
+  initQuantity();
+  initTabs();
+  initFilterSort();
+  initPagination();
+  initNewsletter();
+  initCartCount();
 });
+
+// ============================================
+// NAVBAR
+// ============================================
+function initNavbar() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Set active nav link
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.navbar-nav a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// ============================================
+// MOBILE MENU
+// ============================================
+function initMobileMenu() {
+  const toggle = document.querySelector('.mobile-toggle');
+  const nav = document.querySelector('.navbar-nav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    toggle.classList.toggle('active');
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.classList.remove('active');
+    });
+  });
+}
+
+// ============================================
+// SCROLL ANIMATIONS
+// ============================================
+function initScrollAnimations() {
+  const elements = document.querySelectorAll('.animate-on-scroll');
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  elements.forEach(el => observer.observe(el));
+}
+
+// ============================================
+// PRODUCT GALLERY
+// ============================================
+function initGallery() {
+  const mainImage = document.querySelector('.gallery-main img');
+  const thumbs = document.querySelectorAll('.gallery-thumb');
+  if (!mainImage || !thumbs.length) return;
+
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      thumbs.forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+      mainImage.style.opacity = '0';
+      setTimeout(() => {
+        mainImage.src = thumb.querySelector('img').src;
+        mainImage.style.opacity = '1';
+      }, 200);
+    });
+  });
+}
+
+// ============================================
+// SIZE SELECTOR
+// ============================================
+function initSizeSelector() {
+  const sizeBtns = document.querySelectorAll('.size-options button');
+  sizeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      sizeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+}
+
+// ============================================
+// COLOR SELECTOR
+// ============================================
+function initColorSelector() {
+  const colorBtns = document.querySelectorAll('.color-options button');
+  colorBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      colorBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+}
+
+// ============================================
+// QUANTITY SELECTOR
+// ============================================
+function initQuantity() {
+  const container = document.querySelector('.quantity-selector');
+  if (!container) return;
+
+  const minus = container.querySelector('.minus');
+  const plus = container.querySelector('.plus');
+  const input = container.querySelector('input');
+
+  if (minus && plus && input) {
+    minus.addEventListener('click', () => {
+      let val = parseInt(input.value) || 1;
+      if (val > 1) input.value = val - 1;
+    });
+
+    plus.addEventListener('click', () => {
+      let val = parseInt(input.value) || 1;
+      if (val < 10) input.value = val + 1;
+    });
+
+    input.addEventListener('change', () => {
+      let val = parseInt(input.value);
+      if (isNaN(val) || val < 1) input.value = 1;
+      if (val > 10) input.value = 10;
+    });
+  }
+}
+
+// ============================================
+// PRODUCT TABS
+// ============================================
+function initTabs() {
+  const tabBtns = document.querySelectorAll('.tabs-nav button');
+  const tabContents = document.querySelectorAll('.tab-content');
+  if (!tabBtns.length) return;
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      const content = document.getElementById(target);
+      if (content) content.classList.add('active');
+    });
+  });
+}
+
+// ============================================
+// FILTER & SORT (Shop Page)
+// ============================================
+function initFilterSort() {
+  const filterOptions = document.querySelectorAll('.filter-option');
+  const sortSelect = document.querySelector('.sort-select');
+  const productCards = document.querySelectorAll('.shop-products-grid .product-card');
+
+  let activeCategory = 'all';
+
+  filterOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      filterOptions.forEach(o => o.classList.remove('active'));
+      option.classList.add('active');
+      activeCategory = option.dataset.category || 'all';
+      filterProducts(activeCategory, sortSelect?.value || 'popular', productCards);
+    });
+  });
+
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => {
+      filterProducts(activeCategory, sortSelect.value, productCards);
+    });
+  }
+}
+
+function filterProducts(category, sort, cards) {
+  cards.forEach(card => {
+    const cardCategory = card.dataset.category || '';
+    if (category === 'all' || cardCategory === category) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  const grid = document.querySelector('.shop-products-grid');
+  if (!grid) return;
+
+  const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
+  visibleCards.sort((a, b) => {
+    const priceA = parseInt(a.dataset.price) || 0;
+    const priceB = parseInt(b.dataset.price) || 0;
+    if (sort === 'price-low') return priceA - priceB;
+    if (sort === 'price-high') return priceB - priceA;
+    return 0;
+  });
+  visibleCards.forEach(card => grid.appendChild(card));
+}
+
+// ============================================
+// PAGINATION
+// ============================================
+function initPagination() {
+  const pageBtns = document.querySelectorAll('.pagination button:not(.prev):not(.next)');
+  pageBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      pageBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+}
+
+// ============================================
+// NEWSLETTER FORM
+// ============================================
+function initNewsletter() {
+  const form = document.querySelector('.newsletter-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = form.querySelector('input');
+    const email = input?.value.trim();
+
+    if (!email || !isValidEmail(email)) {
+      shakeElement(form);
+      return;
+    }
+
+    input.value = '';
+    showNotification('Terima kasih telah berlangganan!');
+  });
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function shakeElement(el) {
+  el.style.animation = 'none';
+  el.offsetHeight;
+  el.style.animation = 'shake 0.5s ease';
+}
+
+// ============================================
+// CART
+// ============================================
+function initCartCount() {
+  const count = parseInt(localStorage.getItem('elvoira_cart_count') || '0');
+  updateCartBadge(count);
+}
+
+function addToCart(productName) {
+  let count = parseInt(localStorage.getItem('elvoira_cart_count') || '0');
+  count++;
+  localStorage.setItem('elvoira_cart_count', count);
+  updateCartBadge(count);
+  showNotification(`${productName} ditambahkan ke keranjang!`);
+}
+
+function updateCartBadge(count) {
+  const badges = document.querySelectorAll('.cart-count');
+  badges.forEach(badge => {
+    badge.textContent = count;
+    badge.style.display = count > 0 ? 'flex' : 'none';
+  });
+}
+
+// ============================================
+// NOTIFICATIONS
+// ============================================
+function showNotification(message) {
+  const existing = document.querySelector('.notification');
+  if (existing) existing.remove();
+
+  const notification = document.createElement('div');
+  notification.className = 'notification';
+  notification.innerHTML = `
+    <div style="
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #111111;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      z-index: 9999;
+      animation: fadeInUp 0.3s ease;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    ">
+      <span style="color: #F5A6B4;">&#10003;</span> ${message}
+    </div>
+  `;
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    notification.style.opacity = '0';
+    notification.style.transition = 'opacity 0.3s ease';
+    setTimeout(() => notification.remove(), 300);
+  }, 3000);
+}
+
+// ============================================
+// SMOOTH SCROLL
+// ============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ============================================
+// ADD TO CART BUTTON HANDLER
+// ============================================
+document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const name = btn.dataset.name || 'Produk';
+    addToCart(name);
+  });
+});
+
+// ============================================
+// SHAKE ANIMATION (for validation)
+// ============================================
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+  }
+`;
+document.head.appendChild(style);

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Models — Autovista Prestige Motors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fas fa-car"></i></div>
+        Autovista
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="models.html" class="active">Models</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Book Test Drive</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our <span class="gradient-text">Models</span></h1>
+      <p>Explore our complete collection of premium vehicles</p>
+    </div>
+  </section>
+
+  <!-- FILTER + CATALOG -->
+  <section class="section">
+    <div class="container">
+      <!-- FILTER BAR -->
+      <div class="filter-bar fade-in">
+        <div class="filter-group">
+          <label>Brand</label>
+          <select id="filterBrand">
+            <option value="">All Brands</option>
+            <option value="toyota">Toyota</option>
+            <option value="honda">Honda</option>
+            <option value="bmw">BMW</option>
+            <option value="mercedes">Mercedes-Benz</option>
+            <option value="mazda">Mazda</option>
+            <option value="suzuki">Suzuki</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Type</label>
+          <select id="filterType">
+            <option value="">All Types</option>
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="hatchback">Hatchback</option>
+            <option value="mpv">MPV</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Max Price (Rp)</label>
+          <input type="number" id="filterPrice" placeholder="e.g. 600000000" step="100000000">
+        </div>
+      </div>
+
+      <!-- CAR GRID -->
+      <div class="models-grid" id="modelsGrid">
+
+        <!-- 1. Toyota Camry -->
+        <div class="car-card fade-in" data-brand="toyota" data-type="sedan" data-price="580000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">Sedan</span>
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600" alt="Toyota Camry">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Toyota</div>
+            <h3 class="car-card-name">Camry Hybrid</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 210 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> CVT</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Hybrid</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 580.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Honda CR-V -->
+        <div class="car-card fade-in" data-brand="honda" data-type="suv" data-price="545000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">SUV</span>
+            <img src="https://images.unsplash.com/photo-1543832923-44685a9c0d58?w=600" alt="Honda CR-V">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Honda</div>
+            <h3 class="car-card-name">CR-V Turbo</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 190 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> CVT</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 545.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. BMW 320i -->
+        <div class="car-card fade-in" data-brand="bmw" data-type="sedan" data-price="1250000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">Luxury</span>
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" alt="BMW 320i">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">BMW</div>
+            <h3 class="car-card-name">320i Sport</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 184 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> Automatic</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 1.250.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Mercedes C200 -->
+        <div class="car-card fade-in" data-brand="mercedes" data-type="sedan" data-price="1380000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">Luxury</span>
+            <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=600" alt="Mercedes C200">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Mercedes-Benz</div>
+            <h3 class="car-card-name">C200 AMG Line</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 204 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> Automatic</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 1.380.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Toyota Fortuner -->
+        <div class="car-card fade-in" data-brand="toyota" data-type="suv" data-price="720000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">SUV</span>
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600" alt="Toyota Fortuner">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Toyota</div>
+            <h3 class="car-card-name">Fortuner VRZ</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 204 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> Automatic</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Diesel</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 720.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Honda Civic -->
+        <div class="car-card fade-in" data-brand="honda" data-type="sedan" data-price="560000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">Sporty</span>
+            <img src="https://images.unsplash.com/photo-1543832923-44685a9c0d58?w=600" alt="Honda Civic">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Honda</div>
+            <h3 class="car-card-name">Civic RS</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 178 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> CVT</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 560.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. BMW X3 -->
+        <div class="car-card fade-in" data-brand="bmw" data-type="suv" data-price="1650000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">Premium</span>
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" alt="BMW X3">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">BMW</div>
+            <h3 class="car-card-name">X3 xDrive30i</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 252 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> Automatic</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 1.650.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Mazda CX-5 -->
+        <div class="car-card fade-in" data-brand="mazda" data-type="suv" data-price="620000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">Popular</span>
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600" alt="Mazda CX-5">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Mazda</div>
+            <h3 class="car-card-name">CX-5 RWD</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 192 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> Automatic</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 620.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Toyota Avanza -->
+        <div class="car-card fade-in" data-brand="toyota" data-type="mpv" data-price="355000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">Family</span>
+            <img src="https://images.unsplash.com/photo-1543832923-44685a9c0d58?w=600" alt="Toyota Avanza">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Toyota</div>
+            <h3 class="car-card-name">Avanza 1.5 G</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 105 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> CVT</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 355.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Honda HR-V -->
+        <div class="car-card fade-in" data-brand="honda" data-type="suv" data-price="415000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">Compact SUV</span>
+            <img src="https://images.unsplash.com/photo-1543832923-44685a9c0d58?w=600" alt="Honda HR-V">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Honda</div>
+            <h3 class="car-card-name">HR-V RS</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 178 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> CVT</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 415.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Suzuki Ertiga -->
+        <div class="car-card fade-in" data-brand="suzuki" data-type="mpv" data-price="275000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">Value</span>
+            <img src="https://images.unsplash.com/photo-1543832923-44685a9c0d58?w=600" alt="Suzuki Ertiga">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Suzuki</div>
+            <h3 class="car-card-name">Ertiga Sport</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 104 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> Manual</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 275.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Mazda 3 Hatchback -->
+        <div class="car-card fade-in" data-brand="mazda" data-type="hatchback" data-price="530000000">
+          <div class="car-card-image">
+            <span class="car-card-badge">Sporty</span>
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600" alt="Mazda 3">
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Mazda</div>
+            <h3 class="car-card-name">3 Hatchback</h3>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 164 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> Automatic</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 530.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-outline">Details</a>
+                <a href="contact.html" class="btn btn-primary">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><i class="fas fa-car"></i></div>
+            Autovista
+          </div>
+          <p>Your trusted premium car dealer since 2005. Excellence in every journey.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="models.html">Models</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">New Car Sales</a></li>
+            <li><a href="services.html">Trade-In</a></li>
+            <li><a href="services.html">Financing</a></li>
+            <li><a href="services.html">Insurance</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+62 812-3456-7890</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@autovista.co.id</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-location-dot"></i>
+            <span>Jl. Sudirman No. 1, Jakarta</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Autovista Prestige Motors. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

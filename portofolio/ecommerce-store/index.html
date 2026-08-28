@@ -1,418 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopEase Store - Modern Online Shopping</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELVOIRA Fashion — Elegance in Every Thread</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <span>Free shipping over $50</span>
-                <span>24/7 Customer Support</span>
-                <div class="auth-links">
-                    <a href="#">Login</a>
-                    <span>/</span>
-                    <a href="#">Register</a>
-                </div>
-            </div>
-        </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand">Elvoira<span>.</span></a>
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="#" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="#" aria-label="Cart" style="position:relative">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
+  </nav>
 
-    <!-- Main Navbar -->
-    <nav class="main-navbar">
-        <div class="container">
-            <div class="navbar-content">
-                <div class="logo">
-                    <h1>ShopEase</h1>
-                </div>
-                
-                <div class="search-bar">
-                    <input type="text" placeholder="Search for products...">
-                    <button type="submit">Search</button>
-                </div>
-                
-                <div class="nav-icons">
-                    <a href="#" class="icon-link">
-                        <span class="icon">👤</span>
-                        <span>Account</span>
-                    </a>
-                    <a href="#" class="icon-link">
-                        <span class="icon">❤️</span>
-                        <span>Wishlist</span>
-                    </a>
-                    <a href="#" class="icon-link">
-                        <span class="icon">🛒</span>
-                        <span>Cart</span>
-                        <span class="cart-count">0</span>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="nav-menu">
-                <a href="#home">Home</a>
-                <a href="#categories">Categories</a>
-                <a href="#new-arrivals">New Arrivals</a>
-                <a href="#best-sellers">Best Sellers</a>
-                <a href="#deals">Deals</a>
-            </div>
-        </div>
-    </nav>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920" alt="Fashion Store">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">New Collection 2026</div>
+      <h1>Elegance in <span>Every Thread</span></h1>
+      <p>Temukan koleksi fashion premium yang dirancang untukmu. ELVOIRA menghadirkan keanggunan dalam setiap jahitan.</p>
+      <div class="hero-actions">
+        <a href="shop.html" class="btn btn-pink btn-lg">Shop Now</a>
+        <a href="about.html" class="btn btn-white btn-lg">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="line"></div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div class="hero-slider">
-            <div class="slide active">
-                <div class="slide-content">
-                    <h2>Discover the Latest Trends</h2>
-                    <p>Shop the best products at unbeatable prices.</p>
-                    <button class="cta-button">Shop Now</button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-content">
-                    <h2>Seasonal Sale</h2>
-                    <p>Up to 50% off on selected items</p>
-                    <button class="cta-button">Shop Deals</button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-content">
-                    <h2>New Collection</h2>
-                    <p>Fresh styles just arrived</p>
-                    <button class="cta-button">Explore Now</button>
-                </div>
-            </div>
-        </div>
-        <div class="slider-controls">
-            <button class="prev">‹</button>
-            <button class="next">›</button>
-        </div>
-    </section>
+  <!-- FEATURED COLLECTIONS -->
+  <section class="collections">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="overline">Collections</span>
+        <h2>Koleksi Unggulan</h2>
+        <p>Pilih koleksi favoritmu sesuai gaya dan kepribadian</p>
+      </div>
+      <div class="collections-grid">
+        <a href="shop.html" class="collection-card animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800" alt="Wanita">
+          <div class="collection-card-overlay">
+            <h3>Wanita</h3>
+            <p>Dress, Blouse, dan koleksi feminin lainnya</p>
+            <span class="btn-link">Jelajahi →</span>
+          </div>
+        </a>
+        <a href="shop.html" class="collection-card animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800" alt="Pria">
+          <div class="collection-card-overlay">
+            <h3>Pria</h3>
+            <p>Blazer, Jaket, dan koleksi maskulin</p>
+            <span class="btn-link">Jelajahi →</span>
+          </div>
+        </a>
+        <a href="shop.html" class="collection-card animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=800" alt="Aksesoris">
+          <div class="collection-card-overlay">
+            <h3>Aksesoris</h3>
+            <p>Tas, Sepatu, dan pelengkap gaya</p>
+            <span class="btn-link">Jelajahi →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Categories Section -->
-    <section class="categories-section" id="categories">
-        <div class="container">
-            <h2>Shop by Category</h2>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/300x200/2563EB/FFFFFF?text=Electronics" alt="Electronics">
-                    <div class="category-overlay">
-                        <h3>Electronics</h3>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/300x200/F3F4F6/111827?text=Fashion" alt="Fashion">
-                    <div class="category-overlay">
-                        <h3>Fashion</h3>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/300x200/2563EB/FFFFFF?text=Home+Living" alt="Home & Living">
-                    <div class="category-overlay">
-                        <h3>Home & Living</h3>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/300x200/F3F4F6/111827?text=Beauty" alt="Beauty">
-                    <div class="category-overlay">
-                        <h3>Beauty</h3>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/300x200/2563EB/FFFFFF?text=Sports" alt="Sports">
-                    <div class="category-overlay">
-                        <h3>Sports</h3>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/300x200/F3F4F6/111827?text=Accessories" alt="Accessories">
-                    <div class="category-overlay">
-                        <h3>Accessories</h3>
-                    </div>
-                </div>
+  <!-- BESTSELLERS -->
+  <section class="products-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="overline">Bestsellers</span>
+        <h2>Produk Terlaris</h2>
+        <p>Produk paling favorit dari pelanggan kami</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card animate-on-scroll">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600" alt="Emilia Silk Dress">
+            <span class="product-badge">Bestseller</span>
+            <div class="product-actions">
+              <button aria-label="Wishlist">♡</button>
+              <button aria-label="Quick View">👁</button>
             </div>
+          </div>
+          <div class="product-card-body">
+            <span class="product-category">Dress</span>
+            <h3><a href="product-detail.html">Emilia Silk Dress</a></h3>
+            <div class="product-price"><span class="current">Rp 1.850.000</span></div>
+            <div class="product-rating"><span class="stars">★★★★★</span> (124)</div>
+          </div>
         </div>
-    </section>
 
-    <!-- Featured Products -->
-    <section class="featured-products">
-        <div class="container">
-            <h2>Featured Products</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/300x300/F3F4F6/111827?text=Headphones" alt="Wireless Headphones">
-                        <span class="badge sale">Sale</span>
-                        <div class="product-actions">
-                            <button class="quick-view">Quick View</button>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Wireless Headphones</h3>
-                        <div class="rating">
-                            <span>⭐</span>
-                            <span class="rating-text">4.7</span>
-                        </div>
-                        <div class="price">$89</div>
-                        <div class="product-actions-bottom">
-                            <button class="wishlist-btn">❤️</button>
-                            <button class="cart-btn">🛒</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/300x300/F3F4F6/111827?text=Smartphone" alt="Smartphone">
-                        <span class="badge new">New</span>
-                        <div class="product-actions">
-                            <button class="quick-view">Quick View</button>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Latest Smartphone</h3>
-                        <div class="rating">
-                            <span>⭐</span>
-                            <span class="rating-text">4.9</span>
-                        </div>
-                        <div class="price">$599</div>
-                        <div class="product-actions-bottom">
-                            <button class="wishlist-btn">❤️</button>
-                            <button class="cart-btn">🛒</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/300x300/F3F4F6/111827?text=Laptop" alt="Laptop">
-                        <div class="product-actions">
-                            <button class="quick-view">Quick View</button>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Gaming Laptop</h3>
-                        <div class="rating">
-                            <span>⭐</span>
-                            <span class="rating-text">4.8</span>
-                        </div>
-                        <div class="price">$1,299</div>
-                        <div class="product-actions-bottom">
-                            <button class="wishlist-btn">❤️</button>
-                            <button class="cart-btn">🛒</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/300x300/F3F4F6/111827?text=Watch" alt="Smart Watch">
-                        <span class="badge sale">Sale</span>
-                        <div class="product-actions">
-                            <button class="quick-view">Quick View</button>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Smart Watch</h3>
-                        <div class="rating">
-                            <span>⭐</span>
-                            <span class="rating-text">4.6</span>
-                        </div>
-                        <div class="price">$199</div>
-                        <div class="product-actions-bottom">
-                            <button class="wishlist-btn">❤️</button>
-                            <button class="cart-btn">🛒</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="product-card animate-on-scroll">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600" alt="Noir Blazer">
+            <div class="product-actions">
+              <button aria-label="Wishlist">♡</button>
+              <button aria-label="Quick View">👁</button>
             </div>
+          </div>
+          <div class="product-card-body">
+            <span class="product-category">Jacket</span>
+            <h3><a href="product-detail.html">Noir Blazer</a></h3>
+            <div class="product-price"><span class="current">Rp 2.100.000</span></div>
+            <div class="product-rating"><span class="stars">★★★★★</span> (98)</div>
+          </div>
         </div>
-    </section>
 
-    <!-- Best Sellers -->
-    <section class="best-sellers">
-        <div class="container">
-            <h2>Best Sellers</h2>
-            <div class="best-sellers-scroll">
-                <div class="product-card-small">
-                    <img src="https://via.placeholder.com/200x200/F3F4F6/111827?text=Trending+1" alt="Trending Item 1">
-                    <h4>Wireless Mouse</h4>
-                    <p>$45</p>
-                </div>
-                <div class="product-card-small">
-                    <img src="https://via.placeholder.com/200x200/F3F4F6/111827?text=Trending+2" alt="Trending Item 2">
-                    <h4>Bluetooth Speaker</h4>
-                    <p>$79</p>
-                </div>
-                <div class="product-card-small">
-                    <img src="https://via.placeholder.com/200x200/F3F4F6/111827?text=Trending+3" alt="Trending Item 3">
-                    <h4>USB-C Hub</h4>
-                    <p>$35</p>
-                </div>
-                <div class="product-card-small">
-                    <img src="https://via.placeholder.com/200x200/F3F4F6/111827?text=Trending+4" alt="Trending Item 4">
-                    <h4>Phone Case</h4>
-                    <p>$25</p>
-                </div>
-                <div class="product-card-small">
-                    <img src="https://via.placeholder.com/200x200/F3F4F6/111827?text=Trending+5" alt="Trending Item 5">
-                    <h4>Power Bank</h4>
-                    <p>$59</p>
-                </div>
+        <div class="product-card animate-on-scroll">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1542290667-3378bOCA4347?w=600" alt="Luna Palazzo Pants">
+            <span class="product-badge">New</span>
+            <div class="product-actions">
+              <button aria-label="Wishlist">♡</button>
+              <button aria-label="Quick View">👁</button>
             </div>
+          </div>
+          <div class="product-card-body">
+            <span class="product-category">Pants</span>
+            <h3><a href="product-detail.html">Luna Palazzo Pants</a></h3>
+            <div class="product-price"><span class="current">Rp 1.450.000</span></div>
+            <div class="product-rating"><span class="stars">★★★★☆</span> (87)</div>
+          </div>
         </div>
-    </section>
 
-    <!-- Promo Banner -->
-    <section class="promo-banner">
-        <div class="promo-content">
-            <h2>Summer Sale Up To 40% Off</h2>
-            <button class="cta-button">Shop Deals</button>
-        </div>
-    </section>
-
-    <!-- Customer Reviews -->
-    <section class="customer-reviews">
-        <div class="container">
-            <h2>Customer Reviews</h2>
-            <div class="reviews-slider">
-                <div class="review-card">
-                    <img src="https://via.placeholder.com/80x80/F3F4F6/111827?text=Customer+1" alt="Customer 1" class="customer-photo">
-                    <div class="review-content">
-                        <h4>Sarah Johnson</h4>
-                        <div class="rating">⭐⭐⭐⭐⭐</div>
-                        <p>"Great quality products and very fast delivery!"</p>
-                        <small>Purchased: Wireless Headphones</small>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <img src="https://via.placeholder.com/80x80/F3F4F6/111827?text=Customer+2" alt="Customer 2" class="customer-photo">
-                    <div class="review-content">
-                        <h4>Mike Chen</h4>
-                        <div class="rating">⭐⭐⭐⭐⭐</div>
-                        <p>"Excellent customer service and amazing prices!"</p>
-                        <small>Purchased: Gaming Laptop</small>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <img src="https://via.placeholder.com/80x80/F3F4F6/111827?text=Customer+3" alt="Customer 3" class="customer-photo">
-                    <div class="review-content">
-                        <h4>Emma Davis</h4>
-                        <div class="rating">⭐⭐⭐⭐⭐</div>
-                        <p>"Love the variety and quality of products!"</p>
-                        <small>Purchased: Smart Watch</small>
-                    </div>
-                </div>
+        <div class="product-card animate-on-scroll">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Aurora Blouse">
+            <div class="product-actions">
+              <button aria-label="Wishlist">♡</button>
+              <button aria-label="Quick View">👁</button>
             </div>
+          </div>
+          <div class="product-card-body">
+            <span class="product-category">Blouse</span>
+            <h3><a href="product-detail.html">Aurora Blouse</a></h3>
+            <div class="product-price"><span class="current">Rp 890.000</span></div>
+            <div class="product-rating"><span class="stars">★★★★★</span> (156)</div>
+          </div>
         </div>
-    </section>
 
-    <!-- Brand Section -->
-    <section class="brands">
-        <div class="container">
-            <h2>Trusted Brands</h2>
-            <div class="brands-grid">
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/FFFFFF/111827?text=Nike" alt="Nike">
-                </div>
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/FFFFFF/111827?text=Apple" alt="Apple">
-                </div>
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/FFFFFF/111827?text=Adidas" alt="Adidas">
-                </div>
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/FFFFFF/111827?text=Sony" alt="Sony">
-                </div>
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/FFFFFF/111827?text=Samsung" alt="Samsung">
-                </div>
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/FFFFFF/111827?text=LG" alt="LG">
-                </div>
+        <div class="product-card animate-on-scroll">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600" alt="Valentina Tote">
+            <span class="product-badge">Popular</span>
+            <div class="product-actions">
+              <button aria-label="Wishlist">♡</button>
+              <button aria-label="Quick View">👁</button>
             </div>
+          </div>
+          <div class="product-card-body">
+            <span class="product-category">Bag</span>
+            <h3><a href="product-detail.html">Valentina Tote</a></h3>
+            <div class="product-price"><span class="current">Rp 2.500.000</span></div>
+            <div class="product-rating"><span class="stars">★★★★★</span> (203)</div>
+          </div>
         </div>
-    </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Get Exclusive Deals & Offers</h2>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit">Subscribe</button>
-                </form>
+        <div class="product-card animate-on-scroll">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600" alt="Sofia Heels">
+            <div class="product-actions">
+              <button aria-label="Wishlist">♡</button>
+              <button aria-label="Quick View">👁</button>
             </div>
+          </div>
+          <div class="product-card-body">
+            <span class="product-category">Shoes</span>
+            <h3><a href="product-detail.html">Sofia Heels</a></h3>
+            <div class="product-price">
+              <span class="current">Rp 1.350.000</span>
+              <span class="original">Rp 1.650.000</span>
+            </div>
+            <div class="product-rating"><span class="stars">★★★★☆</span> (74)</div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="shop.html" class="btn btn-secondary">Lihat Semua Produk</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <h3>ShopEase</h3>
-                    </div>
-                    <p>Your trusted online shopping destination for quality products at unbeatable prices.</p>
-                    <div class="social-links">
-                        <a href="#">📘</a>
-                        <a href="#">🐦</a>
-                        <a href="#">📷</a>
-                        <a href="#">📺</a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="#">Electronics</a></li>
-                        <li><a href="#">Fashion</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Home & Living</a></li>
-                        <li><a href="#">Beauty</a></li>
-                        <li><a href="#">Sports</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Customer Support</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Order Status</a></li>
-                        <li><a href="#">Size Guide</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <div class="contact-info">
-                        <p>📍 123 Shopping Street, Commerce City, CC 12345</p>
-                        <p>📧 support@shopease.com</p>
-                        <p>📞 +1 (555) 123-4567</p>
-                        <p>🕒 Mon-Fri: 9AM-6PM EST</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 ShopEase Store. All rights reserved.</p>
-            </div>
+  <!-- BRAND STORY -->
+  <section class="brand-story">
+    <div class="container">
+      <div class="brand-story-grid">
+        <div class="brand-story-content animate-on-scroll">
+          <span class="overline">Our Story</span>
+          <h2>Cerita di Balik ELVOIRA</h2>
+          <p>Didirikan pada tahun 2020, ELVOIRA lahir dari kecintaan terhadap keanggunan dan kualitas. Setiap koleksi kami dirancang dengan penuh perhatian untuk menghadirkan gaya yang tak lekang oleh waktu.</p>
+          <p>Kami percaya bahwa fashion bukan sekadar pakaian, melainkan ekspresi diri. Dengan material pilihan dan desain yang teliti, ELVOIRA hadir untuk membuatmu merasa percaya diri di setiap momen.</p>
+          <a href="about.html" class="btn btn-primary" style="margin-top:1rem;">Baca Selengkapnya</a>
         </div>
-    </footer>
+        <div class="brand-story-image animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800" alt="Brand Story">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-inner animate-on-scroll">
+        <h2>Stay in Style</h2>
+        <p>Berlangganan newsletter kami untuk mendapatkan info koleksi terbaru, promo eksklusif, dan tips fashion.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Masukkan email kamu" required>
+          <button type="submit" class="btn btn-pink">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Elvoira<span>.</span></h3>
+          <p>Elegance in Every Thread. Fashion premium untuk wanita dan pria yang menghargai keanggunan.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">Wanita</a></li>
+            <li><a href="shop.html">Pria</a></li>
+            <li><a href="shop.html">Aksesoris</a></li>
+            <li><a href="shop.html">New Arrivals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ELVOIRA Fashion. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

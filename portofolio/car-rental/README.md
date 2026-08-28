@@ -1,20 +1,18 @@
-# DriveNow Rental - Premium Car Rentals
+# Autovista Prestige Motors - Premium Car Dealership Portfolio
 
 ## 📋 Overview
 
-**DriveNow Rental** is a static front-end website for a premium car rental service. It is a single-page application (SPA) built entirely with vanilla web technologies — no frameworks, no backend, no database.
+**Autovista Prestige Motors** is a premium multi-page static website for a luxury car dealership. Built with vanilla HTML, CSS, and JavaScript — featuring 5 pages, modern dark automotive design, and full interactivity.
 
 ---
 
 ## 🏗️ Architecture
 
-The project follows a **3-tier front-end architecture** with clear separation of concerns:
-
 ```
 ┌─────────────────────────────────────────────────────┐
-│                   index.html                         │
-│              (Structure Layer - HTML)                │
-│  Defines all content, sections, forms, and layout   │
+│              Multi-Page HTML Structure               │
+│  index.html | models.html | model-detail.html        │
+│  services.html | contact.html                        │
 └────────────────────┬────────────────────────────────┘
                      │ references via <link> & <script>
         ┌────────────┴────────────┐
@@ -22,165 +20,102 @@ The project follows a **3-tier front-end architecture** with clear separation of
 ┌─────────────────┐   ┌──────────────────────┐
 │   styles.css     │   │     script.js         │
 │ (Presentation)   │   │   (Behavior Layer)    │
-│   CSS3 styling   │   │  JavaScript (ES6+)    │
-│   Layout, color  │   │  DOM manipulation,    │
-│   animations,    │   │  event handling,      │
-│   responsive     │   │  form validation,     │
-│   design         │   │  IntersectionObserver │
+│ Dark slate theme │   │ Car filter, gallery   │
+│ Electric blue    │   │ Color selector        │
+│ Responsive       │   │ Animated stats        │
 └─────────────────┘   └──────────────────────┘
 ```
-
-### Layer Details:
-
-1. **Structure Layer** (`index.html`)
-   - HTML5 semantic markup
-   - Sections: Navbar, Hero, Booking Search, Car Fleet, Locations, Why Choose Us, Reviews, Pricing, Map, Promo Banner, Footer
-   - Google Fonts (Inter) via CDN
-   - Google Maps embed iframe
-
-2. **Presentation Layer** (`styles.css`)
-   - CSS Custom Properties (variables) for consistent theming
-   - Flexbox & CSS Grid for layouts
-   - Responsive design via media queries (breakpoints: 768px, 480px)
-   - Hover effects with transitions & transforms
-   - Backdrop-filter for glassmorphism effects
-   - Gradient overlays
-
-3. **Behavior Layer** (`script.js`)
-   - Vanilla JavaScript (ES6+)
-   - DOMContentLoaded initialization
-   - Smooth scrolling for anchor links
-   - Form validation for booking search
-   - Interactive animations (hover, fade-in, auto-rotate)
-   - Intersection Observer API for scroll-based animations
-   - Keyboard accessibility enhancements
-
----
-
-## 🧩 Frameworks & Libraries Used
-
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **HTML5** | Standard | Document structure |
-| **CSS3** | Standard | All styling and layout |
-| **JavaScript (ES6+)** | Standard | Client-side interactivity |
-| **Google Fonts - Inter** | CDN | Typography |
-| **Google Maps Embed API** | CDN | Embedded map |
-| **Unsplash Images** | CDN | Stock photography |
-
-> **No JavaScript frameworks (React, Vue, Angular, etc.)**
-> **No CSS frameworks (Bootstrap, Tailwind, etc.)**
-> **No build tools (Webpack, Vite, etc.)**
-> **No backend or database**
 
 ---
 
 ## 📁 Folder Structure
 
 ```
-Car Rental/
-├── index.html                # Main HTML page (all sections)
-├── styles.css                # Complete CSS stylesheet (~755 lines)
-├── script.js                 # JavaScript logic (~250 lines)
-├── README.md                 # This documentation file
-└── trajectories/             # AI agent trajectory history
-    └── trajectory_20260715_210330.json
-```
-
-### File Details
-
-| File | Size | Lines | Description |
-|------|------|-------|-------------|
-| `index.html` | ~15.8 KB | 369 | Complete website structure with 11 sections |
-| `styles.css` | ~13.1 KB | 755 | Full styling with responsive design |
-| `script.js` | ~8.8 KB | 250 | All interactivity and behavior |
-| `trajectories/` | ~16.5 KB | - | AI development artifacts |
-
----
-
-## 🚀 How to Run
-
-Since this is a **static website**, no build steps or server software are required.
-
-### Option 1: Open Directly in Browser (Simplest)
-
-```bash
-# macOS
-open "/Users/10969sosho/PROJECT/CVSS/PORTOFOLIO/CVSS dummy/DUMMY PROJECT/Car Rental/index.html"
-
-# Or simply double-click index.html in Finder / File Explorer
-```
-
-### Option 2: Python HTTP Server (Recommended for proper asset loading)
-
-```bash
-cd "/Users/10969sosho/PROJECT/CVSS/PORTOFOLIO/CVSS dummy/DUMMY PROJECT/Car Rental"
-
-# Python 3
-python3 -m http.server 8000
-
-# Then open http://localhost:8000 in your browser
-```
-
-### Option 3: VS Code Live Server
-
-1. Install the **Live Server** extension by Ritwick Dey
-2. Right-click on `index.html`
-3. Select **"Open with Live Server"**
-
-### Option 4: Node.js http-server
-
-```bash
-# Install globally (one-time)
-npm install -g http-server
-
-# Run the server
-cd "/Users/10969sosho/PROJECT/CVSS/PORTOFOLIO/CVSS dummy/DUMMY PROJECT/Car Rental"
-http-server
-
-# Open http://localhost:8080
-```
-
-### Option 5: PHP Built-in Server
-
-```bash
-cd "/Users/10969sosho/PROJECT/CVSS/PORTOFOLIO/CVSS dummy/DUMMY PROJECT/Car Rental"
-php -S localhost:8000
+car-rental/
+├── index.html          # Homepage: hero, featured cars, testimonials, finance
+├── models.html         # Car catalog with filters (12 cars)
+├── model-detail.html   # Car detail: gallery, specs, features, test drive form
+├── services.html       # 6 service offerings
+├── contact.html        # Contact form, 3 locations, hours, WhatsApp
+├── styles.css          # Complete CSS (~800 lines, dark automotive theme)
+├── script.js           # JavaScript (~300 lines, filter, gallery, animations)
+└── README.md           # This documentation
 ```
 
 ---
 
 ## 🎨 Design System
 
-### Color Palette
-
 | Variable | Value | Usage |
 |----------|-------|-------|
-| `--dark-gray` | `#111827` | Text, dark backgrounds |
-| `--red-accent` | `#EF4444` | Primary CTA, accents |
-| `--white` | `#FFFFFF` | Card backgrounds |
-| `--light-gray` | `#F3F4F6` | Section backgrounds |
-| `--text-gray` | `#6B7280` | Secondary text |
-| `--border-gray` | `#E5E7EB` | Borders, dividers |
+| `--dark-slate` | `#0F172A` | Primary background |
+| `--silver` | `#94A3B8` | Secondary text |
+| `--electric-blue` | `#3B82F6` | Accent color |
+| `--white` | `#F8FAFC` | Text on dark |
+| `--black` | `#020617` | Darkest background |
 
-### Typography
-- **Font**: Inter (Google Fonts)
-- **Weights**: 300, 400, 500, 600, 700
+**Font:** Inter (Google Fonts)
 
 ---
 
-## 📄 Sections Breakdown
+## 📄 Pages
 
-| # | Section | Description |
-|---|---------|-------------|
-| 1 | **Navbar** | Sticky navigation with logo, menu links, CTA button |
-| 2 | **Hero** | Full-screen banner with gradient overlay, headline, CTA buttons |
-| 3 | **Booking Search** | Floating search form (location, dates, car type) |
-| 4 | **Car Fleet** | 3 car cards with specs, pricing, and details button |
-| 5 | **Locations** | 4 rental location cards with images |
-| 6 | **Why Choose Us** | 4 feature cards with icons |
-| 7 | **Customer Reviews** | Testimonial slider with auto-rotation |
-| 8 | **Pricing Plans** | 3-tier pricing (Economy, Standard, Luxury) |
-| 9 | **Map** | Google Maps iframe + office contact info |
-| 10 | **Promo Banner** | 15% off first rental promotion |
-| 11 | **Footer** | Links, contact info, copyright |
+| Page | Sections |
+|------|----------|
+| **index.html** | Hero, Featured Models (4), Why Choose Us (4), Testimonials (3), Finance Teaser, CTA WhatsApp |
+| **models.html** | Filter bar, 12 Car Cards with specs & pricing |
+| **model-detail.html** | Image Gallery (5), Specs Table, Features (8), Color Swatches (5), Test Drive Form |
+| **services.html** | Sales, Trade-In, Financing, Insurance, Service & Maintenance, Roadside Assistance |
+| **contact.html** | Contact Form, 3 Dealer Locations, Operating Hours, WhatsApp Hotline |
+
+---
+
+## 🚀 How to Run
+
+```bash
+cd car-rental
+python3 -m http.server 8000
+# Open http://localhost:8000
+```
+
+---
+
+## 🚗 Car Inventory (12 Models)
+
+| Brand | Model | Type | Price |
+|-------|-------|------|-------|
+| Toyota | Avanza | MPV | Rp 235 Juta |
+| Honda | Brio | Hatchback | Rp 220 Juta |
+| Honda | CR-V | SUV | Rp 545 Juta |
+| Toyota | Camry | Sedan | Rp 580 Juta |
+| Honda | Civic | Sedan | Rp 450 Juta |
+| Toyota | Fortuner | SUV | Rp 520 Juta |
+| Mitsubishi | Pajero Sport | SUV | Rp 510 Juta |
+| Toyota | Kijang Innova | MPV | Rp 380 Juta |
+| BMW | 320i | Sedan | Rp 1,25 Miliar |
+| Mercedes | C200 | Sedan | Rp 1,38 Miliar |
+| Porsche | Cayenne | SUV | Rp 1,65 Miliar |
+| Mazda | CX-5 | SUV | Rp 530 Juta |
+
+---
+
+## 🏢 Dealer Locations
+
+- **Jakarta** — Jl. Sudirman No. 1
+- **Surabaya** — Jl. Basuki Rachmat No. 45
+- **Medan** — Jl. Sisingamangaraja No. 12
+
+---
+
+## ✨ Features
+
+- Dark premium automotive design
+- Responsive (mobile, tablet, desktop)
+- Car filter (brand, type, price)
+- Image gallery with thumbnails
+- Color swatch selector
+- Test drive booking form
+- Animated statistics counter
+- WhatsApp integration
+- Scroll animations
+- Mobile hamburger menu

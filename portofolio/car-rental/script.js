@@ -1,359 +1,198 @@
-'use strict';
+const CAR_DATA = [
+  { id: 1, name: "Toyota Avanza", brand: "Toyota", type: "MPV", price: 235000000, hp: 103, engine: "1.5L", transmission: "CVT", fuel: "Bensin", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" },
+  { id: 2, name: "Honda Brio", brand: "Honda", type: "Hatchback", price: 220000000, hp: 120, engine: "1.5L", transmission: "CVT", fuel: "Bensin", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" },
+  { id: 3, name: "Honda CR-V", brand: "Honda", type: "SUV", price: 545000000, hp: 190, engine: "1.5L Turbo", transmission: "CVT", fuel: "Bensin", image: "https://images.unsplash.com/photo-1568844293986-8d0400f4745b?w=600" },
+  { id: 4, name: "Toyota Camry", brand: "Toyota", type: "Sedan", price: 580000000, hp: 181, engine: "2.5L", transmission: "CVT", fuel: "Bensin", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" },
+  { id: 5, name: "Honda Civic", brand: "Honda", type: "Sedan", price: 450000000, hp: 176, engine: "1.5L Turbo", transmission: "CVT", fuel: "Bensin", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" },
+  { id: 6, name: "Toyota Fortuner", brand: "Toyota", type: "SUV", price: 520000000, hp: 201, engine: "2.4L Diesel", transmission: "Automatic", fuel: "Diesel", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" },
+  { id: 7, name: "Mitsubishi Pajero Sport", brand: "Mitsubishi", type: "SUV", price: 510000000, hp: 181, engine: "2.4L Diesel", transmission: "Automatic", fuel: "Diesel", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" },
+  { id: 8, name: "Toyota Kijang Innova", brand: "Toyota", type: "MPV", price: 380000000, hp: 139, engine: "2.0L", transmission: "Automatic", fuel: "Bensin", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" },
+  { id: 9, name: "BMW 320i", brand: "BMW", type: "Sedan", price: 1250000000, hp: 184, engine: "2.0L Turbo", transmission: "Automatic", fuel: "Bensin", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" },
+  { id: 10, name: "Mercedes C200", brand: "Mercedes", type: "Sedan", price: 1380000000, hp: 184, engine: "2.0L Turbo", transmission: "Automatic", fuel: "Bensin", image: "https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=600" },
+  { id: 11, name: "Porsche Cayenne", brand: "Porsche", type: "SUV", price: 1650000000, hp: 340, engine: "3.0L V6 Turbo", transmission: "Automatic", fuel: "Bensin", image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600" },
+  { id: 12, name: "Mazda CX-5", brand: "Mazda", type: "SUV", price: 530000000, hp: 165, engine: "2.0L Skyactiv", transmission: "Automatic", fuel: "Bensin", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" }
+];
 
-document.addEventListener('DOMContentLoaded', function() {
-  const isMobile = window.innerWidth < 768;
+function formatPrice(price) {
+  return 'Rp ' + price.toLocaleString('id-ID');
+}
 
-  // — Lenis Smooth Scroll —
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    orientation: 'vertical',
-    smoothWheel: true,
-    wheelMultiplier: 1,
-    touchMultiplier: 1.5,
-  });
-
-  lenis.on('scroll', ScrollTrigger.update);
-
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-
-  gsap.ticker.lagSmoothing(0);
-
-  // — Scroll Progress —
-  gsap.to('.scroll-progress', {
-    width: '100%',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: document.body,
-      start: 'top top',
-      end: 'bottom bottom',
-      scrub: 1,
-    },
-  });
-
-  // — Navbar —
+function initNavbar() {
   const navbar = document.querySelector('.navbar');
-
-  ScrollTrigger.create({
-    trigger: document.body,
-    start: '80px top',
-    onUpdate: (self) => {
-      navbar.classList.toggle('scrolled', self.progress > 0);
-    },
+  if (!navbar) return;
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
   });
+}
 
-  // — Hero Parallax —
-  gsap.to('.hero-bg', {
-    y: '25%',
-    scale: 1.1,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: 1.5,
-    },
+function initMobileMenu() {
+  const toggle = document.querySelector('.mobile-toggle');
+  const links = document.querySelector('.navbar-links');
+  if (!toggle || !links) return;
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    links.classList.toggle('active');
   });
-
-  // — Hero Content Entrance —
-  const heroTimeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
-  heroTimeline
-    .from('.hero-badge', { y: 30, opacity: 0, duration: 0.8 })
-    .from('.hero-title', { y: 60, opacity: 0, duration: 1 }, '-=0.4')
-    .from('.hero-subtitle', { y: 40, opacity: 0, duration: 0.8 }, '-=0.5')
-    .from('.hero-buttons > *', { y: 30, opacity: 0, duration: 0.6, stagger: 0.15 }, '-=0.4')
-    .from('.hero-stats > *', { y: 20, opacity: 0, duration: 0.5, stagger: 0.1 }, '-=0.3');
-
-  // — Animated Counters —
-  function animateCounters() {
-    document.querySelectorAll('.stat-number').forEach((el) => {
-      const target = parseInt(el.dataset.target);
-      const suffix = el.dataset.suffix || '';
-
-      gsap.fromTo(
-        el,
-        { textContent: '0' },
-        {
-          textContent: target,
-          duration: 2.5,
-          ease: 'power2.out',
-          snap: { textContent: 1 },
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 85%',
-          },
-          onUpdate: function () {
-            if (el.dataset.suffix) {
-              el.textContent = Math.round(parseFloat(el.textContent)) + suffix;
-            }
-          },
-        }
-      );
-    });
-  }
-  animateCounters();
-
-  // — Booking Form Validation —
-  const searchForm = document.querySelector('.search-card form');
-  if (searchForm) {
-    searchForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const location = document.getElementById('location').value;
-      const pickupDate = document.getElementById('pickup-date').value;
-      const returnDate = document.getElementById('return-date').value;
-      const carType = document.getElementById('car-type').value;
-
-      if (!location || !pickupDate || !returnDate) {
-        alert('Please fill in all required fields');
-        return;
-      }
-
-      if (new Date(returnDate) <= new Date(pickupDate)) {
-        alert('Return date must be after pickup date');
-        return;
-      }
-
-      alert(`Searching for ${carType} cars in ${location} from ${pickupDate} to ${returnDate}`);
-    });
-  }
-
-  // — Horizontal Pinned Scroll (Car Fleet) —
-  const carFleet = document.querySelector('.car-fleet');
-  const scrollTrack = document.querySelector('.horizontal-scroll-track');
-
-  if (scrollTrack && !isMobile) {
-    const scrollDist = scrollTrack.scrollWidth - window.innerWidth;
-    if (scrollDist > 0) {
-      const endPoint = scrollDist + 120;
-      ScrollTrigger.create({
-        trigger: carFleet,
-        pin: true,
-        start: 'top top',
-        end: () => `+=${endPoint}`,
-        invalidateOnRefresh: true,
-      });
-      gsap.to(scrollTrack, {
-        x: () => -(scrollDist),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: carFleet,
-          start: 'top top',
-          end: () => `+=${endPoint}`,
-          scrub: 1.2,
-          invalidateOnRefresh: true,
-        },
-      });
-    }
-  }
-
-  // — Section Reveal Animations —
-  function revealFrom(selector, fromVars) {
-    const els = document.querySelectorAll(selector);
-    if (!els.length) return;
-    const toVars = {};
-    Object.keys(fromVars).forEach((k) => { toVars[k] = 0; });
-    gsap.fromTo(els, fromVars, {
-      ...toVars,
-      opacity: 1,
-      duration: 0.8,
-      ease: 'power2.out',
-      stagger: 0.12,
-      scrollTrigger: {
-        trigger: els[0].closest('.container') || els[0].parentElement,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse',
-      },
-    });
-  }
-
-  revealFrom('.feature-card', { y: 40 });
-  revealFrom('.location-card', { y: 40 });
-  revealFrom('.review-card', { y: 40 });
-  revealFrom('.pricing-card', { y: 40 });
-
-  gsap.set('.map-left', { x: -40, opacity: 0 });
-  gsap.to('.map-left', {
-    x: 0,
-    opacity: 1,
-    duration: 0.8,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.map-container',
-      start: 'top 80%',
-    },
-  });
-
-  gsap.set('.map-right', { x: 40, opacity: 0 });
-  gsap.to('.map-right', {
-    x: 0,
-    opacity: 1,
-    duration: 0.8,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.map-container',
-      start: 'top 80%',
-    },
-  });
-
-  gsap.set('.promo-content', { y: 30, opacity: 0 });
-  gsap.to('.promo-content', {
-    y: 0,
-    opacity: 1,
-    duration: 1,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.promo-banner',
-      start: 'top 80%',
-    },
-  });
-
-  // — Promo Parallax —
-  gsap.to('.promo-bg', {
-    y: '20%',
-    scale: 1.05,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.promo-banner',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: 1.5,
-    },
-  });
-
-  // — Floating Booking Bar —
-  const floatingBar = document.querySelector('.floating-booking');
-  let bookingVisible = false;
-
-  if (floatingBar) {
-    const bookingSection = document.querySelector('.booking-section');
-
-    ScrollTrigger.create({
-      trigger: '.car-fleet',
-      start: 'top 90%',
-      onEnter: () => {
-        floatingBar.classList.add('visible');
-        bookingVisible = true;
-      },
-      onLeaveBack: () => {
-        floatingBar.classList.remove('visible');
-        bookingVisible = false;
-      },
-    });
-
-    floatingBar.querySelector('.floating-submit')?.addEventListener('click', function () {
-      const loc = document.getElementById('floating-location').value;
-      const pickup = document.getElementById('floating-pickup').value;
-      const ret = document.getElementById('floating-return').value;
-      if (loc && pickup && ret) {
-        alert(`Searching in ${loc} from ${pickup} to ${ret}`);
-      } else {
-        lenis.scrollTo('#booking', { offset: -80 });
-      }
-    });
-  }
-
-  // — Smooth Scroll Anchor Links —
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        lenis.scrollTo(target, { offset: -80, duration: 1.2 });
-      }
-    });
-  });
-
-  // — View Details Buttons —
-  document.querySelectorAll('.view-details').forEach((btn) => {
-    btn.addEventListener('click', function () {
-      const card = this.closest('.car-card');
-      const name = card?.querySelector('h3')?.textContent || 'this car';
-      alert(`Viewing details for ${name}`);
-    });
-  });
-
-  // — Book Now / CTA Buttons —
-  document.querySelectorAll(
-    '.pricing-button, .cta-button, .btn-primary, .btn-secondary, .promo-button'
-  ).forEach((btn) => {
-    btn.addEventListener('click', function () {
-      alert(`${this.textContent.trim()} — redirecting to booking page...`);
-    });
-  });
-
-  // — Location Card Clicks —
-  document.querySelectorAll('.location-card').forEach((card) => {
-    card.addEventListener('click', function () {
-      const name = this.querySelector('h3')?.textContent || 'Location';
-      const info = this.querySelector('p')?.textContent || '';
-      alert(`${name}: ${info}`);
-    });
-  });
-
-  // — Button Loading Animation —
-  document.querySelectorAll('button').forEach((btn) => {
-    btn.addEventListener('click', function () {
-      const original = this.textContent;
-      this.innerHTML = '<span class="btn-loading">...</span>';
-      this.disabled = true;
-      setTimeout(() => {
-        this.innerHTML = original;
-        this.disabled = false;
-      }, 1000);
-    });
-  });
-
-  // — Mobile Menu Toggle —
-  const mobileToggle = document.querySelector('.mobile-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-
-  mobileToggle?.addEventListener('click', () => {
-    navMenu?.classList.toggle('mobile-active');
-    mobileToggle.classList.toggle('active');
-  });
-
-  document.querySelectorAll('.nav-menu a').forEach((link) => {
+  links.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      navMenu?.classList.remove('mobile-active');
-      mobileToggle?.classList.remove('active');
+      toggle.classList.remove('active');
+      links.classList.remove('active');
     });
   });
+}
 
-  // — Car Availability Simulation —
-  function updateCarAvailability() {
-    document.querySelectorAll('.location-info p').forEach((el) => {
-      const match = el.textContent.match(/(\d+)/);
-      if (match) {
-        const current = parseInt(match[1]);
-        const change = Math.floor(Math.random() * 10) - 5;
-        const updated = Math.max(50, current + change);
-        el.textContent = `${updated} Cars Available`;
+function initScrollAnimations() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
       }
     });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+}
+
+function initAnimatedStats() {
+  const statElements = document.querySelectorAll('[data-count]');
+  if (!statElements.length) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-count'));
+        const suffix = el.getAttribute('data-suffix') || '';
+        const prefix = el.getAttribute('data-prefix') || '';
+        let current = 0;
+        const increment = target / 60;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = prefix + Math.floor(current).toLocaleString('id-ID') + suffix;
+        }, 30);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  statElements.forEach(el => observer.observe(el));
+}
+
+function initCarFilter() {
+  const filterForm = document.getElementById('filterForm');
+  if (!filterForm) return;
+  filterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    filterCars();
+  });
+}
+
+function filterCars() {
+  const brand = document.getElementById('filterBrand')?.value || '';
+  const type = document.getElementById('filterType')?.value || '';
+  const maxPrice = parseInt(document.getElementById('filterPrice')?.value) || 0;
+  const cards = document.querySelectorAll('.car-card');
+  let visibleCount = 0;
+  cards.forEach(card => {
+    const cardBrand = card.dataset.brand;
+    const cardType = card.dataset.type;
+    const cardPrice = parseInt(card.dataset.price);
+    let show = true;
+    if (brand && cardBrand !== brand) show = false;
+    if (type && cardType !== type) show = false;
+    if (maxPrice && cardPrice > maxPrice) show = false;
+    card.classList.toggle('hidden', !show);
+    if (show) visibleCount++;
+  });
+  const noResults = document.getElementById('noResults');
+  if (noResults) {
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
   }
-  setInterval(updateCarAvailability, 30000);
+}
 
-  // — Keyboard Accessibility —
-  document.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').forEach((el) => {
-    el.addEventListener('focus', () => el.style.outline = '2px solid var(--accent)');
-    el.addEventListener('blur', () => el.style.outline = 'none');
+function initGallery() {
+  const thumbs = document.querySelectorAll('.gallery-thumb');
+  const mainImage = document.querySelector('.gallery-main img');
+  if (!thumbs.length || !mainImage) return;
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      thumbs.forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+      mainImage.src = thumb.querySelector('img').src;
+    });
   });
+}
 
-  // — Refresh ScrollTrigger on resize —
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 200);
+function initColorSelector() {
+  const swatches = document.querySelectorAll('.color-swatch');
+  if (!swatches.length) return;
+  swatches.forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      swatches.forEach(s => s.classList.remove('active'));
+      swatch.classList.add('active');
+    });
   });
+}
 
-  // — Refresh on images load —
-  window.addEventListener('load', () => {
-    ScrollTrigger.refresh();
+function initTestDriveForm() {
+  const form = document.getElementById('testDriveForm');
+  if (!form) return;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = form.querySelector('[name="name"]')?.value;
+    const phone = form.querySelector('[name="phone"]')?.value;
+    const date = form.querySelector('[name="date"]')?.value;
+    const branch = form.querySelector('[name="branch"]')?.value;
+    if (!name || !phone || !date || !branch) {
+      alert('Mohon lengkapi semua field');
+      return;
+    }
+    alert('Terima kasih! Permintaan test drive Anda telah dikirim. Tim kami akan menghubungi Anda dalam 1x24 jam.');
+    form.reset();
   });
+}
 
-  console.log('DriveNow Rental — Premium website loaded successfully');
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Terima kasih! Pesan Anda telah dikirim. Tim kami akan merespon dalam 1x24 jam.');
+    form.reset();
+  });
+}
+
+function initFavorites() {
+  document.querySelectorAll('.car-card-favorite').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      btn.classList.toggle('active');
+    });
+  });
+}
+
+function initWhatsAppLink() {
+  document.querySelectorAll('.btn-whatsapp').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const phone = '6281234567890';
+      const text = encodeURIComponent('Halo Autovista Prestige Motors! Saya tertarik dengan penawaran mobil yang ada. Mohon informasi lebih lanjut.');
+      window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initNavbar();
+  initMobileMenu();
+  initScrollAnimations();
+  initAnimatedStats();
+  initCarFilter();
+  initGallery();
+  initColorSelector();
+  initTestDriveForm();
+  initContactForm();
+  initFavorites();
+  initWhatsAppLink();
 });
