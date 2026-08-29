@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autovista Prestige Motors | Excellence in Every Journey</title>
+  <title>Autovista Prestige Motors — Drive the Extraordinary</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- NAVIGATION -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="navbar-brand">
-        <div class="brand-icon">⚡</div>
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="6" fill="#0071e3"/>
+          <path d="M7 18h14M8 14l2-4h8l2 4M10 14v4M18 14v4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         AUTOVISTA<span>Prestige</span>
       </a>
-      <div class="navbar-links">
-        <a href="index.html" class="active">Beranda</a>
-        <a href="models.html">Model</a>
-        <a href="services.html">Layanan</a>
-        <a href="contact.html">Kontak</a>
-        <a href="#" class="navbar-cta btn-whatsapp">WhatsApp Kami</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="models.html">Models</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Book Test Drive</a>
       </div>
       <button class="mobile-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -27,301 +32,323 @@
     </div>
   </nav>
 
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu-overlay">
+    <a href="index.html">Home</a>
+    <a href="models.html">Models</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary btn-lg" style="margin-top:16px">Book Test Drive</a>
+  </div>
+
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920" alt="Luxury Car">
-    </div>
-    <div class="container" style="display:flex;flex-direction:column;justify-content:center;min-height:100vh;">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">✦ Dealer Premium Terpercaya Sejak 2010</div>
-        <h1>Excellence in <span class="highlight">Every Journey</span></h1>
-        <p>Temukan koleksi kendaraan premium terlengkap dari Toyota, Honda, BMW, Mercedes, dan Porsche dengan layanan terbaik di Indonesia.</p>
+        <div class="hero-badge">
+          <i class="fas fa-star" style="font-size:0.625rem"></i>
+          Premium Dealer Since 2010
+        </div>
+        <h1>Drive the<br><span class="accent">Extraordinary</span></h1>
+        <p class="hero-subtitle">Indonesia's most prestigious collection of luxury, sports, and electric vehicles. Experience automotive excellence like never before.</p>
         <div class="hero-buttons">
-          <a href="models.html" class="btn btn-primary btn-lg">Lihat Katalog →</a>
-          <a href="contact.html" class="btn btn-outline btn-lg">Hubungi Kami</a>
+          <a href="models.html" class="btn btn-primary btn-lg">Explore Models <i class="fas fa-arrow-right" style="font-size:0.8125rem"></i></a>
+          <a href="contact.html" class="btn btn-ghost btn-lg">Contact Us</a>
         </div>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <h3 data-count="1500" data-suffix="+">0</h3>
-          <p>Mobil Terjual</p>
-        </div>
-        <div class="hero-stat">
-          <h3 data-count="15" data-suffix=" Tahun">0</h3>
-          <p>Pengalaman</p>
-        </div>
-        <div class="hero-stat">
-          <h3 data-count="98" data-suffix="%">0</h3>
-          <p>Pelanggan Puas</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="number" data-count="1500" data-suffix="+">0</div>
+            <div class="label">Cars Sold</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number" data-count="15" data-suffix=" Yrs">0</div>
+            <div class="label">Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number" data-count="98" data-suffix="%">0</div>
+            <div class="label">Satisfaction</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- FEATURED CARS -->
+  <section class="section section-light">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="label">Featured Models</div>
-        <h2>Mobil Pilihan Terbaik</h2>
-        <p>Koleksi kendaraan premium pilihan dengan performa dan desain terbaik</p>
+      <div class="section-header gsap-reveal">
+        <div class="section-label">Featured Collection</div>
+        <h2>Handpicked for You</h2>
+        <p>Every vehicle in our collection is meticulously selected for performance, comfort, and style.</p>
       </div>
       <div class="car-grid">
-        <div class="car-card animate-on-scroll">
+        <!-- Card 1 -->
+        <div class="car-card gsap-reveal" data-brand="toyota" data-type="sedan" data-price="580">
           <div class="car-card-image">
-            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" alt="Toyota Camry">
-            <div class="car-card-badge">Best Seller</div>
-            <button class="car-card-favorite">♡</button>
-          </div>
-          <div class="car-card-body">
-            <h3>Toyota Camry</h3>
-            <div class="car-card-type">Sedan • Bensin</div>
-            <div class="car-card-specs">
-              <div class="car-card-spec"><div class="value">181 HP</div><div class="label">Power</div></div>
-              <div class="car-card-spec"><div class="value">2.5L</div><div class="label">Engine</div></div>
-              <div class="car-card-spec"><div class="value">CVT</div><div class="label">Transmisi</div></div>
-            </div>
-            <div class="car-card-price">
-              <div class="price">Rp 580.000.000</div>
-            </div>
-            <div class="car-card-actions">
-              <a href="model-detail.html" class="btn btn-primary btn-sm">Details</a>
-              <a href="contact.html" class="btn btn-outline btn-sm">Test Drive</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="car-card animate-on-scroll">
-          <div class="car-card-image">
-            <img src="https://images.unsplash.com/photo-1568844293986-8d0400f4745b?w=600" alt="Honda CR-V">
-            <div class="car-card-badge">Popular</div>
-            <button class="car-card-favorite">♡</button>
-          </div>
-          <div class="car-card-body">
-            <h3>Honda CR-V</h3>
-            <div class="car-card-type">SUV • Bensin</div>
-            <div class="car-card-specs">
-              <div class="car-card-spec"><div class="value">190 HP</div><div class="label">Power</div></div>
-              <div class="car-card-spec"><div class="value">1.5L Turbo</div><div class="label">Engine</div></div>
-              <div class="car-card-spec"><div class="value">CVT</div><div class="label">Transmisi</div></div>
-            </div>
-            <div class="car-card-price">
-              <div class="price">Rp 545.000.000</div>
-            </div>
-            <div class="car-card-actions">
-              <a href="model-detail.html" class="btn btn-primary btn-sm">Details</a>
-              <a href="contact.html" class="btn btn-outline btn-sm">Test Drive</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="car-card animate-on-scroll">
-          <div class="car-card-image">
-            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" alt="BMW 320i">
-            <div class="car-card-badge">Premium</div>
-            <button class="car-card-favorite">♡</button>
-          </div>
-          <div class="car-card-body">
-            <h3>BMW 320i</h3>
-            <div class="car-card-type">Sedan • Bensin</div>
-            <div class="car-card-specs">
-              <div class="car-card-spec"><div class="value">184 HP</div><div class="label">Power</div></div>
-              <div class="car-card-spec"><div class="value">2.0L Turbo</div><div class="label">Engine</div></div>
-              <div class="car-card-spec"><div class="value">Automatic</div><div class="label">Transmisi</div></div>
-            </div>
-            <div class="car-card-price">
-              <div class="price">Rp 1.250.000.000</div>
-            </div>
-            <div class="car-card-actions">
-              <a href="model-detail.html" class="btn btn-primary btn-sm">Details</a>
-              <a href="contact.html" class="btn btn-outline btn-sm">Test Drive</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="car-card animate-on-scroll">
-          <div class="car-card-image">
-            <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=600" alt="Mercedes C200">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600" alt="Toyota Camry Hybrid" loading="lazy">
             <div class="car-card-badge">Luxury</div>
-            <button class="car-card-favorite">♡</button>
           </div>
           <div class="car-card-body">
-            <h3>Mercedes C200</h3>
-            <div class="car-card-type">Sedan • Bensin</div>
+            <div class="car-card-brand">Toyota</div>
+            <div class="car-card-name">Camry Hybrid</div>
             <div class="car-card-specs">
-              <div class="car-card-spec"><div class="value">184 HP</div><div class="label">Power</div></div>
-              <div class="car-card-spec"><div class="value">2.0L Turbo</div><div class="label">Engine</div></div>
-              <div class="car-card-spec"><div class="value">Automatic</div><div class="label">Transmisi</div></div>
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 210 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> CVT</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Hybrid</span>
             </div>
-            <div class="car-card-price">
-              <div class="price">Rp 1.380.000.000</div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 580.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-primary btn-sm">Details</a>
+                <a href="contact.html" class="btn btn-outline btn-sm">Test Drive</a>
+              </div>
             </div>
-            <div class="car-card-actions">
-              <a href="model-detail.html" class="btn btn-primary btn-sm">Details</a>
-              <a href="contact.html" class="btn btn-outline btn-sm">Test Drive</a>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="car-card gsap-reveal" data-brand="honda" data-type="suv" data-price="545">
+          <div class="car-card-image">
+            <img src="https://images.unsplash.com/photo-1543832923-44685a9c0d58?w=600" alt="Honda CR-V Turbo" loading="lazy">
+            <div class="car-card-badge">SUV</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Honda</div>
+            <div class="car-card-name">CR-V Turbo</div>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 190 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> CVT</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 545.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-primary btn-sm">Details</a>
+                <a href="contact.html" class="btn btn-outline btn-sm">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="car-card gsap-reveal" data-brand="bmw" data-type="sedan" data-price="1250">
+          <div class="car-card-image">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" alt="BMW 320i Sport" loading="lazy">
+            <div class="car-card-badge">Premium</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">BMW</div>
+            <div class="car-card-name">320i Sport</div>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 184 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> Automatic</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 1.250.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-primary btn-sm">Details</a>
+                <a href="contact.html" class="btn btn-outline btn-sm">Test Drive</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="car-card gsap-reveal" data-brand="mercedes" data-type="sedan" data-price="1380">
+          <div class="car-card-image">
+            <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=600" alt="Mercedes C200 AMG Line" loading="lazy">
+            <div class="car-card-badge">Luxury</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Mercedes-Benz</div>
+            <div class="car-card-name">C200 AMG Line</div>
+            <div class="car-card-specs">
+              <span class="car-card-spec"><i class="fas fa-gauge-high"></i> 204 HP</span>
+              <span class="car-card-spec"><i class="fas fa-gear"></i> Automatic</span>
+              <span class="car-card-spec"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-card-footer">
+              <span class="car-card-price">Rp 1.380.000.000</span>
+              <div class="car-card-actions">
+                <a href="model-detail.html" class="btn btn-primary btn-sm">Details</a>
+                <a href="contact.html" class="btn btn-outline btn-sm">Test Drive</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div style="text-align:center;margin-top:48px;">
-        <a href="models.html" class="btn btn-outline btn-lg">Lihat Semua Model →</a>
+      <div style="text-align:center;margin-top:48px" class="gsap-reveal">
+        <a href="models.html" class="btn btn-outline btn-lg" style="color:var(--black);border-color:var(--gray-300)">View All Models <i class="fas fa-arrow-right" style="font-size:0.8125rem"></i></a>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background:var(--dark-slate-light);">
+  <!-- SERVICES (dark) -->
+  <section class="section section-dark">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="label">Why Choose Us</div>
-        <h2>Mengapa Autovista?</h2>
-        <p>Kami memberikan pengalaman terbaik dalam setiap langkah pembelian kendaraan Anda</p>
+      <div class="section-header gsap-reveal">
+        <div class="section-label">Why Autovista</div>
+        <h2>Excellence in Every Step</h2>
+        <p>From browsing to ownership, we craft a seamless premium experience.</p>
       </div>
-      <div class="reasons-grid">
-        <div class="reason-card animate-on-scroll">
-          <div class="reason-icon">🏆</div>
-          <h3>Dealer Resmi Terpercaya</h3>
-          <p>Dealer resmi bersertifikat dengan reputasi terbaik di Indonesia sejak 2010.</p>
+      <div class="services-grid">
+        <div class="service-card gsap-reveal">
+          <div class="service-icon"><i class="fas fa-award"></i></div>
+          <h3>Certified Premium Dealer</h3>
+          <p>Official dealer with the highest certification. Trusted by thousands of customers across Indonesia since 2010.</p>
         </div>
-        <div class="reason-card animate-on-scroll">
-          <div class="reason-icon">💰</div>
-          <h3>Harga Terbaik</h3>
-          <p> harga kompetitif dengan program promo menarik dan cicilan ringan.</p>
+        <div class="service-card gsap-reveal">
+          <div class="service-icon"><i class="fas fa-tags"></i></div>
+          <h3>Best Price Guarantee</h3>
+          <p>Competitive pricing with exclusive promotions and flexible financing options tailored to your needs.</p>
         </div>
-        <div class="reason-card animate-on-scroll">
-          <div class="reason-icon">🛡️</div>
-          <h3>Garansi Resmi</h3>
-          <p>Setiap kendaraan dilengkapi garansi resmi pabrik dan jaringan servis luas.</p>
+        <div class="service-card gsap-reveal">
+          <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Full Warranty Coverage</h3>
+          <p>Every vehicle comes with comprehensive factory warranty and access to our nationwide service network.</p>
         </div>
-        <div class="reason-card animate-on-scroll">
-          <div class="reason-icon">🤝</div>
-          <h3>After Sales Terbaik</h3>
-          <p>Layanan purna jual premium dengan teknisi bersertifikat dan suku cadang asli.</p>
+        <div class="service-card gsap-reveal">
+          <div class="service-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Premium After-Sales</h3>
+          <p>Dedicated service advisors, certified technicians, and genuine parts — your car stays in perfect condition.</p>
+        </div>
+        <div class="service-card gsap-reveal">
+          <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h3>Seamless Trade-In</h3>
+          <p>Get the best value for your current vehicle with our transparent evaluation and instant upgrade program.</p>
+        </div>
+        <div class="service-card gsap-reveal">
+          <div class="service-icon"><i class="fas fa-headset"></i></div>
+          <h3>24/7 Roadside Assistance</h3>
+          <p>Breakdown? Flat tire? Our roadside assistance team is available around the clock across Indonesia.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- BOOKING CTA (light) -->
+  <section class="section section-light">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="label">Testimonials</div>
-        <h2>Apa Kata Mereka?</h2>
-        <p>Dengarkan pengalaman pelanggan kami yang puas</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-stars">★★★★★</div>
-          <div class="testimonial-text">"Pelayanan luar biasa! Dari awal konsultasi hingga serah terima kendaraan, semuanya profesional. Mobil BMW 320i yang saya beli dalam kondisi sempurna."</div>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">AR</div>
-            <div>
-              <h4>Ahmad Rizky</h4>
-              <p>BMW 320i Owner</p>
-            </div>
+      <div class="booking-cta gsap-reveal-scale">
+        <div>
+          <div class="section-label" style="text-align:left">Special Offer</div>
+          <h2>Own Your Dream Car<br>with Zero Hassle</h2>
+          <p>Enjoy exclusive financing with down payments starting from 10%, competitive rates, and approval within 24 hours.</p>
+          <div class="booking-features">
+            <div class="booking-feature"><i class="fas fa-check-circle"></i> DP from 10%</div>
+            <div class="booking-feature"><i class="fas fa-check-circle"></i> Tenor up to 6 Years</div>
+            <div class="booking-feature"><i class="fas fa-check-circle"></i> Competitive Rates</div>
+            <div class="booking-feature"><i class="fas fa-check-circle"></i> All-Risk Insurance</div>
           </div>
+          <a href="contact.html" class="btn btn-primary btn-lg">Apply Now <i class="fas fa-arrow-right" style="font-size:0.8125rem"></i></a>
         </div>
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-stars">★★★★★</div>
-          <div class="testimonial-text">"Proses trade-in sangat mudah dan harga yang ditawarkan fair. Tim Autovista membantu saya mendapatkan CR-V impian dengan cicilan yang terjangkau."</div>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">SP</div>
-            <div>
-              <h4>Sari Putri</h4>
-              <p>Honda CR-V Owner</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-stars">★★★★★</div>
-          <div class="testimonial-text">"Sudah 3 kali beli mobil di Autovista. After sales-nya juara! Servis berkala selalu tepat waktu dan staff-nya sangat ramah. Highly recommended!"</div>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">BW</div>
-            <div>
-              <h4>Budi Wahyudi</h4>
-              <p>Toyota Camry Owner</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="background:var(--dark-slate-light);">
-    <div class="container">
-      <div class="finance-section animate-on-scroll">
-        <div class="finance-content">
-          <div class="promo-badge">✦ Promo Spesial Bulan Ini</div>
-          <h2>Kemudahan Memiliki Mobil Impian</h2>
-          <p>Dapatkan penawaran pembiayaan terbaik dengan mitra leasing pilihan kami. Proses cepat, mudah, dan transparan.</p>
-          <div class="finance-features">
-            <div class="finance-feature"><span class="check">✓</span> DP Mulai 10%</div>
-            <div class="finance-feature"><span class="check">✓</span> Tenor Hingga 6 Tahun</div>
-            <div class="finance-feature"><span class="check">✓</span> Bunga Kompetitif</div>
-            <div class="finance-feature"><span class="check">✓</span> Asuransi All Risk</div>
-          </div>
-          <a href="contact.html" class="btn btn-primary">Ajukan Sekarang →</a>
-        </div>
-        <div class="finance-visual">
+        <div class="booking-visual">
           <div class="big-number">0%</div>
-          <div class="label">Bunga Cicilan 3 Bulan Pertama</div>
+          <div class="visual-label">Interest for First 3 Months</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- TESTIMONIALS (dark) -->
+  <section class="section section-dark">
     <div class="container">
-      <div class="cta-section animate-on-scroll">
-        <h2>Siap Memiliki Mobil Impian?</h2>
-        <p>Hubungi kami sekarang untuk mendapatkan penawaran terbaik dan jadwalkan test drive gratis</p>
-        <div class="btn-group">
-          <a href="#" class="btn btn-whatsapp btn-lg">💬 Chat WhatsApp</a>
-          <a href="models.html" class="btn btn-white btn-lg">Lihat Katalog →</a>
+      <div class="section-header gsap-reveal">
+        <div class="section-label">Testimonials</div>
+        <h2>What Our Clients Say</h2>
+        <p>Hear from drivers who chose excellence.</p>
+      </div>
+      <div class="car-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="service-card gsap-reveal" style="background:var(--gray-900)">
+          <div style="color:#ff9f0a;font-size:0.875rem;letter-spacing:2px;margin-bottom:16px">★★★★★</div>
+          <p style="color:var(--gray-300);font-size:0.9375rem;line-height:1.6;margin-bottom:20px;font-style:italic">"Outstanding service from start to finish. The BMW 320i I purchased was delivered in immaculate condition. Truly a premium experience."</p>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:0.8125rem">AR</div>
+            <div><div style="font-weight:500;font-size:0.875rem;color:var(--white)">Ahmad Rizky</div><div style="font-size:0.75rem;color:var(--gray-400)">BMW 320i Owner</div></div>
+          </div>
+        </div>
+        <div class="service-card gsap-reveal" style="background:var(--gray-900)">
+          <div style="color:#ff9f0a;font-size:0.875rem;letter-spacing:2px;margin-bottom:16px">★★★★★</div>
+          <p style="color:var(--gray-300);font-size:0.9375rem;line-height:1.6;margin-bottom:20px;font-style:italic">"The trade-in process was seamless. Fair valuation, quick paperwork, and I drove home in my new CR-V the same day. Highly recommended!"</p>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:0.8125rem">SP</div>
+            <div><div style="font-weight:500;font-size:0.875rem;color:var(--white)">Sari Putri</div><div style="font-size:0.75rem;color:var(--gray-400)">Honda CR-V Owner</div></div>
+          </div>
+        </div>
+        <div class="service-card gsap-reveal" style="background:var(--gray-900)">
+          <div style="color:#ff9f0a;font-size:0.875rem;letter-spacing:2px;margin-bottom:16px">★★★★★</div>
+          <p style="color:var(--gray-300);font-size:0.9375rem;line-height:1.6;margin-bottom:20px;font-style:italic">"Third car from Autovista. After-sales service is exceptional — always on time, always professional. Autovista is my go-to dealer."</p>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:0.8125rem">BW</div>
+            <div><div style="font-weight:500;font-size:0.875rem;color:var(--white)">Budi Wahyudi</div><div style="font-size:0.75rem;color:var(--gray-400)">Toyota Camry Owner</div></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FINAL CTA -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="cta-section gsap-reveal-scale">
+        <h2>Ready to Drive the Extraordinary?</h2>
+        <p>Schedule a test drive today and experience automotive perfection.</p>
+        <div class="btn-group">
+          <a href="#" class="btn btn-whatsapp btn-lg" data-whatsapp><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
+          <a href="models.html" class="btn btn-white btn-lg">Browse Models <i class="fas fa-arrow-right" style="font-size:0.8125rem"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <h3>AUTOVISTA<span>Prestige</span></h3>
-          <p>Dealer mobil premium terpercaya dengan koleksi kendaraan terlengkap dari brand ternama dunia.</p>
+          <p>Indonesia's trusted premium car dealer with the most complete collection of world-class vehicles.</p>
           <div class="footer-social">
-            <a href="#">📘</a>
-            <a href="#">📸</a>
-            <a href="#">🐦</a>
-            <a href="#">📺</a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
           </div>
         </div>
         <div class="footer-col">
           <h4>Menu</h4>
-          <a href="index.html">Beranda</a>
-          <a href="models.html">Katalog Model</a>
-          <a href="services.html">Layanan</a>
-          <a href="contact.html">Kontak</a>
+          <a href="index.html">Home</a>
+          <a href="models.html">Models</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
         </div>
         <div class="footer-col">
-          <h4>Layanan</h4>
-          <a href="services.html">Penjualan</a>
+          <h4>Services</h4>
+          <a href="services.html">New Car Sales</a>
           <a href="services.html">Trade-In</a>
-          <a href="services.html">Pembiayaan</a>
-          <a href="services.html">Asuransi</a>
+          <a href="services.html">Financing</a>
+          <a href="services.html">Insurance</a>
         </div>
         <div class="footer-col">
-          <h4>Kontak</h4>
+          <h4>Contact</h4>
           <a href="tel:+6281234567890">+62 812 3456 7890</a>
           <a href="mailto:info@autovista.co.id">info@autovista.co.id</a>
-          <a href="contact.html">Jakarta • Surabaya • Medan</a>
+          <a href="contact.html">Jakarta &bull; Surabaya &bull; Bali</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Autovista Prestige Motors. All rights reserved.</p>
-        <p>Excellence in Every Journey</p>
+        <span>&copy; 2026 Autovista Prestige Motors. All rights reserved.</span>
+        <span>Drive the Extraordinary</span>
       </div>
     </div>
   </footer>
 
+  <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

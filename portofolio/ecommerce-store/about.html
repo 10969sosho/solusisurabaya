@@ -1,160 +1,204 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — ELVOIRA Fashion</title>
+  <title>About — ELVOIRA</title>
+  <meta name="description" content="The story behind ELVOIRA Fashion. Elegance in Every Thread since 2020.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container navbar-inner">
-      <a href="index.html" class="navbar-brand">Elvoira<span>.</span></a>
-      <ul class="navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+  <!-- NAVIGATION -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">ELVOIRA</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="shop.html" class="nav__link">Shop</a></li>
+        <li><a href="about.html" class="nav__link active">About</a></li>
       </ul>
-      <div class="navbar-actions">
-        <button aria-label="Search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-        <a href="#" aria-label="Account">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <div class="nav__actions">
+        <a href="shop.html" class="nav__icon" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </a>
-        <a href="#" aria-label="Cart" style="position:relative">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          <span class="cart-count">0</span>
+        <a href="#" class="nav__icon" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
-        <button class="mobile-toggle" aria-label="Menu">
+        <a href="#" class="nav__icon" aria-label="Cart" style="position:relative">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <button class="nav__toggle" id="mobileToggle" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="shop.html" class="mobile-menu__link">Shop</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+  </div>
+
   <!-- ABOUT HERO -->
   <section class="about-hero">
     <div class="container">
-      <h1>Tentang ELVOIRA</h1>
-      <p>Menghadirkan keanggunan dalam setiap jahitan sejak 2020</p>
+      <h1 class="about-hero__title gsap-reveal">The Art of<br>Elegance</h1>
+      <p class="about-hero__desc gsap-reveal">Crafting timeless fashion since 2020. A story of passion, precision, and purpose.</p>
     </div>
   </section>
 
-  <!-- BRAND STORY -->
+  <!-- BRAND STORY — Alternating Sections -->
   <section class="about-story">
+
+    <!-- Row 1: Image Left, Content Right -->
     <div class="container">
-      <div class="about-story-grid">
-        <div class="about-story-image animate-on-scroll">
-          <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800" alt="Our Story">
+      <div class="about-story__row">
+        <div class="about-story__image gsap-reveal-left">
+          <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800" alt="Our Beginning" loading="lazy">
         </div>
-        <div class="about-story-content animate-on-scroll">
-          <span class="overline">Our Story</span>
-          <h2>Cerita Kami</h2>
-          <p>ELVOIRA lahir dari mimpi seorang desainer muda yang ingin menghadirkan fashion premium Indonesia ke kancah internasional. Dimulai dari sebuah studio kecil di Jakarta pada tahun 2020, kini ELVOIRA telah berkembang menjadi brand fashion yang dikenal luas.</p>
-          <p>Setiap koleksi kami dirancang dengan penuh dedikasi, menggabungkan warisan budaya Indonesia dengan tren fashion global. Kami percaya bahwa keanggunan sejati datang dari dalam, dan pakaian yang tepat dapat membantu setiap individu mengekspresikan diri mereka yang terbaik.</p>
-          <p>Dengan komitmen terhadap kualitas dan keberlanjutan, kami terus berinovasi untuk menghadirkan koleksi yang tidak hanya indah dipandang, tetapi juga ramah lingkungan.</p>
+        <div class="gsap-reveal-right">
+          <span class="about-story__overline">The Beginning</span>
+          <h2 class="about-story__title">Born from a Dream</h2>
+          <p class="about-story__text">ELVOIRA was founded in 2020 by a young designer with a vision: to bring Indonesian premium fashion to the international stage. Starting from a small studio in Jakarta, ELVOIRA has grown into a globally recognized fashion brand.</p>
+          <p class="about-story__text">Every collection is designed with dedication, blending Indonesian cultural heritage with global fashion trends. We believe that true elegance comes from within, and the right clothing can help every individual express their best self.</p>
         </div>
       </div>
     </div>
+
+    <!-- Row 2: Content Left, Image Right -->
+    <div class="container">
+      <div class="about-story__row about-story__row--reverse">
+        <div class="about-story__image gsap-reveal-right">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800" alt="Our Craft" loading="lazy">
+        </div>
+        <div class="gsap-reveal-left">
+          <span class="about-story__overline">Our Craft</span>
+          <h2 class="about-story__title">Precision in Every Stitch</h2>
+          <p class="about-story__text">With a commitment to quality and sustainability, we continuously innovate to deliver collections that are not only beautiful to look at, but also environmentally friendly. Every material is carefully sourced, every stitch placed with intention.</p>
+          <p class="about-story__text">Our design philosophy is rooted in restraint — we believe that true luxury speaks through quality, not excess. Each piece is engineered to transcend seasons and trends.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: Image Left, Content Right -->
+    <div class="container">
+      <div class="about-story__row">
+        <div class="about-story__image gsap-reveal-left">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800" alt="Our Future" loading="lazy">
+        </div>
+        <div class="gsap-reveal-right">
+          <span class="about-story__overline">Our Vision</span>
+          <h2 class="about-story__title">Shaping the Future</h2>
+          <p class="about-story__text">Today, ELVOIRA ships worldwide from Jakarta, bringing premium fashion to discerning customers across the globe. Our three flagship stores in Jakarta, Bandung, and Bali serve as havens for those who appreciate the finer things.</p>
+          <p class="about-story__text">We're just getting started. Our vision is to become Southeast Asia's most respected fashion house — one that proves elegance and sustainability can coexist beautifully.</p>
+          <div style="margin-top: var(--space-24);">
+            <a href="shop.html" class="btn btn--primary">Explore Collection</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- VALUES -->
-  <section class="values-section">
+  <section class="section section--gray">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="overline">Our Values</span>
-        <h2>Nilai-Nilai Kami</h2>
-        <p>Tiga pilar utama yang menjadi fondasi ELVOIRA</p>
+      <div class="section__header gsap-reveal">
+        <span class="section__overline">Our Values</span>
+        <h2 class="section__title">What We Stand For</h2>
+        <p class="section__desc">Three pillars that define every decision we make.</p>
       </div>
       <div class="values-grid">
-        <div class="value-card animate-on-scroll">
-          <div class="value-icon">✦</div>
-          <h3>Keanggunan</h3>
-          <p>Setiap desain kami dirancang untuk menghadirkan keanggunan yang abadi. Kami percaya bahwa true elegance tidak mengikuti tren sesaat, melainkan mencerminkan karakter dan kepercayaan diri pemakainya.</p>
+        <div class="value-card gsap-reveal">
+          <div class="value-card__icon">✦</div>
+          <h3 class="value-card__title">Elegance</h3>
+          <p class="value-card__desc">Every design is crafted to deliver timeless elegance. We believe true style transcends fleeting trends and reflects character and confidence.</p>
         </div>
-        <div class="value-card animate-on-scroll">
-          <div class="value-icon">♻</div>
-          <h3>Keberlanjutan</h3>
-          <p>Kami berkomitmen untuk praktik fashion yang bertanggung jawab. Dengan menggunakan material ramah lingkungan dan proses produksi yang etis, kami berusaha mengurangi dampak lingkungan.</p>
+        <div class="value-card gsap-reveal">
+          <div class="value-card__icon">♻</div>
+          <h3 class="value-card__title">Sustainability</h3>
+          <p class="value-card__desc">We are committed to responsible fashion practices. Using eco-friendly materials and ethical production processes to minimize environmental impact.</p>
         </div>
-        <div class="value-card animate-on-scroll">
-          <div class="value-icon">♡</div>
-          <h3>Kualitas</h3>
-          <p>Setiap jahitan diperhatikan dengan teliti. Kami hanya menggunakan material pilihan terbaik dan bekerja sama dengan pengrajin berpengalaman untuk memastikan kualitas yang konsisten.</p>
+        <div class="value-card gsap-reveal">
+          <div class="value-card__icon">♡</div>
+          <h3 class="value-card__title">Quality</h3>
+          <p class="value-card__desc">Every stitch is carefully examined. We use only the finest materials and collaborate with experienced artisans to ensure consistent quality.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- TEAM -->
-  <section class="team-section">
+  <section class="section section--light">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="overline">Our Team</span>
-        <h2>Tim Kami</h2>
-        <p>Orang-orang hebat di balik ELVOIRA</p>
+      <div class="section__header gsap-reveal">
+        <span class="section__overline">Our Team</span>
+        <h2 class="section__title">The People Behind ELVOIRA</h2>
+        <p class="section__desc">Passionate individuals dedicated to the art of fashion.</p>
       </div>
       <div class="team-grid">
-        <div class="team-card animate-on-scroll">
-          <div class="team-photo">
-            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Putri Larasati">
+        <div class="team-card gsap-reveal">
+          <div class="team-card__photo">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Putri Larasati" loading="lazy">
           </div>
-          <h3>Putri Larasati</h3>
-          <span class="role">Founder & Creative Director</span>
-          <p>Lulusan Parsons School of Design dengan pengalaman 10 tahun di industri fashion internasional. Visioner di balik setiap koleksi ELVOIRA.</p>
+          <h3 class="team-card__name">Putri Larasati</h3>
+          <span class="team-card__role">Founder & Creative Director</span>
+          <p class="team-card__desc">Parsons School of Design graduate with 10 years of international fashion experience. The visionary behind every ELVOIRA collection.</p>
         </div>
-        <div class="team-card animate-on-scroll">
-          <div class="team-photo">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Arka Wijaya">
+        <div class="team-card gsap-reveal">
+          <div class="team-card__photo">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Arka Wijaya" loading="lazy">
           </div>
-          <h3>Arka Wijaya</h3>
-          <span class="role">Head of Operations</span>
-          <p>Berpengalaman dalam supply chain management dan operasi retail. Memastikan setiap produk ELVOIRA sampai di tangan pelanggan dengan sempurna.</p>
+          <h3 class="team-card__name">Arka Wijaya</h3>
+          <span class="team-card__role">Head of Operations</span>
+          <p class="team-card__desc">Experienced in supply chain management and retail operations. Ensures every ELVOIRA product reaches customers in perfect condition.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- STORE LOCATIONS -->
-  <section class="stores-section">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="overline">Visit Us</span>
-        <h2>Store Locations</h2>
-        <p>Kunjungi toko kami di kota-kota besar Indonesia</p>
+  <section class="section section--gray">
+    <div class="container container--wide">
+      <div class="section__header gsap-reveal">
+        <span class="section__overline">Visit Us</span>
+        <h2 class="section__title">Store Locations</h2>
+        <p class="section__desc">Find us in major cities across Indonesia.</p>
       </div>
       <div class="stores-grid">
-        <div class="store-card animate-on-scroll">
-          <div class="store-card-image">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Jakarta Store">
+        <div class="store-card gsap-reveal">
+          <div class="store-card__image">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Jakarta Store" loading="lazy">
           </div>
-          <div class="store-card-body">
-            <h3>Jakarta</h3>
-            <p class="address">Jl. Senopati No. 88<br>Kebayoran Baru, Jakarta Selatan 12190</p>
-            <span class="hours">Senin - Minggu: 10:00 - 21:00</span>
-          </div>
-        </div>
-        <div class="store-card animate-on-scroll">
-          <div class="store-card-image">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600" alt="Bandung Store">
-          </div>
-          <div class="store-card-body">
-            <h3>Bandung</h3>
-            <p class="address">Jl. Riau No. 55<br>Citarum, Bandung Wetan 40115</p>
-            <span class="hours">Senin - Minggu: 10:00 - 20:00</span>
+          <div class="store-card__body">
+            <h3 class="store-card__name">Jakarta</h3>
+            <p class="store-card__address">Jl. Senopati No. 88<br>Kebayoran Baru, Jakarta Selatan 12190</p>
+            <span class="store-card__hours">Mon — Sun: 10:00 — 21:00</span>
           </div>
         </div>
-        <div class="store-card animate-on-scroll">
-          <div class="store-card-image">
-            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600" alt="Bali Store">
+        <div class="store-card gsap-reveal">
+          <div class="store-card__image">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600" alt="Bandung Store" loading="lazy">
           </div>
-          <div class="store-card-body">
-            <h3>Bali</h3>
-            <p class="address">Jl. Sunset Road No. 123<br>Seminyak, Badung 80361</p>
-            <span class="hours">Senin - Minggu: 10:00 - 22:00</span>
+          <div class="store-card__body">
+            <h3 class="store-card__name">Bandung</h3>
+            <p class="store-card__address">Jl. Riau No. 55<br>Citarum, Bandung Wetan 40115</p>
+            <span class="store-card__hours">Mon — Sun: 10:00 — 20:00</span>
+          </div>
+        </div>
+        <div class="store-card gsap-reveal">
+          <div class="store-card__image">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600" alt="Bali Store" loading="lazy">
+          </div>
+          <div class="store-card__body">
+            <h3 class="store-card__name">Bali</h3>
+            <p class="store-card__address">Jl. Sunset Road No. 123<br>Seminyak, Badung 80361</p>
+            <span class="store-card__hours">Mon — Sun: 10:00 — 22:00</span>
           </div>
         </div>
       </div>
@@ -163,23 +207,23 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>Elvoira<span>.</span></h3>
-          <p>Elegance in Every Thread. Fashion premium untuk wanita dan pria yang menghargai keanggunan.</p>
+    <div class="container container--wide">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">ELVOIRA</div>
+          <p class="footer__brand-desc">Elegance in Every Thread. Premium fashion for those who appreciate timeless design and exceptional quality.</p>
         </div>
-        <div class="footer-col">
-          <h4>Shop</h4>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Shop</h4>
           <ul>
-            <li><a href="shop.html">Wanita</a></li>
-            <li><a href="shop.html">Pria</a></li>
-            <li><a href="shop.html">Aksesoris</a></li>
+            <li><a href="shop.html">Clothing</a></li>
+            <li><a href="shop.html">Accessories</a></li>
+            <li><a href="shop.html">Footwear</a></li>
             <li><a href="shop.html">New Arrivals</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Company</h4>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
           <ul>
             <li><a href="about.html">About Us</a></li>
             <li><a href="#">Careers</a></li>
@@ -187,8 +231,8 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Help</h4>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Help</h4>
           <ul>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Shipping</a></li>
@@ -197,17 +241,33 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 ELVOIRA Fashion. All rights reserved.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Twitter">TW</a>
-          <a href="#" aria-label="Facebook">FB</a>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 ELVOIRA Fashion. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="toast__icon">✓</span>
+    <span id="toastMessage"></span>
+  </div>
+
+  <!-- CDN Scripts -->
+  <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

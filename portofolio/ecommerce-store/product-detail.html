@@ -1,50 +1,60 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emilia Silk Dress — ELVOIRA Fashion</title>
+  <title>Emilia Silk Dress — ELVOIRA</title>
+  <meta name="description" content="Premium silk dress with elegant design. Crafted from 100% Mulberry Silk.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container navbar-inner">
-      <a href="index.html" class="navbar-brand">Elvoira<span>.</span></a>
-      <ul class="navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html" class="active">Shop</a></li>
-        <li><a href="about.html">About</a></li>
+  <!-- NAVIGATION -->
+  <nav class="nav nav--light" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">ELVOIRA</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="shop.html" class="nav__link active">Shop</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
       </ul>
-      <div class="navbar-actions">
-        <button aria-label="Search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-        <a href="#" aria-label="Account">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <div class="nav__actions">
+        <a href="shop.html" class="nav__icon" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </a>
-        <a href="#" aria-label="Cart" style="position:relative">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          <span class="cart-count">0</span>
+        <a href="#" class="nav__icon" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
-        <button class="mobile-toggle" aria-label="Menu">
+        <a href="#" class="nav__icon" aria-label="Cart" style="position:relative">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <button class="nav__toggle" id="mobileToggle" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="shop.html" class="mobile-menu__link">Shop</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+  </div>
+
   <!-- PRODUCT DETAIL -->
   <section class="product-detail">
-    <div class="container">
-      <div class="product-detail-grid">
+    <div class="container container--wide">
+      <div class="product-detail__grid">
+
         <!-- Gallery -->
-        <div class="product-gallery">
-          <div class="gallery-main">
-            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800" alt="Emilia Silk Dress">
+        <div class="product-gallery gsap-reveal-left">
+          <div class="product-gallery__main">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800" alt="Emilia Silk Dress" class="product-gallery__main-img">
           </div>
-          <div class="gallery-thumbs">
+          <div class="product-gallery__thumbs">
             <div class="gallery-thumb active">
               <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200" alt="Thumb 1">
             </div>
@@ -54,12 +64,15 @@
             <div class="gallery-thumb">
               <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=200" alt="Thumb 3">
             </div>
+            <div class="gallery-thumb">
+              <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=200" alt="Thumb 4">
+            </div>
           </div>
         </div>
 
         <!-- Product Info -->
-        <div class="product-info">
-          <div class="breadcrumb">
+        <div class="product-info gsap-reveal-right">
+          <div class="product-info__breadcrumb">
             <a href="shop.html">Shop</a>
             <span>/</span>
             <a href="shop.html">Dress</a>
@@ -67,83 +80,83 @@
             <span>Emilia Silk Dress</span>
           </div>
 
-          <h1>Emilia Silk Dress</h1>
+          <h1 class="product-info__title">Emilia Silk Dress</h1>
 
-          <div class="rating">
-            <span class="stars">★★★★★</span>
+          <div class="product-info__rating">
+            <span class="product-info__rating-stars">★★★★★</span>
             <span>4.8</span>
-            <span>(124 ulasan)</span>
+            <span>(124 reviews)</span>
           </div>
 
-          <div class="price">Rp 1.850.000</div>
+          <div class="product-info__price">$129</div>
 
-          <p class="description">
-            Dress sutra premium dengan potongan yang anggun. Dirancang untuk memberikan kesan feminin dan elegan di setiap kesempatan. Material sutra berkualitas tinggi yang nyaman dipakai sepanjang hari.
+          <p class="product-info__desc">
+            Premium silk dress with an elegant cut. Designed to deliver a feminine and sophisticated impression for every occasion. High-quality silk material that is comfortable to wear all day long.
           </p>
 
-          <div class="divider"></div>
+          <div class="product-info__divider"></div>
 
-          <span class="option-label">Ukuran: <span>—</span></span>
+          <span class="option-label">Size: <span>—</span></span>
           <div class="size-options">
-            <button>XS</button>
-            <button>S</button>
-            <button class="active">M</button>
-            <button>L</button>
-            <button>XL</button>
+            <button class="size-option">XS</button>
+            <button class="size-option">S</button>
+            <button class="size-option active">M</button>
+            <button class="size-option">L</button>
+            <button class="size-option">XL</button>
           </div>
 
-          <span class="option-label">Warna: <span>—</span></span>
+          <span class="option-label">Color: <span>Black</span></span>
           <div class="color-options">
-            <button class="active" style="background:#111111;" title="Black"></button>
-            <button style="background:#F5A6B4;" title="Pink"></button>
-            <button style="background:#f5f5f5;" title="White"></button>
-            <button style="background:#8B7355;" title="Brown"></button>
+            <button class="color-option active" style="background:#1d1d1f;" title="Black"></button>
+            <button class="color-option" style="background:#f5a6b4;" title="Rose"></button>
+            <button class="color-option" style="background:#f5f5f7;" title="White"></button>
+            <button class="color-option" style="background:#8B7355;" title="Bronze"></button>
           </div>
 
-          <span class="option-label">Jumlah:</span>
+          <span class="option-label">Quantity:</span>
           <div class="quantity-selector">
-            <button class="minus">−</button>
+            <button class="quantity-selector__btn">−</button>
             <input type="number" value="1" min="1" max="10">
-            <button class="plus">+</button>
+            <button class="quantity-selector__btn">+</button>
           </div>
 
           <div class="add-to-cart-row">
-            <button class="btn btn-pink btn-lg add-to-cart-btn" data-name="Emilia Silk Dress">Add to Cart</button>
-            <button class="btn-wishlist">♡</button>
+            <button class="btn btn--primary btn--lg add-to-cart-btn" data-name="Emilia Silk Dress">Add to Bag — $129</button>
+            <button class="btn-wishlist-lg">♡</button>
           </div>
 
-          <div class="divider"></div>
+          <div class="product-info__divider"></div>
 
           <!-- Tabs -->
           <div class="product-tabs">
-            <div class="tabs-nav">
-              <button class="active" data-tab="tab-desc">Deskripsi</button>
-              <button data-tab="tab-info">Informasi</button>
-              <button data-tab="tab-reviews">Ulasan (124)</button>
+            <div class="product-tabs__nav">
+              <button class="product-tabs__btn active" data-tab="tab-desc">Description</button>
+              <button class="product-tabs__btn" data-tab="tab-info">Details</button>
+              <button class="product-tabs__btn" data-tab="tab-reviews">Reviews (124)</button>
             </div>
 
             <div class="tab-content active" id="tab-desc">
-              <p>Emilia Silk Dress adalah koleksi andalan ELVOIRA yang menggabungkan keanggunan klasik dengan sentuhan modern. Dress ini terbuat dari 100% sutra alami dengan jahitan tangan yang presisi.</p>
+              <p>The Emilia Silk Dress is ELVOIRA's signature piece that combines classic elegance with a modern touch. This dress is made from 100% natural silk with precise hand-stitching.</p>
               <br>
-              <p>Potongan A-line yang_flattering cocok untuk berbagai bentuk tubuh. Kerah V-neck memperpanjang garis leher, sementara detail ruffle di bagian bahu memberikan sentuhan feminin yang lembut.</p>
+              <p>The A-line cut flatters various body types. The V-neckline elongates the neck, while the ruffle detail on the shoulders adds a soft, feminine touch.</p>
               <br>
-              <p>Cocok untuk acara formal, dinner date, maupun pesta pernikahan. Padukan dengan heels dan clutch untuk tampilan yang sempurna.</p>
+              <p>Perfect for formal events, dinner dates, or weddings. Pair with heels and a clutch for a complete look.</p>
             </div>
 
             <div class="tab-content" id="tab-info">
               <p><strong>Material:</strong> 100% Mulberry Silk</p>
               <p><strong>Fit:</strong> Regular Fit</p>
-              <p><strong>Panjang:</strong> Midi (di bawah lutut)</p>
-              <p><strong>Perawatan:</strong> Dry clean only</p>
-              <p><strong>Asal:</strong> Made in Italy</p>
+              <p><strong>Length:</strong> Midi (below knee)</p>
+              <p><strong>Care:</strong> Dry clean only</p>
+              <p><strong>Origin:</strong> Made in Italy</p>
             </div>
 
             <div class="tab-content" id="tab-reviews">
-              <p><strong>Ayu L.</strong> — ★★★★★<br>Dressnya cantik banget! Material sutranya terasa premium dan jahitannya rapi. Puas banget!</p>
+              <p><strong>Ayu L.</strong> — ★★★★★<br>The dress is gorgeous! The silk material feels premium and the stitching is impeccable. Very satisfied!</p>
               <br>
-              <p><strong>Maya S.</strong> — ★★★★★<br>Warnanya persis seperti di foto. Nyaman dipakai dan bikin percaya diri. Worth every penny!</p>
+              <p><strong>Maya S.</strong> — ★★★★★<br>Color is exactly as pictured. Comfortable to wear and makes me feel confident. Worth every penny!</p>
               <br>
-              <p><strong>Rina P.</strong> — ★★★★☆<br>Kualitas bagus, tapi pengirimannya agak lama. Overall tetap puas.</p>
+              <p><strong>Rina P.</strong> — ★★★★☆<br>Great quality, but shipping took a bit long. Overall still satisfied.</p>
             </div>
           </div>
         </div>
@@ -151,72 +164,77 @@
 
       <!-- Related Products -->
       <div class="related-products">
-        <h2>Produk Terkait</h2>
+        <h2 class="related-products__title">You May Also Like</h2>
         <div class="related-grid">
           <div class="product-card">
-            <div class="product-card-image">
-              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600" alt="Celestine Gown"></a>
-              <div class="product-actions">
-                <button aria-label="Wishlist">♡</button>
-                <button aria-label="Quick View">👁</button>
+            <div class="product-card__inner">
+              <div class="product-card__image-wrap">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600" alt="Celestine Gown" class="product-card__image" loading="lazy"></a>
+                <div class="product-card__actions">
+                  <button class="product-card__action-btn" aria-label="Wishlist">♡</button>
+                  <button class="product-card__action-btn" aria-label="Quick View">👁</button>
+                </div>
               </div>
-            </div>
-            <div class="product-card-body">
-              <span class="product-category">Dress</span>
-              <h3><a href="product-detail.html">Celestine Gown</a></h3>
-              <div class="product-price"><span class="current">Rp 2.200.000</span></div>
-              <div class="product-rating"><span class="stars">★★★★★</span> (67)</div>
+              <div class="product-card__body">
+                <span class="product-card__category">Dress</span>
+                <h3 class="product-card__name"><a href="product-detail.html">Celestine Gown</a></h3>
+                <div class="product-card__price"><span class="product-card__price-current">$159</span></div>
+                <div class="product-card__rating"><span class="product-card__rating-stars">★★★★★</span> (67)</div>
+              </div>
             </div>
           </div>
-
           <div class="product-card">
-            <div class="product-card-image">
-              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Aurora Blouse"></a>
-              <div class="product-actions">
-                <button aria-label="Wishlist">♡</button>
-                <button aria-label="Quick View">👁</button>
+            <div class="product-card__inner">
+              <div class="product-card__image-wrap">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Aurora Blouse" class="product-card__image" loading="lazy"></a>
+                <div class="product-card__actions">
+                  <button class="product-card__action-btn" aria-label="Wishlist">♡</button>
+                  <button class="product-card__action-btn" aria-label="Quick View">👁</button>
+                </div>
               </div>
-            </div>
-            <div class="product-card-body">
-              <span class="product-category">Blouse</span>
-              <h3><a href="product-detail.html">Aurora Blouse</a></h3>
-              <div class="product-price"><span class="current">Rp 890.000</span></div>
-              <div class="product-rating"><span class="stars">★★★★★</span> (156)</div>
+              <div class="product-card__body">
+                <span class="product-card__category">Blouse</span>
+                <h3 class="product-card__name"><a href="product-detail.html">Aurora Blouse</a></h3>
+                <div class="product-card__price"><span class="product-card__price-current">$59</span></div>
+                <div class="product-card__rating"><span class="product-card__rating-stars">★★★★★</span> (156)</div>
+              </div>
             </div>
           </div>
-
           <div class="product-card">
-            <div class="product-card-image">
-              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600" alt="Sofia Heels"></a>
-              <div class="product-actions">
-                <button aria-label="Wishlist">♡</button>
-                <button aria-label="Quick View">👁</button>
+            <div class="product-card__inner">
+              <div class="product-card__image-wrap">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600" alt="Sofia Heels" class="product-card__image" loading="lazy"></a>
+                <div class="product-card__actions">
+                  <button class="product-card__action-btn" aria-label="Wishlist">♡</button>
+                  <button class="product-card__action-btn" aria-label="Quick View">👁</button>
+                </div>
               </div>
-            </div>
-            <div class="product-card-body">
-              <span class="product-category">Shoes</span>
-              <h3><a href="product-detail.html">Sofia Heels</a></h3>
-              <div class="product-price">
-                <span class="current">Rp 1.350.000</span>
-                <span class="original">Rp 1.650.000</span>
+              <div class="product-card__body">
+                <span class="product-card__category">Shoes</span>
+                <h3 class="product-card__name"><a href="product-detail.html">Sofia Heels</a></h3>
+                <div class="product-card__price">
+                  <span class="product-card__price-current">$99</span>
+                  <span class="product-card__price-original">$129</span>
+                </div>
+                <div class="product-card__rating"><span class="product-card__rating-stars">★★★★☆</span> (74)</div>
               </div>
-              <div class="product-rating"><span class="stars">★★★★☆</span> (74)</div>
             </div>
           </div>
-
           <div class="product-card">
-            <div class="product-card-image">
-              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600" alt="Valentina Tote"></a>
-              <div class="product-actions">
-                <button aria-label="Wishlist">♡</button>
-                <button aria-label="Quick View">👁</button>
+            <div class="product-card__inner">
+              <div class="product-card__image-wrap">
+                <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600" alt="Valentina Tote" class="product-card__image" loading="lazy"></a>
+                <div class="product-card__actions">
+                  <button class="product-card__action-btn" aria-label="Wishlist">♡</button>
+                  <button class="product-card__action-btn" aria-label="Quick View">👁</button>
+                </div>
               </div>
-            </div>
-            <div class="product-card-body">
-              <span class="product-category">Bag</span>
-              <h3><a href="product-detail.html">Valentina Tote</a></h3>
-              <div class="product-price"><span class="current">Rp 2.500.000</span></div>
-              <div class="product-rating"><span class="stars">★★★★★</span> (203)</div>
+              <div class="product-card__body">
+                <span class="product-card__category">Bag</span>
+                <h3 class="product-card__name"><a href="product-detail.html">Valentina Tote</a></h3>
+                <div class="product-card__price"><span class="product-card__price-current">$179</span></div>
+                <div class="product-card__rating"><span class="product-card__rating-stars">★★★★★</span> (203)</div>
+              </div>
             </div>
           </div>
         </div>
@@ -224,25 +242,34 @@
     </div>
   </section>
 
+  <!-- Sticky Cart (Mobile) -->
+  <div class="sticky-cart">
+    <div class="sticky-cart__info">
+      <div class="sticky-cart__name">Emilia Silk Dress</div>
+      <div class="sticky-cart__price">$129</div>
+    </div>
+    <button class="btn btn--primary btn--sm add-to-cart-btn" data-name="Emilia Silk Dress">Add to Bag</button>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>Elvoira<span>.</span></h3>
-          <p>Elegance in Every Thread. Fashion premium untuk wanita dan pria yang menghargai keanggunan.</p>
+    <div class="container container--wide">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">ELVOIRA</div>
+          <p class="footer__brand-desc">Elegance in Every Thread. Premium fashion for those who appreciate timeless design and exceptional quality.</p>
         </div>
-        <div class="footer-col">
-          <h4>Shop</h4>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Shop</h4>
           <ul>
-            <li><a href="shop.html">Wanita</a></li>
-            <li><a href="shop.html">Pria</a></li>
-            <li><a href="shop.html">Aksesoris</a></li>
+            <li><a href="shop.html">Clothing</a></li>
+            <li><a href="shop.html">Accessories</a></li>
+            <li><a href="shop.html">Footwear</a></li>
             <li><a href="shop.html">New Arrivals</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Company</h4>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
           <ul>
             <li><a href="about.html">About Us</a></li>
             <li><a href="#">Careers</a></li>
@@ -250,8 +277,8 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Help</h4>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Help</h4>
           <ul>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Shipping</a></li>
@@ -260,17 +287,33 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 ELVOIRA Fashion. All rights reserved.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Twitter">TW</a>
-          <a href="#" aria-label="Facebook">FB</a>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 ELVOIRA Fashion. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="toast__icon">✓</span>
+    <span id="toastMessage"></span>
+  </div>
+
+  <!-- CDN Scripts -->
+  <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

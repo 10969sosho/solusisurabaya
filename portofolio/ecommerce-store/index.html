@@ -1,266 +1,290 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ELVOIRA Fashion — Elegance in Every Thread</title>
+  <title>ELVOIRA — Elegance in Every Thread</title>
+  <meta name="description" content="ELVOIRA Fashion — Premium fashion for those who appreciate elegance. Clothing, Accessories, Footwear.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container navbar-inner">
-      <a href="index.html" class="navbar-brand">Elvoira<span>.</span></a>
-      <ul class="navbar-nav">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">ELVOIRA</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link active">Home</a></li>
+        <li><a href="shop.html" class="nav__link">Shop</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
       </ul>
-      <div class="navbar-actions">
-        <button aria-label="Search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-        <a href="#" aria-label="Account">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <div class="nav__actions">
+        <a href="shop.html" class="nav__icon" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </a>
-        <a href="#" aria-label="Cart" style="position:relative">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          <span class="cart-count">0</span>
+        <a href="#" class="nav__icon" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
-        <button class="mobile-toggle" aria-label="Menu">
+        <a href="#" class="nav__icon" aria-label="Cart" style="position:relative">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <button class="nav__toggle" id="mobileToggle" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920" alt="Fashion Store">
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="container hero-content">
-      <div class="hero-badge">New Collection 2026</div>
-      <h1>Elegance in <span>Every Thread</span></h1>
-      <p>Temukan koleksi fashion premium yang dirancang untukmu. ELVOIRA menghadirkan keanggunan dalam setiap jahitan.</p>
-      <div class="hero-actions">
-        <a href="shop.html" class="btn btn-pink btn-lg">Shop Now</a>
-        <a href="about.html" class="btn btn-white btn-lg">Our Story</a>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="shop.html" class="mobile-menu__link">Shop</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="shop.html" class="mobile-menu__link">Shop Now</a>
+  </div>
+
+  <!-- ============================================
+       HERO — Full viewport, 3D particles
+       ============================================ -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="heroCanvas"></canvas>
+    <div class="hero__content">
+      <div class="hero__overline gsap-reveal">New Collection 2026</div>
+      <h1 class="hero__title gsap-reveal">Elegance in<br><span>Every Thread</span></h1>
+      <p class="hero__subtitle gsap-reveal">Discover premium fashion designed for those who appreciate timeless elegance. Crafted with precision, worn with confidence.</p>
+      <div class="hero__actions gsap-reveal">
+        <a href="shop.html" class="btn btn--primary btn--lg">Shop Now</a>
+        <a href="about.html" class="btn btn--ghost btn--lg">Our Story</a>
       </div>
     </div>
-    <div class="hero-scroll">
+    <div class="hero__scroll">
       <span>Scroll</span>
-      <div class="line"></div>
+      <div class="hero__scroll-line"></div>
     </div>
   </section>
 
-  <!-- FEATURED COLLECTIONS -->
-  <section class="collections">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="overline">Collections</span>
-        <h2>Koleksi Unggulan</h2>
-        <p>Pilih koleksi favoritmu sesuai gaya dan kepribadian</p>
+  <!-- ============================================
+       FEATURED PRODUCTS — Light bg, 3D cards
+       ============================================ -->
+  <section class="section section--light" id="featured">
+    <div class="container container--wide">
+      <div class="section__header gsap-reveal">
+        <span class="section__overline">Featured</span>
+        <h2 class="section__title">Curated for You</h2>
+        <p class="section__desc">Our most beloved pieces, selected for their exceptional quality and timeless appeal.</p>
       </div>
-      <div class="collections-grid">
-        <a href="shop.html" class="collection-card animate-on-scroll">
-          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800" alt="Wanita">
-          <div class="collection-card-overlay">
-            <h3>Wanita</h3>
-            <p>Dress, Blouse, dan koleksi feminin lainnya</p>
-            <span class="btn-link">Jelajahi →</span>
+      <div class="products-grid" id="featuredGrid">
+        <!-- Product 1 -->
+        <div class="product-card gsap-reveal">
+          <div class="product-card__inner">
+            <div class="product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600" alt="Emilia Silk Dress" class="product-card__image" loading="lazy">
+              <span class="product-card__badge">Bestseller</span>
+              <div class="product-card__actions">
+                <button class="product-card__action-btn" aria-label="Wishlist">♡</button>
+                <button class="product-card__action-btn" aria-label="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Dress</span>
+              <h3 class="product-card__name"><a href="product-detail.html">Emilia Silk Dress</a></h3>
+              <div class="product-card__price">
+                <span class="product-card__price-current">$129</span>
+              </div>
+              <div class="product-card__rating"><span class="product-card__rating-stars">★★★★★</span> (124)</div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card gsap-reveal">
+          <div class="product-card__inner">
+            <div class="product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600" alt="Noir Blazer" class="product-card__image" loading="lazy">
+              <div class="product-card__actions">
+                <button class="product-card__action-btn" aria-label="Wishlist">♡</button>
+                <button class="product-card__action-btn" aria-label="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Jacket</span>
+              <h3 class="product-card__name"><a href="product-detail.html">Noir Blazer</a></h3>
+              <div class="product-card__price">
+                <span class="product-card__price-current">$149</span>
+              </div>
+              <div class="product-card__rating"><span class="product-card__rating-stars">★★★★★</span> (98)</div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card gsap-reveal">
+          <div class="product-card__inner">
+            <div class="product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1542290667-3378b0ca4347?w=600" alt="Luna Palazzo Pants" class="product-card__image" loading="lazy">
+              <span class="product-card__badge">New</span>
+              <div class="product-card__actions">
+                <button class="product-card__action-btn" aria-label="Wishlist">♡</button>
+                <button class="product-card__action-btn" aria-label="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Pants</span>
+              <h3 class="product-card__name"><a href="product-detail.html">Luna Palazzo Pants</a></h3>
+              <div class="product-card__price">
+                <span class="product-card__price-current">$89</span>
+              </div>
+              <div class="product-card__rating"><span class="product-card__rating-stars">★★★★☆</span> (87)</div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card gsap-reveal">
+          <div class="product-card__inner">
+            <div class="product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Aurora Blouse" class="product-card__image" loading="lazy">
+              <div class="product-card__actions">
+                <button class="product-card__action-btn" aria-label="Wishlist">♡</button>
+                <button class="product-card__action-btn" aria-label="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Blouse</span>
+              <h3 class="product-card__name"><a href="product-detail.html">Aurora Blouse</a></h3>
+              <div class="product-card__price">
+                <span class="product-card__price-current">$59</span>
+              </div>
+              <div class="product-card__rating"><span class="product-card__rating-stars">★★★★★</span> (156)</div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card gsap-reveal">
+          <div class="product-card__inner">
+            <div class="product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600" alt="Valentina Tote" class="product-card__image" loading="lazy">
+              <span class="product-card__badge">Popular</span>
+              <div class="product-card__actions">
+                <button class="product-card__action-btn" aria-label="Wishlist">♡</button>
+                <button class="product-card__action-btn" aria-label="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Bag</span>
+              <h3 class="product-card__name"><a href="product-detail.html">Valentina Tote</a></h3>
+              <div class="product-card__price">
+                <span class="product-card__price-current">$179</span>
+              </div>
+              <div class="product-card__rating"><span class="product-card__rating-stars">★★★★★</span> (203)</div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card gsap-reveal">
+          <div class="product-card__inner">
+            <div class="product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600" alt="Sofia Heels" class="product-card__image" loading="lazy">
+              <div class="product-card__actions">
+                <button class="product-card__action-btn" aria-label="Wishlist">♡</button>
+                <button class="product-card__action-btn" aria-label="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Shoes</span>
+              <h3 class="product-card__name"><a href="product-detail.html">Sofia Heels</a></h3>
+              <div class="product-card__price">
+                <span class="product-card__price-current">$99</span>
+                <span class="product-card__price-original">$129</span>
+              </div>
+              <div class="product-card__rating"><span class="product-card__rating-stars">★★★★☆</span> (74)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top: var(--space-48);" class="gsap-reveal">
+        <a href="shop.html" class="btn btn--secondary">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CATEGORY SHOWCASE — Dark bg
+       ============================================ -->
+  <section class="section section--dark" id="categories">
+    <div class="container container--wide">
+      <div class="section__header gsap-reveal">
+        <span class="section__overline">Collections</span>
+        <h2 class="section__title">Explore by Category</h2>
+        <p class="section__desc">Three distinct worlds, each with its own character and charm.</p>
+      </div>
+      <div class="categories-grid">
+        <a href="shop.html" class="category-card gsap-reveal">
+          <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800" alt="Clothing" class="category-card__image" loading="lazy">
+          <div class="category-card__overlay">
+            <h3 class="category-card__title">Clothing</h3>
+            <span class="category-card__count">48 pieces</span>
+            <span class="category-card__cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
           </div>
         </a>
-        <a href="shop.html" class="collection-card animate-on-scroll">
-          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800" alt="Pria">
-          <div class="collection-card-overlay">
-            <h3>Pria</h3>
-            <p>Blazer, Jaket, dan koleksi maskulin</p>
-            <span class="btn-link">Jelajahi →</span>
+        <a href="shop.html" class="category-card gsap-reveal">
+          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800" alt="Accessories" class="category-card__image" loading="lazy">
+          <div class="category-card__overlay">
+            <h3 class="category-card__title">Accessories</h3>
+            <span class="category-card__count">36 pieces</span>
+            <span class="category-card__cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
           </div>
         </a>
-        <a href="shop.html" class="collection-card animate-on-scroll">
-          <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=800" alt="Aksesoris">
-          <div class="collection-card-overlay">
-            <h3>Aksesoris</h3>
-            <p>Tas, Sepatu, dan pelengkap gaya</p>
-            <span class="btn-link">Jelajahi →</span>
+        <a href="shop.html" class="category-card gsap-reveal">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800" alt="Footwear" class="category-card__image" loading="lazy">
+          <div class="category-card__overlay">
+            <h3 class="category-card__title">Footwear</h3>
+            <span class="category-card__count">24 pieces</span>
+            <span class="category-card__cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- BESTSELLERS -->
-  <section class="products-section">
+  <!-- ============================================
+       NEWSLETTER — Light bg
+       ============================================ -->
+  <section class="section section--gray" id="newsletter">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="overline">Bestsellers</span>
-        <h2>Produk Terlaris</h2>
-        <p>Produk paling favorit dari pelanggan kami</p>
-      </div>
-      <div class="products-grid">
-        <div class="product-card animate-on-scroll">
-          <div class="product-card-image">
-            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600" alt="Emilia Silk Dress">
-            <span class="product-badge">Bestseller</span>
-            <div class="product-actions">
-              <button aria-label="Wishlist">♡</button>
-              <button aria-label="Quick View">👁</button>
-            </div>
-          </div>
-          <div class="product-card-body">
-            <span class="product-category">Dress</span>
-            <h3><a href="product-detail.html">Emilia Silk Dress</a></h3>
-            <div class="product-price"><span class="current">Rp 1.850.000</span></div>
-            <div class="product-rating"><span class="stars">★★★★★</span> (124)</div>
-          </div>
-        </div>
-
-        <div class="product-card animate-on-scroll">
-          <div class="product-card-image">
-            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600" alt="Noir Blazer">
-            <div class="product-actions">
-              <button aria-label="Wishlist">♡</button>
-              <button aria-label="Quick View">👁</button>
-            </div>
-          </div>
-          <div class="product-card-body">
-            <span class="product-category">Jacket</span>
-            <h3><a href="product-detail.html">Noir Blazer</a></h3>
-            <div class="product-price"><span class="current">Rp 2.100.000</span></div>
-            <div class="product-rating"><span class="stars">★★★★★</span> (98)</div>
-          </div>
-        </div>
-
-        <div class="product-card animate-on-scroll">
-          <div class="product-card-image">
-            <img src="https://images.unsplash.com/photo-1542290667-3378bOCA4347?w=600" alt="Luna Palazzo Pants">
-            <span class="product-badge">New</span>
-            <div class="product-actions">
-              <button aria-label="Wishlist">♡</button>
-              <button aria-label="Quick View">👁</button>
-            </div>
-          </div>
-          <div class="product-card-body">
-            <span class="product-category">Pants</span>
-            <h3><a href="product-detail.html">Luna Palazzo Pants</a></h3>
-            <div class="product-price"><span class="current">Rp 1.450.000</span></div>
-            <div class="product-rating"><span class="stars">★★★★☆</span> (87)</div>
-          </div>
-        </div>
-
-        <div class="product-card animate-on-scroll">
-          <div class="product-card-image">
-            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Aurora Blouse">
-            <div class="product-actions">
-              <button aria-label="Wishlist">♡</button>
-              <button aria-label="Quick View">👁</button>
-            </div>
-          </div>
-          <div class="product-card-body">
-            <span class="product-category">Blouse</span>
-            <h3><a href="product-detail.html">Aurora Blouse</a></h3>
-            <div class="product-price"><span class="current">Rp 890.000</span></div>
-            <div class="product-rating"><span class="stars">★★★★★</span> (156)</div>
-          </div>
-        </div>
-
-        <div class="product-card animate-on-scroll">
-          <div class="product-card-image">
-            <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600" alt="Valentina Tote">
-            <span class="product-badge">Popular</span>
-            <div class="product-actions">
-              <button aria-label="Wishlist">♡</button>
-              <button aria-label="Quick View">👁</button>
-            </div>
-          </div>
-          <div class="product-card-body">
-            <span class="product-category">Bag</span>
-            <h3><a href="product-detail.html">Valentina Tote</a></h3>
-            <div class="product-price"><span class="current">Rp 2.500.000</span></div>
-            <div class="product-rating"><span class="stars">★★★★★</span> (203)</div>
-          </div>
-        </div>
-
-        <div class="product-card animate-on-scroll">
-          <div class="product-card-image">
-            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600" alt="Sofia Heels">
-            <div class="product-actions">
-              <button aria-label="Wishlist">♡</button>
-              <button aria-label="Quick View">👁</button>
-            </div>
-          </div>
-          <div class="product-card-body">
-            <span class="product-category">Shoes</span>
-            <h3><a href="product-detail.html">Sofia Heels</a></h3>
-            <div class="product-price">
-              <span class="current">Rp 1.350.000</span>
-              <span class="original">Rp 1.650.000</span>
-            </div>
-            <div class="product-rating"><span class="stars">★★★★☆</span> (74)</div>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:3rem;">
-        <a href="shop.html" class="btn btn-secondary">Lihat Semua Produk</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BRAND STORY -->
-  <section class="brand-story">
-    <div class="container">
-      <div class="brand-story-grid">
-        <div class="brand-story-content animate-on-scroll">
-          <span class="overline">Our Story</span>
-          <h2>Cerita di Balik ELVOIRA</h2>
-          <p>Didirikan pada tahun 2020, ELVOIRA lahir dari kecintaan terhadap keanggunan dan kualitas. Setiap koleksi kami dirancang dengan penuh perhatian untuk menghadirkan gaya yang tak lekang oleh waktu.</p>
-          <p>Kami percaya bahwa fashion bukan sekadar pakaian, melainkan ekspresi diri. Dengan material pilihan dan desain yang teliti, ELVOIRA hadir untuk membuatmu merasa percaya diri di setiap momen.</p>
-          <a href="about.html" class="btn btn-primary" style="margin-top:1rem;">Baca Selengkapnya</a>
-        </div>
-        <div class="brand-story-image animate-on-scroll">
-          <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800" alt="Brand Story">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter">
-    <div class="container">
-      <div class="newsletter-inner animate-on-scroll">
-        <h2>Stay in Style</h2>
-        <p>Berlangganan newsletter kami untuk mendapatkan info koleksi terbaru, promo eksklusif, dan tips fashion.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Masukkan email kamu" required>
-          <button type="submit" class="btn btn-pink">Subscribe</button>
+      <div class="newsletter gsap-reveal">
+        <h2 class="newsletter__title">Stay Inspired</h2>
+        <p class="newsletter__desc">Subscribe for exclusive access to new collections, behind-the-scenes content, and member-only offers.</p>
+        <form class="newsletter__form" id="newsletterForm">
+          <input type="email" class="newsletter__input" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn--primary">Subscribe</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>Elvoira<span>.</span></h3>
-          <p>Elegance in Every Thread. Fashion premium untuk wanita dan pria yang menghargai keanggunan.</p>
+    <div class="container container--wide">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">ELVOIRA</div>
+          <p class="footer__brand-desc">Elegance in Every Thread. Premium fashion for those who appreciate timeless design and exceptional quality.</p>
         </div>
-        <div class="footer-col">
-          <h4>Shop</h4>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Shop</h4>
           <ul>
-            <li><a href="shop.html">Wanita</a></li>
-            <li><a href="shop.html">Pria</a></li>
-            <li><a href="shop.html">Aksesoris</a></li>
+            <li><a href="shop.html">Clothing</a></li>
+            <li><a href="shop.html">Accessories</a></li>
+            <li><a href="shop.html">Footwear</a></li>
             <li><a href="shop.html">New Arrivals</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Company</h4>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
           <ul>
             <li><a href="about.html">About Us</a></li>
             <li><a href="#">Careers</a></li>
@@ -268,8 +292,8 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Help</h4>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Help</h4>
           <ul>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Shipping</a></li>
@@ -278,17 +302,33 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 ELVOIRA Fashion. All rights reserved.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Twitter">TW</a>
-          <a href="#" aria-label="Facebook">FB</a>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 ELVOIRA Fashion. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span class="toast__icon">✓</span>
+    <span id="toastMessage"></span>
+  </div>
+
+  <!-- CDN Scripts -->
+  <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

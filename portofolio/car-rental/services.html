@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services — Autovista Prestige Motors</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,9 +12,12 @@
   <!-- NAVIGATION -->
   <nav class="navbar">
     <div class="container">
-      <a href="index.html" class="logo">
-        <div class="logo-icon"><i class="fas fa-car"></i></div>
-        Autovista
+      <a href="index.html" class="navbar-brand">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="6" fill="#0071e3"/>
+          <path d="M7 18h14M8 14l2-4h8l2 4M10 14v4M18 14v4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        AUTOVISTA<span>Prestige</span>
       </a>
       <div class="nav-links">
         <a href="index.html">Home</a>
@@ -31,71 +32,227 @@
     </div>
   </nav>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
+  <div class="mobile-menu-overlay">
+    <a href="index.html">Home</a>
+    <a href="models.html">Models</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary btn-lg" style="margin-top:16px">Book Test Drive</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
     <div class="container">
-      <h1>Our <span class="gradient-text">Services</span></h1>
-      <p>Complete automotive solutions for every stage of your ownership journey</p>
+      <h1>Our <span class="accent">Services</span></h1>
+      <p>Complete automotive solutions for every stage of your ownership journey.</p>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="section">
+  <!-- SERVICES GRID -->
+  <section class="section section-dark">
     <div class="container">
+      <div class="section-header gsap-reveal">
+        <div class="section-label">What We Offer</div>
+        <h2>Premium Services</h2>
+        <p>Everything you need, from purchase to maintenance and beyond.</p>
+      </div>
       <div class="services-grid">
-        <div class="service-card fade-in">
+        <div class="service-card gsap-reveal">
           <div class="service-icon"><i class="fas fa-car-side"></i></div>
           <h3>New Car Sales</h3>
-          <p>Explore our extensive collection of brand-new vehicles from Toyota, Honda, BMW, Mercedes-Benz, Mazda, and Suzuki. Our expert consultants will help you find the perfect match for your lifestyle and budget.</p>
-          <a href="models.html" class="btn btn-outline" style="margin-top:20px"><i class="fas fa-arrow-right"></i> View Models</a>
+          <p>Explore our extensive collection of brand-new vehicles from Toyota, Honda, BMW, Mercedes-Benz, Mazda, and Suzuki.</p>
         </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon"><i class="fas fa-money-bill-transfer"></i></div>
+        <div class="service-card gsap-reveal">
+          <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
           <h3>Trade-In Program</h3>
-          <p>Get the best value for your current vehicle. Our transparent evaluation system ensures you receive a fair and competitive price. Trade in any brand and upgrade to your dream car with ease.</p>
-          <a href="contact.html" class="btn btn-outline" style="margin-top:20px"><i class="fas fa-calculator"></i> Get Evaluation</a>
+          <p>Get the best value for your current vehicle. Our transparent evaluation ensures a fair and competitive price.</p>
         </div>
-
-        <div class="service-card fade-in">
+        <div class="service-card gsap-reveal">
           <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
           <h3>Flexible Financing</h3>
-          <p>We partner with major banks and financial institutions to offer you the best financing packages. Enjoy competitive interest rates, flexible tenures, and fast approval within 24 hours.</p>
-          <a href="contact.html" class="btn btn-outline" style="margin-top:20px"><i class="fas fa-calculator"></i> Calculate</a>
+          <p>Partnered with major banks for the best packages. Competitive rates, flexible tenures, fast 24-hour approval.</p>
         </div>
-
-        <div class="service-card fade-in">
+        <div class="service-card gsap-reveal">
           <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
           <h3>Insurance Coverage</h3>
-          <p>Protect your investment with comprehensive insurance plans. We offer all-risk and total-loss coverage options, plus extended warranty packages to keep you worry-free for years to come.</p>
-          <a href="contact.html" class="btn btn-outline" style="margin-top:20px"><i class="fas fa-info-circle"></i> Learn More</a>
+          <p>Comprehensive all-risk and total-loss plans plus extended warranty packages for years of worry-free driving.</p>
         </div>
-
-        <div class="service-card fade-in">
+        <div class="service-card gsap-reveal">
           <div class="service-icon"><i class="fas fa-wrench"></i></div>
           <h3>Service & Maintenance</h3>
-          <p>Our certified technicians use only genuine parts and the latest diagnostic equipment. Regular maintenance keeps your vehicle performing at its best and preserves its resale value.</p>
-          <a href="contact.html" class="btn btn-outline" style="margin-top:20px"><i class="fas fa-calendar"></i> Book Service</a>
+          <p>Certified technicians with genuine parts and the latest diagnostics. Regular maintenance preserves value.</p>
         </div>
-
-        <div class="service-card fade-in">
+        <div class="service-card gsap-reveal">
           <div class="service-icon"><i class="fas fa-headset"></i></div>
           <h3>24/7 Roadside Assistance</h3>
-          <p>Breakdown? Flat tire? Locked out? Our roadside assistance team is available 24/7 across Indonesia. Call us anytime and we'll be there to help you get back on the road safely.</p>
-          <a href="https://wa.me/6281234567890" class="btn btn-outline" style="margin-top:20px" target="_blank"><i class="fas fa-phone"></i> Call Now</a>
+          <p>Breakdowns, flat tires, lockouts — our team is available 24/7 across Indonesia to get you back on the road.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS TIMELINE -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header gsap-reveal">
+        <div class="section-label">How It Works</div>
+        <h2>Your Journey with Autovista</h2>
+        <p>From browsing to driving home — a seamless experience.</p>
+      </div>
+      <div class="timeline" style="max-width:640px;margin:0 auto">
+        <div class="timeline-item gsap-reveal">
+          <div class="timeline-step">1</div>
+          <h3>Browse & Choose</h3>
+          <p>Explore our curated collection online or visit our showroom. Our consultants help you find the perfect match.</p>
+        </div>
+        <div class="timeline-item gsap-reveal">
+          <div class="timeline-step">2</div>
+          <h3>Consultation & Test Drive</h3>
+          <p>Experience the car firsthand. Our team walks you through every feature and answers all your questions.</p>
+        </div>
+        <div class="timeline-item gsap-reveal">
+          <div class="timeline-step">3</div>
+          <h3>Financing & Paperwork</h3>
+          <p>We handle all the paperwork. Choose your financing plan and get approved within 24 hours.</p>
+        </div>
+        <div class="timeline-item gsap-reveal">
+          <div class="timeline-step">4</div>
+          <h3>Delivery Day</h3>
+          <p>Your new car, delivered to your doorstep in pristine condition. Welcome to the Autovista family.</p>
+        </div>
+        <div class="timeline-item gsap-reveal">
+          <div class="timeline-step">5</div>
+          <h3>After-Sales Support</h3>
+          <p>Lifetime service support, warranty coverage, and 24/7 roadside assistance — we're always here for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TIERS -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header gsap-reveal">
+        <div class="section-label">Service Packages</div>
+        <h2>Maintenance Plans</h2>
+        <p>Choose the plan that fits your driving style and budget.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card gsap-reveal">
+          <div class="tier-name">Basic</div>
+          <h3>Essential Care</h3>
+          <div class="price">Rp 3.5Jt</div>
+          <div class="price-note">per year</div>
+          <ul>
+            <li><i class="fas fa-check"></i> 2x annual service</li>
+            <li><i class="fas fa-check"></i> Oil & filter change</li>
+            <li><i class="fas fa-check"></i> Basic health check</li>
+            <li><i class="fas fa-check"></i> Tire rotation</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline">Get Started</a>
+        </div>
+        <div class="pricing-card featured gsap-reveal">
+          <div class="tier-name">Premium</div>
+          <h3>Total Protection</h3>
+          <div class="price">Rp 7.5Jt</div>
+          <div class="price-note">per year</div>
+          <ul>
+            <li><i class="fas fa-check"></i> 4x annual service</li>
+            <li><i class="fas fa-check"></i> Full synthetic oil</li>
+            <li><i class="fas fa-check"></i> Brake inspection</li>
+            <li><i class="fas fa-check"></i> AC system service</li>
+            <li><i class="fas fa-check"></i> Battery health check</li>
+            <li><i class="fas fa-check"></i> 24/7 roadside assist</li>
+          </ul>
+          <a href="contact.html" class="btn btn-white">Get Premium</a>
+        </div>
+        <div class="pricing-card gsap-reveal">
+          <div class="tier-name">Elite</div>
+          <h3>Concierge Service</h3>
+          <div class="price">Rp 12Jt</div>
+          <div class="price-note">per year</div>
+          <ul>
+            <li><i class="fas fa-check"></i> Unlimited services</li>
+            <li><i class="fas fa-check"></i> Pickup & delivery</li>
+            <li><i class="fas fa-check"></i> Loan car available</li>
+            <li><i class="fas fa-check"></i> Detailing quarterly</li>
+            <li><i class="fas fa-check"></i> Extended warranty</li>
+            <li><i class="fas fa-check"></i> Priority scheduling</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline">Get Elite</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header gsap-reveal">
+        <div class="section-label">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item gsap-reveal">
+          <button class="faq-question">
+            What documents do I need for a test drive?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Simply bring a valid driving license (SIM A) and a government-issued ID (KTP). We'll handle the rest and have you on the road in minutes.</p>
+          </div>
+        </div>
+        <div class="faq-item gsap-reveal">
+          <button class="faq-question">
+            How long does financing approval take?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Most applications are approved within 24 hours. For complex cases, it may take up to 3 business days. We work with 15+ banking partners to find you the best rate.</p>
+          </div>
+        </div>
+        <div class="faq-item gsap-reveal">
+          <button class="faq-question">
+            Can I trade in my current car?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. We accept trade-ins for any brand. Our certified appraisers provide a transparent, fair market valuation on the spot. The trade-in value can be applied directly to your new purchase.</p>
+          </div>
+        </div>
+        <div class="faq-item gsap-reveal">
+          <button class="faq-question">
+            What warranty coverage is included?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-answer">
+            <p>All new vehicles come with a 3-year/100,000 km factory warranty (whichever comes first). Extended warranty packages are available for up to 5 years. Certified pre-owned vehicles include a 1-year comprehensive warranty.</p>
+          </div>
+        </div>
+        <div class="faq-item gsap-reveal">
+          <button class="faq-question">
+            Do you offer delivery across Indonesia?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we deliver nationwide. Delivery within Jakarta, Surabaya, and Bali is complimentary. For other cities, a nominal shipping fee applies. Contact us for a personalized delivery quote.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta-section">
+  <section class="section section-dark">
     <div class="container">
-      <h2>Need Assistance? We're Here for You</h2>
-      <p>Contact our service team anytime for professional automotive support</p>
-      <a href="https://wa.me/6281234567890" class="cta-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp" style="font-size:1.5rem"></i> Chat via WhatsApp
-      </a>
+      <div class="cta-section gsap-reveal-scale">
+        <h2>Need Assistance? We're Here.</h2>
+        <p>Contact our service team anytime for professional automotive support.</p>
+        <div class="btn-group">
+          <a href="https://wa.me/6281234567890" class="btn btn-whatsapp btn-lg" target="_blank"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
+          <a href="contact.html" class="btn btn-white btn-lg">Contact Us <i class="fas fa-arrow-right" style="font-size:0.8125rem"></i></a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -104,54 +261,39 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo">
-            <div class="logo-icon"><i class="fas fa-car"></i></div>
-            Autovista
-          </div>
-          <p>Your trusted premium car dealer since 2005. Excellence in every journey.</p>
+          <h3>AUTOVISTA<span>Prestige</span></h3>
+          <p>Indonesia's trusted premium car dealer with the most complete collection of world-class vehicles.</p>
           <div class="footer-social">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-youtube"></i></a>
             <a href="#"><i class="fab fa-tiktok"></i></a>
           </div>
         </div>
-        <div class="footer-column">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="models.html">Models</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <a href="index.html">Home</a>
+          <a href="models.html">Models</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
         </div>
-        <div class="footer-column">
+        <div class="footer-col">
           <h4>Services</h4>
-          <ul>
-            <li><a href="services.html">New Car Sales</a></li>
-            <li><a href="services.html">Trade-In</a></li>
-            <li><a href="services.html">Financing</a></li>
-            <li><a href="services.html">Insurance</a></li>
-          </ul>
+          <a href="services.html">New Car Sales</a>
+          <a href="services.html">Trade-In</a>
+          <a href="services.html">Financing</a>
+          <a href="services.html">Insurance</a>
         </div>
-        <div class="footer-column">
-          <h4>Contact Us</h4>
-          <div class="footer-contact-item">
-            <i class="fas fa-phone"></i>
-            <span>+62 812-3456-7890</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>info@autovista.co.id</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fas fa-location-dot"></i>
-            <span>Jl. Sudirman No. 1, Jakarta</span>
-          </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+6281234567890">+62 812 3456 7890</a>
+          <a href="mailto:info@autovista.co.id">info@autovista.co.id</a>
+          <a href="contact.html">Jakarta &bull; Surabaya &bull; Bali</a>
         </div>
       </div>
       <div class="footer-bottom">
-        &copy; 2026 Autovista Prestige Motors. All rights reserved.
+        <span>&copy; 2026 Autovista Prestige Motors. All rights reserved.</span>
+        <span>Drive the Extraordinary</span>
       </div>
     </div>
   </footer>
@@ -160,6 +302,8 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

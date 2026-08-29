@@ -1,228 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects — Lumina Interior Studio</title>
-    <meta name="description" content="Explore our portfolio of residential, commercial, and hospitality interior design projects across Indonesia.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Lumina Interior Studio</title>
+  <meta name="description" content="Explore our portfolio of residential, commercial, and hospitality interior design projects across Indonesia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- Navigation -->
 <nav class="navbar scrolled" id="navbar">
-    <div class="container nav-inner">
-        <a href="index.html" class="nav-logo">Lumina</a>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html">Home</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <a href="contact.html" class="nav-cta">Start Your Project</a>
-        <div class="mobile-toggle" id="mobileToggle">
-            <span></span><span></span><span></span>
-        </div>
+  <div class="nav-inner container-wide">
+    <a href="index.html" class="nav-logo">Lumina<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
+    <a href="contact.html" class="nav-cta">Start Your Project</a>
+    <div class="mobile-toggle" id="mobileToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
 </nav>
+
+<!-- Mobile Overlay -->
+<div class="mobile-overlay" id="mobileOverlay">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="projects.html" class="nav-link">Projects</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <a href="contact.html" class="nav-cta mobile-cta">Start Your Project</a>
+</div>
 
 <!-- Page Hero -->
 <section class="page-hero">
-    <div class="container">
-        <h1>Our Projects</h1>
-        <p>A curated collection of spaces we've designed with warmth and intention.</p>
-        <div class="breadcrumb">
-            <a href="index.html">Home</a>
-            <span>/</span>
-            <span class="current">Projects</span>
-        </div>
+  <div class="container">
+    <h1>Our Projects</h1>
+    <p>A curated collection of spaces we've designed with warmth and intention.</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span class="current">Projects</span>
     </div>
+  </div>
 </section>
 
-<!-- Projects Filter -->
-<section class="section section-cream">
-    <div class="container">
-        <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="residential">Residential</button>
-            <button class="filter-btn" data-filter="commercial">Commercial</button>
-            <button class="filter-btn" data-filter="hospitality">Hospitality</button>
-        </div>
-
-        <div class="projects-grid">
-            <!-- 1 -->
-            <a href="project-detail.html" class="project-card fade-in" data-category="residential">
-                <div class="project-thumb">
-                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="The Jakarta Penthouse">
-                    <span class="project-cat">Residential</span>
-                    <div class="project-overlay"><span>View Project</span></div>
-                </div>
-                <div class="project-meta">
-                    <h3>The Jakarta Penthouse</h3>
-                    <p>Jakarta Selatan — 280 sqm</p>
-                </div>
-            </a>
-            <!-- 2 -->
-            <a href="project-detail.html" class="project-card fade-in" data-category="residential">
-                <div class="project-thumb">
-                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Bali Beach Villa">
-                    <span class="project-cat">Residential</span>
-                    <div class="project-overlay"><span>View Project</span></div>
-                </div>
-                <div class="project-meta">
-                    <h3>Bali Beach Villa</h3>
-                    <p>Bali — 450 sqm</p>
-                </div>
-            </a>
-            <!-- 3 -->
-            <a href="project-detail.html" class="project-card fade-in" data-category="residential">
-                <div class="project-thumb">
-                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Bandung Family Home">
-                    <span class="project-cat">Residential</span>
-                    <div class="project-overlay"><span>View Project</span></div>
-                </div>
-                <div class="project-meta">
-                    <h3>Bandung Family Home</h3>
-                    <p>Bandung — 320 sqm</p>
-                </div>
-            </a>
-            <!-- 4 -->
-            <a href="project-detail.html" class="project-card fade-in" data-category="commercial">
-                <div class="project-thumb">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Surabaya Office Tower">
-                    <span class="project-cat">Commercial</span>
-                    <div class="project-overlay"><span>View Project</span></div>
-                </div>
-                <div class="project-meta">
-                    <h3>Surabaya Office Tower</h3>
-                    <p>Surabaya — 1,200 sqm</p>
-                </div>
-            </a>
-            <!-- 5 -->
-            <a href="project-detail.html" class="project-card fade-in" data-category="commercial">
-                <div class="project-thumb">
-                    <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&w=800&q=80" alt="Jakarta Creative Hub">
-                    <span class="project-cat">Commercial</span>
-                    <div class="project-overlay"><span>View Project</span></div>
-                </div>
-                <div class="project-meta">
-                    <h3>Jakarta Creative Hub</h3>
-                    <p>Jakarta Pusat — 600 sqm</p>
-                </div>
-            </a>
-            <!-- 6 -->
-            <a href="project-detail.html" class="project-card fade-in" data-category="commercial">
-                <div class="project-thumb">
-                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Medan Tech Campus">
-                    <span class="project-cat">Commercial</span>
-                    <div class="project-overlay"><span>View Project</span></div>
-                </div>
-                <div class="project-meta">
-                    <h3>Medan Tech Campus</h3>
-                    <p>Medan — 2,400 sqm</p>
-                </div>
-            </a>
-            <!-- 7 -->
-            <a href="project-detail.html" class="project-card fade-in" data-category="hospitality">
-                <div class="project-thumb">
-                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" alt="Lombok Ocean Resort">
-                    <span class="project-cat">Hospitality</span>
-                    <div class="project-overlay"><span>View Project</span></div>
-                </div>
-                <div class="project-meta">
-                    <h3>Lombok Ocean Resort</h3>
-                    <p>Lombok — 3,500 sqm</p>
-                </div>
-            </a>
-            <!-- 8 -->
-            <a href="project-detail.html" class="project-card fade-in" data-category="hospitality">
-                <div class="project-thumb">
-                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80" alt="Yogyakarta Heritage Hotel">
-                    <span class="project-cat">Hospitality</span>
-                    <div class="project-overlay"><span>View Project</span></div>
-                </div>
-                <div class="project-meta">
-                    <h3>Yogyakarta Heritage Hotel</h3>
-                    <p>Yogyakarta — 1,800 sqm</p>
-                </div>
-            </a>
-            <!-- 9 -->
-            <a href="project-detail.html" class="project-card fade-in" data-category="hospitality">
-                <div class="project-thumb">
-                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80" alt="Bali Cliff Restaurant">
-                    <span class="project-cat">Hospitality</span>
-                    <div class="project-overlay"><span>View Project</span></div>
-                </div>
-                <div class="project-meta">
-                    <h3>Bali Cliff Restaurant</h3>
-                    <p>Bali — 420 sqm</p>
-                </div>
-            </a>
-        </div>
+<!-- Projects Filter & Grid -->
+<section class="section section-light">
+  <div class="container">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="residential">Residential</button>
+      <button class="filter-btn" data-filter="commercial">Commercial</button>
+      <button class="filter-btn" data-filter="hospitality">Hospitality</button>
     </div>
+
+    <div class="projects-grid">
+      <!-- 1 -->
+      <a href="project-detail.html" class="project-card" data-category="residential">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="The Jakarta Penthouse" loading="lazy">
+          <span class="project-cat">Residential</span>
+          <div class="overlay"><span class="overlay-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Project</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">The Jakarta Penthouse</h3>
+          <p class="project-location">Jakarta Selatan — 280 sqm</p>
+        </div>
+      </a>
+      <!-- 2 -->
+      <a href="project-detail.html" class="project-card" data-category="residential">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Bali Beach Villa" loading="lazy">
+          <span class="project-cat">Residential</span>
+          <div class="overlay"><span class="overlay-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Project</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Bali Beach Villa</h3>
+          <p class="project-location">Bali — 450 sqm</p>
+        </div>
+      </a>
+      <!-- 3 -->
+      <a href="project-detail.html" class="project-card" data-category="residential">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Bandung Family Home" loading="lazy">
+          <span class="project-cat">Residential</span>
+          <div class="overlay"><span class="overlay-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Project</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Bandung Family Home</h3>
+          <p class="project-location">Bandung — 320 sqm</p>
+        </div>
+      </a>
+      <!-- 4 -->
+      <a href="project-detail.html" class="project-card" data-category="commercial">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Surabaya Office Tower" loading="lazy">
+          <span class="project-cat">Commercial</span>
+          <div class="overlay"><span class="overlay-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Project</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Surabaya Office Tower</h3>
+          <p class="project-location">Surabaya — 1,200 sqm</p>
+        </div>
+      </a>
+      <!-- 5 -->
+      <a href="project-detail.html" class="project-card" data-category="commercial">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&w=800&q=80" alt="Jakarta Creative Hub" loading="lazy">
+          <span class="project-cat">Commercial</span>
+          <div class="overlay"><span class="overlay-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Project</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Jakarta Creative Hub</h3>
+          <p class="project-location">Jakarta Pusat — 600 sqm</p>
+        </div>
+      </a>
+      <!-- 6 -->
+      <a href="project-detail.html" class="project-card" data-category="commercial">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Medan Tech Campus" loading="lazy">
+          <span class="project-cat">Commercial</span>
+          <div class="overlay"><span class="overlay-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Project</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Medan Tech Campus</h3>
+          <p class="project-location">Medan — 2,400 sqm</p>
+        </div>
+      </a>
+      <!-- 7 -->
+      <a href="project-detail.html" class="project-card" data-category="hospitality">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" alt="Lombok Ocean Resort" loading="lazy">
+          <span class="project-cat">Hospitality</span>
+          <div class="overlay"><span class="overlay-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Project</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Lombok Ocean Resort</h3>
+          <p class="project-location">Lombok — 3,500 sqm</p>
+        </div>
+      </a>
+      <!-- 8 -->
+      <a href="project-detail.html" class="project-card" data-category="hospitality">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80" alt="Yogyakarta Heritage Hotel" loading="lazy">
+          <span class="project-cat">Hospitality</span>
+          <div class="overlay"><span class="overlay-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Project</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Yogyakarta Heritage Hotel</h3>
+          <p class="project-location">Yogyakarta — 1,800 sqm</p>
+        </div>
+      </a>
+      <!-- 9 -->
+      <a href="project-detail.html" class="project-card" data-category="hospitality">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80" alt="Bali Cliff Restaurant" loading="lazy">
+          <span class="project-cat">Hospitality</span>
+          <div class="overlay"><span class="overlay-text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Project</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name">Bali Cliff Restaurant</h3>
+          <p class="project-location">Bali — 420 sqm</p>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-    <div class="cta-bg"></div>
-    <div class="container">
-        <div class="cta-content">
-            <h2>Have a Project in Mind?</h2>
-            <p>We'd love to hear about your vision. Let's create something beautiful together.</p>
-            <a href="contact.html" class="btn btn-gold">Get in Touch</a>
-        </div>
+  <div class="container">
+    <div class="cta-content">
+      <h2>Have a Project in Mind?</h2>
+      <p>We'd love to hear about your vision. Let's create something beautiful together.</p>
+      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
     </div>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <span class="logo">Lumina</span>
-                <p>Premium interior design studio crafting warm, luxurious spaces since 2015.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Instagram">IG</a>
-                    <a href="#" aria-label="Pinterest">PI</a>
-                    <a href="#" aria-label="LinkedIn">LI</a>
-                    <a href="#" aria-label="Facebook">FB</a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="about.html">Residential Design</a></li>
-                    <li><a href="about.html">Commercial Design</a></li>
-                    <li><a href="about.html">Hospitality Interiors</a></li>
-                    <li><a href="about.html">Custom Furniture</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Projects</h4>
-                <ul>
-                    <li><a href="projects.html">Residential</a></li>
-                    <li><a href="projects.html">Commercial</a></li>
-                    <li><a href="projects.html">Hospitality</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="mailto:hello@luminainterior.com">hello@luminainterior.com</a></li>
-                    <li><a href="tel:+622156789012">+62 21 5678 9012</a></li>
-                    <li>Jakarta Design Center<br>Jakarta 12190</li>
-                </ul>
-            </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Lumina<span>.</span></div>
+        <p class="footer-desc">Premium interior design studio crafting extraordinary spaces since 2015.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.1 2.5 7.7 6 9.2 0-.7 0-1.6.2-2.4l1.4-6s-.4-.7-.4-1.8c0-1.7 1-2.9 2.2-2.9 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.1 1.8 2.1 2.1 0 3.7-2.2 3.7-5.5 0-2.9-2-4.9-5-4.9-3.4 0-5.4 2.5-5.4 5.2 0 1 .4 2.1.9 2.7.1.1.1.2.1.3l-.4 1.4c0 .2-.2.3-.3.2-1.7-.8-2.8-3.3-2.8-5.3 0-4.3 3.2-8.3 9.1-8.3 4.8 0 8.5 3.4 8.5 8 0 4.8-3 8.6-7.2 8.6-1.4 0-2.7-.7-3.2-1.6l-.9 3.3c-.3 1.2-1.2 2.8-1.8 3.7C10 22 11 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Lumina Interior Studio. All rights reserved.</p>
-        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="about.html">Residential Design</a></li>
+          <li><a href="about.html">Commercial Design</a></li>
+          <li><a href="about.html">Hospitality Interiors</a></li>
+          <li><a href="about.html">Custom Furniture</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="projects.html">Residential</a></li>
+          <li><a href="projects.html">Commercial</a></li>
+          <li><a href="projects.html">Hospitality</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@luminainterior.com">hello@luminainterior.com</a></li>
+          <li><a href="tel:+622156789012">+62 21 5678 9012</a></li>
+          <li>Jakarta Design Center<br>Jakarta 12190</li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lumina Interior Studio. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
+<!-- CDN Scripts -->
+<script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -3,173 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hartawan Properti Indonesia — Luxury Real Estate</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>PT. Hartawan Properti Indonesia — Premium Real Estate</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="navbar-brand">Hartawan<span>.</span></a>
-      <div class="nav-links">
-        <a href="index.html" class="active">Beranda</a>
-        <a href="properties.html">Properti</a>
-        <a href="about.html">Tentang</a>
-        <a href="contact.html">Kontak</a>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">Hartawan</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active">Beranda</a>
+        <a href="#properties" class="nav-link">Properti</a>
+        <a href="#about" class="nav-link">Tentang</a>
+        <a href="#contact" class="nav-link">Kontak</a>
       </div>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
+      <a href="#contact" class="nav-cta">Hubungi Kami</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920" alt="Luxury Home">
-      <div class="hero-overlay"></div>
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <div class="mobile-nav-content">
+      <a href="#hero" class="mobile-link">Beranda</a>
+      <a href="#properties" class="mobile-link">Properti</a>
+      <a href="#about" class="mobile-link">Tentang</a>
+      <a href="#contact" class="mobile-link">Kontak</a>
+      <a href="#contact" class="mobile-cta">Hubungi Kami</a>
     </div>
-    <div class="container">
-      <div class="hero-content">
-        <h1>Membangun Masa Depan, Satu <span class="highlight">Properti</span> pada Waktu</h1>
-        <p>Temukan properti impian Anda bersama PT. Hartawan Properti Indonesia. Kualitas premium, layanan terpercaya, investasi masa depan.</p>
-        <div class="hero-buttons">
-          <a href="properties.html" class="btn btn-primary">Lihat Properti</a>
-          <a href="contact.html" class="btn btn-outline">Hubungi Kami</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow">PT. Hartawan Properti Indonesia</p>
+      <h1 class="hero-title">
+        Membangun<br>Masa Depan,<br>Satu Properti<br>Pada Waktu.
+      </h1>
+      <p class="hero-subtitle">Properti premium di Surabaya, Jakarta, dan Bali. Investasi masa depan Anda dimulai di sini.</p>
+      <div class="hero-actions">
+        <a href="#properties" class="btn-pill btn-primary-pill">Lihat Properti</a>
+        <a href="#contact" class="btn-pill btn-ghost-pill">Hubungi Kami</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num">250+</span>
+          <span class="stat-label">Properti Terjual</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">15+</span>
+          <span class="stat-label">Tahun Pengalaman</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">Kepuasan Klien</span>
         </div>
       </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
   <!-- Featured Properties -->
-  <section id="featured">
-    <div class="container">
-      <div class="section-title">
-        <h2>Properti Unggulan</h2>
-        <p>Pilihan terbaik untuk investasi dan hunian premium Anda</p>
-        <div class="gold-line"></div>
+  <section class="section section-light" id="properties">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">Properti Unggulan</p>
+        <h2 class="section-title">Pilihan Terbaik Untuk<br>Investasi Premium Anda</h2>
+        <p class="section-desc">Villa, apartemen, komersial, dan tanah di lokasi strategis Indonesia.</p>
       </div>
-      <div class="properties-grid">
-        <!-- Card 1 -->
-        <div class="property-card animate-on-scroll">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600" alt="Gardenia Residence">
+      <div class="properties-grid" id="propertiesGrid">
+        <div class="property-card" data-tilt>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" alt="Gardenia Residence" loading="lazy">
             <span class="card-badge">Featured</span>
             <span class="card-price">Rp 2.3 Miliar</span>
           </div>
-          <div class="card-body">
-            <h3><a href="property-detail.html">Gardenia Residence</a></h3>
+          <div class="card-content">
+            <h3 class="card-title">Gardenia Residence</h3>
             <div class="card-location">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <i class="fas fa-map-marker-alt"></i>
               Jakarta Selatan
             </div>
             <div class="card-specs">
-              <span>3 KT</span>
-              <span>2 KM</span>
-              <span>120 m²</span>
+              <span><i class="fas fa-bed"></i> 3 KT</span>
+              <span><i class="fas fa-bath"></i> 2 KM</span>
+              <span><i class="fas fa-ruler-combined"></i> 120 m²</span>
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="property-card animate-on-scroll">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600" alt="Villa Bali Asri">
+
+        <div class="property-card" data-tilt>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop" alt="Villa Bali Asri" loading="lazy">
             <span class="card-badge">Premium</span>
             <span class="card-price">Rp 12 Miliar</span>
           </div>
-          <div class="card-body">
-            <h3><a href="property-detail.html">Villa Bali Asri</a></h3>
+          <div class="card-content">
+            <h3 class="card-title">Villa Bali Asri</h3>
             <div class="card-location">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <i class="fas fa-map-marker-alt"></i>
               Bali
             </div>
             <div class="card-specs">
-              <span>5 KT</span>
-              <span>4 KM</span>
-              <span>350 m²</span>
+              <span><i class="fas fa-bed"></i> 5 KT</span>
+              <span><i class="fas fa-bath"></i> 4 KM</span>
+              <span><i class="fas fa-ruler-combined"></i> 350 m²</span>
             </div>
           </div>
         </div>
-        <!-- Card 3 -->
-        <div class="property-card animate-on-scroll">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=600" alt="Bandung Heights">
+
+        <div class="property-card" data-tilt>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop" alt="Puncak View Residence" loading="lazy">
             <span class="card-badge">New</span>
-            <span class="card-price">Rp 1.8 Miliar</span>
-          </div>
-          <div class="card-body">
-            <h3><a href="property-detail.html">Bandung Heights</a></h3>
-            <div class="card-location">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Bandung
-            </div>
-            <div class="card-specs">
-              <span>3 KT</span>
-              <span>2 KM</span>
-              <span>150 m²</span>
-            </div>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="property-card animate-on-scroll">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600" alt="Puncak View Residence">
-            <span class="card-badge">Hot</span>
             <span class="card-price">Rp 3.5 Miliar</span>
           </div>
-          <div class="card-body">
-            <h3><a href="property-detail.html">Puncak View Residence</a></h3>
+          <div class="card-content">
+            <h3 class="card-title">Puncak View Residence</h3>
             <div class="card-location">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <i class="fas fa-map-marker-alt"></i>
               Bogor
             </div>
             <div class="card-specs">
-              <span>4 KT</span>
-              <span>3 KM</span>
-              <span>200 m²</span>
+              <span><i class="fas fa-bed"></i> 4 KT</span>
+              <span><i class="fas fa-bath"></i> 3 KM</span>
+              <span><i class="fas fa-ruler-combined"></i> 200 m²</span>
             </div>
           </div>
         </div>
-        <!-- Card 5 -->
-        <div class="property-card animate-on-scroll">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1571939228382-b2f2b585ce15?w=600" alt="Sentra Kemang Arcade">
+
+        <div class="property-card" data-tilt>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop" alt="Kemang Arcade" loading="lazy">
             <span class="card-badge">Exclusive</span>
             <span class="card-price">Rp 4.2 Miliar</span>
           </div>
-          <div class="card-body">
-            <h3><a href="property-detail.html">Sentra Kemang Arcade</a></h3>
+          <div class="card-content">
+            <h3 class="card-title">Kemang Arcade</h3>
             <div class="card-location">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <i class="fas fa-map-marker-alt"></i>
               Jakarta Timur
             </div>
             <div class="card-specs">
-              <span>2 KT</span>
-              <span>2 KM</span>
-              <span>95 m²</span>
+              <span><i class="fas fa-bed"></i> 2 KT</span>
+              <span><i class="fas fa-bath"></i> 2 KM</span>
+              <span><i class="fas fa-ruler-combined"></i> 95 m²</span>
             </div>
           </div>
         </div>
-        <!-- Card 6 -->
-        <div class="property-card animate-on-scroll">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600" alt="Citra Land Paradise">
+
+        <div class="property-card" data-tilt>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" alt="Citra Land Paradise" loading="lazy">
             <span class="card-badge">Invest</span>
             <span class="card-price">Rp 2.8 Miliar</span>
           </div>
-          <div class="card-body">
-            <h3><a href="property-detail.html">Citra Land Paradise</a></h3>
+          <div class="card-content">
+            <h3 class="card-title">Citra Land Paradise</h3>
             <div class="card-location">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <i class="fas fa-map-marker-alt"></i>
               Surabaya
             </div>
             <div class="card-specs">
-              <span>3 KT</span>
-              <span>2 KM</span>
-              <span>130 m²</span>
+              <span><i class="fas fa-bed"></i> 3 KT</span>
+              <span><i class="fas fa-bath"></i> 2 KM</span>
+              <span><i class="fas fa-ruler-combined"></i> 130 m²</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card" data-tilt>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&h=600&fit=crop" alt="Bandung Heights" loading="lazy">
+            <span class="card-badge">Hot</span>
+            <span class="card-price">Rp 1.8 Miliar</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Bandung Heights</h3>
+            <div class="card-location">
+              <i class="fas fa-map-marker-alt"></i>
+              Bandung
+            </div>
+            <div class="card-specs">
+              <span><i class="fas fa-bed"></i> 3 KT</span>
+              <span><i class="fas fa-bath"></i> 2 KM</span>
+              <span><i class="fas fa-ruler-combined"></i> 150 m²</span>
             </div>
           </div>
         </div>
@@ -177,85 +205,192 @@
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section id="why-us" style="background: var(--gray-50);">
-    <div class="container">
-      <div class="section-title">
-        <h2>Mengapa Memilih Kami</h2>
-        <p>Kepercayaan dan profesionalisme adalah fondasi layanan kami</p>
-        <div class="gold-line"></div>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card animate-on-scroll">
-          <div class="feature-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+  <!-- About -->
+  <section class="section section-dark" id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-content">
+          <p class="section-eyebrow">Tentang Kami</p>
+          <h2 class="section-title">Mitra Terpercaya<br>Properti Premium</h2>
+          <p class="about-text">PT. Hartawan Properti Indonesia telah berdiri sejak 2010 sebagai mitra terpercaya dalam mencari dan memiliki properti premium di Indonesia. Dengan pengalaman lebih dari 15 tahun, kami menghadirkan layanan konsultasi properti yang profesional, transparan, dan berorientasi pada kepuasan klien.</p>
+          <p class="about-text">Kami percaya bahwa setiap orang berhak memiliki properti impian. Itulah sebabnya kami berkomitmen menghadirkan properti berkualitas premium di lokasi strategis, dengan proses yang mudah dan terpercaya.</p>
+          <div class="about-values">
+            <div class="value-item">
+              <div class="value-icon"><i class="fas fa-shield-halved"></i></div>
+              <div>
+                <h4>Kepercayaan</h4>
+                <p>Transparansi dalam setiap transaksi</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><i class="fas fa-gem"></i></div>
+              <div>
+                <h4>Kualitas Premium</h4>
+                <p>Material terbaik dan desain arsitektur modern</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><i class="fas fa-handshake"></i></div>
+              <div>
+                <h4>Layanan Prima</h4>
+                <p>Pendampingan hingga serah terima kunci</p>
+              </div>
+            </div>
           </div>
-          <h3>Lokasi Strategis</h3>
-          <p>Properti pilihan di kawasan premium dengan aksesibilitas tinggi dan infrastruktur prima.</p>
         </div>
-        <div class="feature-card animate-on-scroll">
-          <div class="feature-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div class="about-visual">
+          <div class="about-image-stack">
+            <div class="about-img about-img-1">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=800&fit=crop" alt="Building" loading="lazy">
+            </div>
+            <div class="about-img about-img-2">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=500&fit=crop" alt="Interior" loading="lazy">
+            </div>
           </div>
-          <h3>Kualitas Premium</h3>
-          <p>Material terbaik dan desain arsitektur modern yang memenuhi standar internasional.</p>
-        </div>
-        <div class="feature-card animate-on-scroll">
-          <div class="feature-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          <div class="about-float-card">
+            <span class="float-num">15+</span>
+            <span class="float-label">Tahun<br>Pengalaman</span>
           </div>
-          <h3>Tim Profesional</h3>
-          <p>Didukung arsitek, konsultan, dan agen properti berpengalaman lebih dari 10 tahun.</p>
-        </div>
-        <div class="feature-card animate-on-scroll">
-          <div class="feature-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-          </div>
-          <h3>Layanan Prima</h3>
-          <p>Konsultasi gratis, proses transparan, dan pendampingan hingga serah terima kunci.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Banner -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Siap Menemukan Properti Impian?</h2>
-      <p>Hubungi kami sekarang untuk konsultasi gratis dan temukan hunian terbaik untuk keluarga Anda.</p>
-      <a href="contact.html" class="btn btn-primary">Hubungi Sekarang</a>
+  <!-- Contact -->
+  <section class="section section-light" id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">Kontak Kami</p>
+        <h2 class="section-title">Siap Menemukan<br>Properti Impian?</h2>
+        <p class="section-desc">Hubungi kami untuk konsultasi gratis dan temukan hunian terbaik untuk keluarga Anda.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Telepon</label>
+                <input type="tel" id="phone" name="phone" placeholder="+62 812 3456 7890">
+              </div>
+              <div class="form-group">
+                <label for="property-type">Jenis Properti</label>
+                <select id="property-type" name="property-type">
+                  <option value="">Pilih jenis properti</option>
+                  <option value="villa">Villa</option>
+                  <option value="apartemen">Apartemen</option>
+                  <option value="rumah">Rumah</option>
+                  <option value="komersial">Komersial</option>
+                  <option value="tanah">Tanah</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="budget">Budget</label>
+              <select id="budget" name="budget">
+                <option value="">Pilih range budget</option>
+                <option value="1-3">Rp 1 - 3 Miliar</option>
+                <option value="3-10">Rp 3 - 10 Miliar</option>
+                <option value="10-25">Rp 10 - 25 Miliar</option>
+                <option value="25+">Rp 25 Miliar+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" placeholder="Ceritakan properti impian Anda..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn-pill btn-primary-pill btn-submit">
+              <span>Kirim Pesan</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i>
+              Pesan Anda berhasil dikirim. Kami akan segera menghubungi Anda.
+            </div>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <h4>Kantor Pusat</h4>
+              <p>Jl. Sudirman No. 123<br>Jakarta Selatan, 12190</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Telepon</h4>
+              <p>+62 21 5555 0123<br>+62 812 3456 7890</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>info@hartawanproperti.co.id</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Jam Operasional</h4>
+              <p>Senin - Sabtu: 08.00 - 17.00<br>Minggu: 09.00 - 14.00</p>
+            </div>
+          </div>
+          <a href="https://wa.me/6281234567890" class="btn-pill btn-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            Chat WhatsApp
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="footer-container">
       <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Hartawan<span>.</span></div>
-          <p>PT. Hartawan Properti Indonesia — partner terpercaya dalam mencari dan memiliki properti premium di Indonesia.</p>
+        <div class="footer-brand-col">
+          <div class="footer-brand">Hartawan</div>
+          <p class="footer-desc">PT. Hartawan Properti Indonesia — partner terpercaya dalam mencari dan memiliki properti premium di Indonesia.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
-        <div>
+        <div class="footer-col">
           <h4>Menu</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="properties.html">Properti</a></li>
-            <li><a href="about.html">Tentang</a></li>
-            <li><a href="contact.html">Kontak</a></li>
+          <ul>
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#properties">Properti</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#contact">Kontak</a></li>
           </ul>
         </div>
-        <div>
+        <div class="footer-col">
           <h4>Properti</h4>
-          <ul class="footer-links">
-            <li><a href="properties.html">Apartemen</a></li>
-            <li><a href="properties.html">Villa</a></li>
-            <li><a href="properties.html">Tanah</a></li>
-            <li><a href="properties.html">Rumah</a></li>
+          <ul>
+            <li><a href="#">Apartemen</a></li>
+            <li><a href="#">Villa</a></li>
+            <li><a href="#">Rumah</a></li>
+            <li><a href="#">Tanah</a></li>
           </ul>
         </div>
-        <div>
+        <div class="footer-col">
           <h4>Kontak</h4>
-          <ul class="footer-links">
+          <ul>
             <li>Jl. Sudirman No. 123</li>
             <li>Jakarta Selatan, 12190</li>
             <li>+62 21 5555 0123</li>
@@ -264,11 +399,15 @@
         </div>
       </div>
       <div class="footer-bottom">
-        &copy; 2026 PT. Hartawan Properti Indonesia. All rights reserved.
+        <p>&copy; 2026 PT. Hartawan Properti Indonesia. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
